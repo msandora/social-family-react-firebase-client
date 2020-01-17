@@ -47,7 +47,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <AuthRoute exact path="/login" component={Login} authenticated={authenticated}/>
                 <AuthRoute exact path="/signup" component={Signup} authenticated={authenticated}/>
-                <AuthRoute exact path="/family-tree" component={FamilyTree} authenticated={authenticated}/>
+                <AuthRoute exact path="/family-tree" component={FamilyTree} />
               </Switch>
             </div>
           </Router>

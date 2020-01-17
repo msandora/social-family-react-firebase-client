@@ -56,7 +56,7 @@ class Scream extends Component {
                         color="textSecondary">
                         {dayjs(createdAt).fromNow()}
                     </Typography>
-                    <Typography variant="body1">{body}</Typography>
+                    <Typography variant="body1">{body}{likeCount}{commentCount}</Typography>
                 </CardContent>
             </Card>
         );
