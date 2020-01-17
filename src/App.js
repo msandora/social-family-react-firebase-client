@@ -13,7 +13,9 @@ import AuthRoute from './util/AuthRoute';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import FamilyTree from './pages/FamilyTree';
+import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
+
+
 
 const theme = createMuiTheme(themeObject);
 

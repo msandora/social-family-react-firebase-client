@@ -1,0 +1,1484 @@
+[
+    {
+      "id": "edwardsandora",
+      "gender": "male",
+      "firstName": "Edward",
+      "lastName": "Sandora",
+      "parents": [],
+      "children": [
+        {
+          "id": "stellaluca",
+          "type": "blood"
+        },
+        {
+            "id": "edsandora",
+            "type": "blood"
+        },
+        {
+          "id": "dansandora",
+          "type": "blood"
+        },
+        {
+          "id": "anneriescott",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "palmasandora",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "palmasandora",
+      "gender": "female",
+      "firstName": "Palma",
+      "lastName": "Sandora",
+      "parents": [],
+      "children": [
+        {
+          "id": "stellaluca",
+          "type": "blood"
+        },
+        {
+          "id": "edsandora",
+          "type": "blood"
+        },
+        {
+          "id": "dansandora",
+          "type": "blood"
+        },
+        {
+          "id": "anneriescott",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "edwardsandora",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "stellaluca",
+      "gender": "female",
+      "firstName": "Stella",
+      "lastName": "Lucatuorto",
+      "parents": [
+        {
+          "id": "edwardsandora",
+          "type": "blood"
+        },
+        {
+          "id": "palmasandora",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "peteluca",
+          "type": "blood"
+        },
+        {
+          "id": "anthonyluca",
+          "type": "blood"
+        },
+        {
+          "id": "lisaluca",
+          "type": "blood"
+        }
+      ],
+      "siblings": [
+        {
+            "id": "edsandora",
+            "type": "blood"
+        },
+        {
+          "id": "dansandora",
+          "type": "blood"
+        },
+        {
+          "id": "anneriescott",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "peterluca",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "peterluca",
+      "gender": "male",
+      "firstName": "Peter",
+      "lastName": "Lucatuorto",
+      "parents": [],
+      "children": [
+        {
+          "id": "peteluca",
+          "type": "blood"
+        },
+        {
+          "id": "anthonyluca",
+          "type": "blood"
+        },
+        {
+          "id": "lisaluca",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "stellaluca",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "peteluca",
+      "gender": "male",
+      "firstName": "Peter",
+      "lastName": "Lucatuorto",
+      "parents": [
+        {
+          "id": "stellaluca",
+          "type": "blood"
+        },
+        {
+          "id": "peterluca",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "anthonyluca",
+          "type": "blood"
+        },
+        {
+          "id": "lisaluca",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "anthonyluca",
+      "gender": "male",
+      "firstName": "Anthony",
+      "lastName": "Lucatuorto",
+      "parents": [
+        {
+          "id": "stellaluca",
+          "type": "blood"
+        },
+        {
+          "id": "peterluca",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "peteluca",
+          "type": "blood"
+        },
+        {
+          "id": "lisaluca",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "lisaluca",
+      "gender": "female",
+      "firstName": "Lisa",
+      "lastName": "Mallen",
+      "parents": [
+        {
+          "id": "stellaluca",
+          "type": "blood"
+        },
+        {
+          "id": "peterluca",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "peteluca",
+          "type": "blood"
+        },
+        {
+          "id": "anthonyluca",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "dansandora",
+      "gender": "male",
+      "firstName": "Daniel",
+      "lastName": "Sandora",
+      "parents": [
+        {
+          "id": "edwardsandora",
+          "type": "blood"
+        },
+        {
+          "id": "palmasandora",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "marksandora",
+          "type": "blood"
+        },
+        {
+          "id": "mikesandora",
+          "type": "blood"
+        },
+        {
+          "id": "valsandora",
+          "type": "blood"
+        }
+      ],
+      "siblings": [
+        {
+          "id": "stellaluca",
+          "type": "blood"
+        },
+        {
+            "id": "edsandora",
+            "type": "blood"
+        },
+        {
+          "id": "anneriescott",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "linsandora",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "edsandora",
+      "gender": "male",
+      "firstName": "Edward",
+      "lastName": "Sandora",
+      "parents": [
+        {
+          "id": "edwardsandora",
+          "type": "blood"
+        },
+        {
+          "id": "palmasandora",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "eddiesandora",
+          "type": "blood"
+        },
+        {
+          "id": "theresabarbuto",
+          "type": "blood"
+        }
+      ],
+      "siblings": [
+        {
+          "id": "stellaluca",
+          "type": "blood"
+        },
+        {
+          "id": "dansandora",
+          "type": "blood"
+        },
+        {
+          "id": "anneriescott",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "lindasandora",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "lindasandora",
+      "gender": "female",
+      "firstName": "Linda",
+      "lastName": "Sandora",
+      "parents": [],
+      "children": [
+        {
+          "id": "eddiesandora",
+          "type": "blood"
+        },
+        {
+          "id": "theresabarbuto",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "edsandora",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "eddiesandora",
+      "gender": "male",
+      "firstName": "Edward",
+      "lastName": "Sandora",
+      "parents": [
+        {
+          "id": "edsandora",
+          "type": "blood"
+        },
+        {
+          "id": "lindasandora",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "emilysandora",
+          "type": "blood"
+        },
+        {
+          "id": "ethansandora",
+          "type": "blood"
+        },
+        {
+          "id": "zachsandora",
+          "type": "blood"
+        },
+        {
+          "id": "juliettesandora",
+          "type": "blood"
+        }
+      ],
+      "siblings": [
+        {
+          "id": "theresabarbuto",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "emilysandora",
+      "gender": "female",
+      "firstName": "Emily",
+      "lastName": "Sandora",
+      "parents": [
+        {
+          "id": "eddiesandora",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "ethansandora",
+          "type": "blood"
+        },
+        {
+          "id": "zachsandora",
+          "type": "blood"
+        },
+        {
+          "id": "juliettesandora",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "ethansandora",
+      "gender": "male",
+      "firstName": "Ethan",
+      "lastName": "Sandora",
+      "parents": [
+        {
+          "id": "eddiesandora",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "emilysandora",
+          "type": "blood"
+        },
+        {
+          "id": "zachsandora",
+          "type": "blood"
+        },
+        {
+          "id": "juliettesandora",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "zachsandora",
+      "gender": "male",
+      "firstName": "Zachary",
+      "lastName": "Sandora",
+      "parents": [
+        {
+          "id": "eddiesandora",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "emilysandora",
+          "type": "blood"
+        },
+        {
+          "id": "ethansandora",
+          "type": "blood"
+        },
+        {
+          "id": "juliettesandora",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "juliettesandora",
+      "gender": "female",
+      "firstName": "Juliette",
+      "lastName": "Sandora",
+      "parents": [
+        {
+          "id": "eddiesandora",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "emilysandora",
+          "type": "blood"
+        },
+        {
+          "id": "ethansandora",
+          "type": "blood"
+        },
+        {
+          "id": "zachsandora",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "theresabarbuto",
+      "gender": "female",
+      "firstName": "Theresa",
+      "lastName": "Barbuto",
+      "parents": [
+        {
+          "id": "edsandora",
+          "type": "blood"
+        },
+        {
+          "id": "lindasandora",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "anthonybarbuto",
+          "type": "blood"
+        },
+        {
+          "id": "gabbybarbuto",
+          "type": "blood"
+        }
+      ],
+      "siblings": [
+        {
+          "id": "eddiesandora",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "vinnybarbuto",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "vinnybarbuto",
+      "gender": "male",
+      "firstName": "Vincent",
+      "lastName": "Barbuto",
+      "parents": [],
+      "children": [
+        {
+          "id": "anthonybarbuto",
+          "type": "blood"
+        },
+        {
+          "id": "gabbybarbuto",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "theresabarbuto",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "anthonybarbuto",
+      "gender": "male",
+      "firstName": "Anthony",
+      "lastName": "Barbuto",
+      "parents": [
+        {
+          "id": "vinnybarbuto",
+          "type": "blood"
+        },
+        {
+          "id": "theresabarbuto",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "gabbybarbuto",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "gabbybarbuto",
+      "gender": "female",
+      "firstName": "Gabby",
+      "lastName": "Barbuto",
+      "parents": [
+        {
+          "id": "vinnybarbuto",
+          "type": "blood"
+        },
+        {
+          "id": "theresabarbuto",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "anthonybarbuto",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "johnscott",
+      "gender": "male",
+      "firstName": "John",
+      "lastName": "Scott",
+      "parents": [],
+      "children": [
+        {
+          "id": "johnnyscott",
+          "type": "blood"
+        },
+        {
+          "id": "jasonscott",
+          "type": "blood"
+        },
+        {
+          "id": "aliciascott",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "anneriescott",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "anneriescott",
+      "gender": "female",
+      "firstName": "Anne Marie",
+      "lastName": "Scott",
+      "parents": [
+        {
+          "id": "edwardsandora",
+          "type": "blood"
+        },
+        {
+          "id": "palmasandora",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "johnnyscott",
+          "type": "blood"
+        },
+        {
+          "id": "jasonscott",
+          "type": "blood"
+        },
+        {
+          "id": "aliciascott",
+          "type": "blood"
+        }
+      ],
+      "siblings": [
+        {
+          "id": "stellaluca",
+          "type": "blood"
+        },
+        {
+            "id": "edsandora",
+            "type": "blood"
+        },
+        {
+          "id": "dansandora",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "johnscott",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "johnnyscott",
+      "gender": "male",
+      "firstName": "John",
+      "lastName": "Scott",
+      "parents": [
+        {
+          "id": "johnscott",
+          "type": "blood"
+        },
+        {
+          "id": "anneriescott",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "atticusscott",
+          "type": "blood"
+        },
+        {
+          "id": "annabellescott",
+          "type": "blood"
+        },
+        {
+          "id": "abramscott",
+          "type": "blood"
+        },
+        {
+          "id": "ainsleyscott",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "kirstenscott",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "kirstenscott",
+      "gender": "female",
+      "firstName": "Kirsten",
+      "lastName": "Scott",
+      "parents": [],
+      "children": [
+        {
+          "id": "atticusscott",
+          "type": "blood"
+        },
+        {
+          "id": "annabellescott",
+          "type": "blood"
+        },
+        {
+          "id": "abramscott",
+          "type": "blood"
+        },
+        {
+          "id": "ainsleyscott",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "johnnyscott",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "atticusscott",
+      "gender": "male",
+      "firstName": "Atticus",
+      "lastName": "Scott",
+      "parents": [
+        {
+          "id": "johnnyscott",
+          "type": "blood"
+        },
+        {
+          "id": "kirstenscott",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "annabellescott",
+          "type": "blood"
+        },
+        {
+          "id": "abramscott",
+          "type": "blood"
+        },
+        {
+          "id": "ainsleyscott",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "annabellescott",
+      "gender": "female",
+      "firstName": "Annabelle",
+      "lastName": "Scott",
+      "parents": [
+        {
+          "id": "johnnyscott",
+          "type": "blood"
+        },
+        {
+          "id": "kirstenscott",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "atticusscott",
+          "type": "blood"
+        },
+        {
+          "id": "abramscott",
+          "type": "blood"
+        },
+        {
+          "id": "ainsleyscott",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "abramscott",
+      "gender": "male",
+      "firstName": "Abram",
+      "lastName": "Scott",
+      "parents": [
+        {
+          "id": "johnnyscott",
+          "type": "blood"
+        },
+        {
+          "id": "kirstenscott",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "atticusscott",
+          "type": "blood"
+        },
+        {
+          "id": "annabellescott",
+          "type": "blood"
+        },
+        {
+          "id": "ainsleyscott",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "ainsleyscott",
+      "gender": "female",
+      "firstName": "Ainsley",
+      "lastName": "Scott",
+      "parents": [
+        {
+          "id": "johnnyscott",
+          "type": "blood"
+        },
+        {
+          "id": "kirstenscott",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "atticusscott",
+          "type": "blood"
+        },
+        {
+          "id": "annabellescott",
+          "type": "blood"
+        },
+        {
+          "id": "abramscott",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "jasonscott",
+      "gender": "male",
+      "firstName": "Jason",
+      "lastName": "Scott",
+      "parents": [
+        {
+          "id": "johnscott",
+          "type": "blood"
+        },
+        {
+          "id": "anneriescott",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "sophiascott",
+          "type": "blood"
+        },
+        {
+          "id": "janescott",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "robertascott",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "robertascott",
+      "gender": "female",
+      "firstName": "Roberta",
+      "lastName": "Scott",
+      "parents": [],
+      "children": [
+        {
+          "id": "sophiascott",
+          "type": "blood"
+        },
+        {
+          "id": "janescott",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "jasonscott",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "sophiascott",
+      "gender": "female",
+      "firstName": "Sophia",
+      "lastName": "Scott",
+      "parents": [
+        {
+          "id": "jasonscott",
+          "type": "blood"
+        },
+        {
+          "id": "robertascott",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "janescott",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "janescott",
+      "gender": "female",
+      "firstName": "Jane",
+      "lastName": "Scott",
+      "parents": [
+        {
+          "id": "jasonscott",
+          "type": "blood"
+        },
+        {
+          "id": "robertascott",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "sophiascott",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "aliciascott",
+      "gender": "female",
+      "firstName": "Alicia",
+      "lastName": "Carmada",
+      "parents": [
+        {
+          "id": "johnscott",
+          "type": "blood"
+        },
+        {
+          "id": "anneriescott",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "leocarmada",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "mattcarmada",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "mattcarmada",
+      "gender": "male",
+      "firstName": "Matt",
+      "lastName": "Carmada",
+      "parents": [],
+      "children": [
+        {
+          "id": "leocarmada",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "aliciascott",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "leocarmada",
+      "gender": "male",
+      "firstName": "Leo",
+      "lastName": "Carmada",
+      "parents": [
+        {
+          "id": "mattcarmada",
+          "type": "blood"
+        },
+        {
+          "id": "aliciascott",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [],
+      "spouses": []
+    },
+    {
+      "id": "jpereira",
+      "gender": "female",
+      "firstName": "Joanne",
+      "lastName": "Periera",
+      "parents": [
+        {
+          "id": "edwardsandora",
+          "type": "blood"
+        },
+        {
+          "id": "palmasandora",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "rickpereira",
+          "type": "blood"
+        },
+        {
+          "id": "mattpereira",
+          "type": "blood"
+        },
+        {
+          "id": "zachpereira",
+          "type": "blood"
+        },
+        {
+          "id": "ashpereira",
+          "type": "blood"
+        }
+      ],
+      "siblings": [
+        {
+          "id": "stellaluca",
+          "type": "blood"
+        },
+        {
+            "id": "edsandora",
+            "type": "blood"
+        },
+        {
+          "id": "dansandora",
+          "type": "blood"
+        },
+        {
+          "id": "anneriescott",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "dickpereira",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "dickpereira",
+      "gender": "male",
+      "firstName": "Dick",
+      "lastName": "Periera",
+      "parents": [],
+      "children": [
+        {
+          "id": "rickpereira",
+          "type": "blood"
+        },
+        {
+          "id": "mattpereira",
+          "type": "blood"
+        },
+        {
+          "id": "zachpereira",
+          "type": "blood"
+        },
+        {
+          "id": "ashpereira",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "jpereira",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "rickpereira",
+      "gender": "male",
+      "firstName": "Rick",
+      "lastName": "Periera",
+      "parents": [
+        {
+          "id": "dickpereira",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [],
+      "spouses": []
+    },
+    {
+      "id": "mattpereira",
+      "gender": "male",
+      "firstName": "Matthew",
+      "lastName": "Periera",
+      "parents": [
+        {
+          "id": "dickpereira",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "mathewpereira",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "christinepereira",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "christinepereira",
+      "gender": "female",
+      "firstName": "Christine",
+      "lastName": "Periera",
+      "parents": [],
+      "children": [
+        {
+          "id": "mathewpereira",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "mattpereira",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "mathewpereira",
+      "gender": "male",
+      "firstName": "Matthew",
+      "lastName": "Periera",
+      "parents": [
+        {
+          "id": "mattpereira",
+          "type": "blood"
+        },
+        {
+          "id": "christinepereira",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [],
+      "spouses": []
+    },
+    {
+      "id": "zachpereira",
+      "gender": "male",
+      "firstName": "Zachary",
+      "lastName": "Periera",
+      "parents": [
+        {
+          "id": "dickpereira",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [],
+      "spouses": []
+    },
+    {
+      "id": "ashpereira",
+      "gender": "female",
+      "firstName": "Ashley",
+      "lastName": "Periera",
+      "parents": [
+        {
+          "id": "dickpereira",
+          "type": "blood"
+        },
+        {
+          "id": "jpereira",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [],
+      "spouses": []
+    },
+    {
+      "id": "linsandora",
+      "gender": "female",
+      "firstName": "Linda",
+      "lastName": "Sandora",
+      "parents": [],
+      "children": [
+        {
+          "id": "marksandora",
+          "type": "blood"
+        },
+        {
+          "id": "mikesandora",
+          "type": "blood"
+        },
+        {
+          "id": "valsandora",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "dansandora",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "marksandora",
+      "gender": "male",
+      "firstName": "Mark",
+      "lastName": "Sandora",
+      "parents": [
+        {
+          "id": "dansandora",
+          "type": "blood"
+        },
+        {
+          "id": "linsandora",
+          "type": "blood"
+        }
+      ],
+      "siblings": [
+        {
+          "id": "mikesandora",
+          "type": "blood"
+        },
+        {
+          "id": "valsandora",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "jteta",
+          "type": "married"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "mikesandora",
+      "gender": "male",
+      "firstName": "Michael",
+      "lastName": "Sandora",
+      "parents": [
+        {
+          "id": "dansandora",
+          "type": "blood"
+        },
+        {
+          "id": "linsandora",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "marksandora",
+          "type": "blood"
+        },
+        {
+          "id": "valsandora",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "valsandora",
+      "gender": "female",
+      "firstName": "Valerie",
+      "lastName": "Garcia",
+      "parents": [
+        {
+          "id": "dansandora",
+          "type": "blood"
+        },
+        {
+          "id": "linsandora",
+          "type": "blood"
+        }
+      ],
+      "children": [
+        {
+          "id": "brandongarcia",
+          "type": "blood"
+        }
+      ],
+      "siblings": [
+        {
+          "id": "marksandora",
+          "type": "blood"
+        },
+        {
+          "id": "mikesandora",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "salgarcia",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "salgarcia",
+      "gender": "male",
+      "firstName": "Salvatore",
+      "lastName": "Garcia",
+      "parents": [],
+      "children": [
+        {
+          "id": "brandongarcia",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "valsandora",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "jteta",
+      "gender": "female",
+      "firstName": "Jaqueline",
+      "lastName": "Teta",
+      "parents": [],
+      "children": [],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "marksandora",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "brandongarcia",
+      "gender": "male",
+      "firstName": "Brandon",
+      "lastName": "Garcia",
+      "parents": [
+        {
+          "id": "salgarcia",
+          "type": "blood"
+        },
+        {
+          "id": "valsandora",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [],
+      "spouses": []
+    }
+]
+  
