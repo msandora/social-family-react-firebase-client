@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import PinchZoomPan from 'pinch-zoom-pan';
 import { IFamilyNode, IFamilyExtNode } from 'relatives-tree';
 import ReactFamilyTree from 'react-family-tree';
-import FamilyNode from '../../components/FamilyNode/FamilyNode.tsx';
+import FamilyNode from '../../components/FamilyNode/FamilyNode';
 import styles from '../FamilyTree/Family.module.css';
 
 import nodes from '../../data.json';
