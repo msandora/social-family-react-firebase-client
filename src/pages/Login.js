@@ -43,7 +43,6 @@ class Login extends Component {
             password: this.state.password
         };
         this.props.loginUser(userData, this.props.history);
-
     };
     handleChange = (event) => {
         this.setState({
@@ -51,7 +50,7 @@ class Login extends Component {
         })
     }
     render() { 
-        const { classes, UI: {loading} } = this.props;
+        const { classes, UI: { loading } } = this.props;
         const { errors } = this.state;
         return ( 
             <Grid container className={classes.form}>

@@ -6,7 +6,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 
 class Navbar extends Component {
-    state = {  }
     render() { 
         return ( 
             <AppBar>

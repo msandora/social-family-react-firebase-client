@@ -19,7 +19,7 @@ import AuthRoute from './util/AuthRoute';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
+//import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
 
 const theme = createMuiTheme(themeObject);
 
@@ -27,7 +27,6 @@ const theme = createMuiTheme(themeObject);
 const token = localStorage.FBIdToken;
 if (token) {
   const decodedToken = jwtDecode(token);
-  // console.log("token ", token);
   if (decodedToken.exp * 1000 < Date.now()) {
     store.dispatch(logoutUser());
     window.location.href = '/login';
@@ -51,7 +50,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <AuthRoute exact path="/login" component={Login} />
                 <AuthRoute exact path="/signup" component={Signup} />
-                <Route exact path="/family-tree" component={FamilyTree} />
+                {/*<Route exact path="/family-tree" component={FamilyTree} />*/}
               </Switch>
             </div>
           </Router>

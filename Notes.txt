@@ -1,0 +1,8 @@
+Notes:
+6:38:57 Should have Credentials Array at this point
+
+2:32 - credentials
+at 56:03 it will be "data.getIdToken()" rather than "data.user.getIdToken()"
+
+
+firebase serve --port 4000
