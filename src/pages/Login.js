@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
 import AppIcon from '../images/icon.png'
-// import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 //MUI Stuff
@@ -44,21 +43,7 @@ class Login extends Component {
             password: this.state.password
         };
         this.props.loginUser(userData, this.props.history);
-        // axios.post('/login', userData)
-        //     .then(res => {
-        //         console.log(res.data);
-        //         localStorage.setItem('FBIdToken', `Bearer ${res.data.token}`);
-        //         this.setState({
-        //             loading:false
-        //         });
-        //         this.props.history.push('/');
-        //     })
-        //     .catch(err => {
-        //         this.setState({
-        //             errors: err.response.data,
-        //             loading: false
-        //         })
-        //     })
+
     };
     handleChange = (event) => {
         this.setState({
