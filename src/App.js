@@ -6,6 +6,10 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import themeObject from './util/theme';
 import jwtDecode from 'jwt-decode'; // decodes temporary token for user that is logged in
 
+// Redux
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 // Components
 import Navbar from './components/Navbar';
 import AuthRoute from './util/AuthRoute';
@@ -39,7 +43,7 @@ class App extends Component {
   render() { 
     return ( 
       <MuiThemeProvider theme={theme}>
-        <div className="App">
+        <Provider store={store}>
           <Router>
             <Navbar/>
             <div className="container">
@@ -47,11 +51,11 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <AuthRoute exact path="/login" component={Login} authenticated={authenticated}/>
                 <AuthRoute exact path="/signup" component={Signup} authenticated={authenticated}/>
-                <AuthRoute exact path="/family-tree" component={FamilyTree} />
+                <Route exact path="/family-tree" component={FamilyTree} />
               </Switch>
             </div>
           </Router>
-        </div>
+        </Provider>
       </MuiThemeProvider>
     );
   }
