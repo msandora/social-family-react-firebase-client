@@ -354,7 +354,20 @@
           "type": "blood"
         }
       ],
-      "children": [],
+      "children": [
+        {
+          "id": "nickmallen",
+          "type": "blood"
+        },
+        {
+            "id": "ryanmallen",
+            "type": "blood"
+        },
+        {
+          "id": "reaganmallen",
+          "type": "blood"
+        }
+      ],
       "siblings": [
         {
           "id": "peteluca",
@@ -362,6 +375,123 @@
         },
         {
           "id": "anthonyluca",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "brettmallen",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "brettmallen",
+      "gender": "male",
+      "firstName": "Brett",
+      "lastName": "Mallen",
+      "parents": [],
+      "children": [
+        {
+          "id": "nickmallen",
+          "type": "blood"
+        },
+        {
+            "id": "ryanmallen",
+            "type": "blood"
+        },
+        {
+          "id": "reaganmallen",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "lisaluca",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "nickmallen",
+      "gender": "male",
+      "firstName": "Nicholas",
+      "lastName": "Mallen",
+      "parents": [
+        {
+          "id": "brettmallen",
+          "type": "blood"
+        },
+        {
+          "id": "lisaluca",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "ryanmallen",
+          "type": "blood"
+        },
+        {
+          "id": "reaganmallen",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "ryanmallen",
+      "gender": "male",
+      "firstName": "Ryan",
+      "lastName": "Mallen",
+      "parents": [
+        {
+          "id": "brettmallen",
+          "type": "blood"
+        },
+        {
+          "id": "lisaluca",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "nickmallen",
+          "type": "blood"
+        },
+        {
+          "id": "reaganmallen",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "reaganmallen",
+      "gender": "female",
+      "firstName": "Reagan",
+      "lastName": "Mallen",
+      "parents": [
+        {
+          "id": "brettmallen",
+          "type": "blood"
+        },
+        {
+          "id": "lisaluca",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "nickmallen",
+          "type": "blood"
+        },
+        {
+          "id": "ryanmallen",
           "type": "blood"
         }
       ],

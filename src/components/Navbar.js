@@ -12,15 +12,22 @@ import Button from '@material-ui/core/Button';
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
 
+
+import { withRouter } from 'react-router-dom';    
+
 class Navbar extends Component {
 	render() { 
-		const { authenticated } = this.props
+		const { authenticated, location } = this.props;
+		const hidePostButton = location.pathname.match('/family-tree');
 		return ( 
 			<AppBar>
 				<Toolbar className="nav-container">
 				{authenticated ? (
 					<Fragment>
-					    <PostScream />
+						{!hidePostButton ? (
+							<PostScream />
+							) : ( null )
+						}
 						<Link to="/">
 								<MyButton tip="Home">
 										<HomeIcon />
@@ -46,6 +53,8 @@ class Navbar extends Component {
 	}
 }
  
+
+
 Navbar.propTypes = {
 	authenticated: PropTypes.bool.isRequired
 };
@@ -54,5 +63,5 @@ const mapStateToProps = (state) => ({
 	authenticated: state.user.authenticated
 });
   
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps)(withRouter(Navbar));
   
