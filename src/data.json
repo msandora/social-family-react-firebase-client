@@ -196,7 +196,20 @@
           "type": "blood"
         }
       ],
-      "children": [],
+      "children": [
+        {
+          "id": "annieluca",
+          "type": "blood"
+        },
+        {
+            "id": "chloeluca",
+            "type": "blood"
+        },
+        {
+          "id": "anthluca",
+          "type": "blood"
+        }
+      ],
       "siblings": [
         {
           "id": "peteluca",
@@ -204,6 +217,123 @@
         },
         {
           "id": "lisaluca",
+          "type": "blood"
+        }
+      ],
+      "spouses": [
+        {
+          "id": "cathyluca",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "cathyluca",
+      "gender": "female",
+      "firstName": "Cathy",
+      "lastName": "Lucatuorto",
+      "parents": [],
+      "children": [
+        {
+          "id": "annieluca",
+          "type": "blood"
+        },
+        {
+            "id": "chloeluca",
+            "type": "blood"
+        },
+        {
+          "id": "anthluca",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "anthonyluca",
+          "type": "married"
+        }
+      ]
+    },
+    {
+      "id": "annieluca",
+      "gender": "female",
+      "firstName": "Annie",
+      "lastName": "Lucatuorto",
+      "parents": [
+        {
+          "id": "anthonyluca",
+          "type": "blood"
+        },
+        {
+          "id": "cathyluca",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "chloeluca",
+          "type": "blood"
+        },
+        {
+          "id": "anthluca",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "chloeluca",
+      "gender": "female",
+      "firstName": "Chloe",
+      "lastName": "Lucatuorto",
+      "parents": [
+        {
+          "id": "anthonyluca",
+          "type": "blood"
+        },
+        {
+          "id": "cathyluca",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "annieluca",
+          "type": "blood"
+        },
+        {
+          "id": "anthluca",
+          "type": "blood"
+        }
+      ],
+      "spouses": []
+    },
+    {
+      "id": "anthluca",
+      "gender": "male",
+      "firstName": "Anthony",
+      "lastName": "Lucatuorto",
+      "parents": [
+        {
+          "id": "anthonyluca",
+          "type": "blood"
+        },
+        {
+          "id": "cathyluca",
+          "type": "blood"
+        }
+      ],
+      "children": [],
+      "siblings": [
+        {
+          "id": "annieluca",
+          "type": "blood"
+        },
+        {
+          "id": "chloeluca",
           "type": "blood"
         }
       ],
