@@ -19,7 +19,7 @@ import AuthRoute from './util/AuthRoute';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-//import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
+import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
 
 const theme = createMuiTheme(themeObject);
 
@@ -37,8 +37,8 @@ if (token) {
   }
 }
 
+
 class App extends Component {
-  state = {  }
   render() { 
     return ( 
       <MuiThemeProvider theme={theme}>
@@ -50,7 +50,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <AuthRoute exact path="/login" component={Login} />
                 <AuthRoute exact path="/signup" component={Signup} />
-                {/*<Route exact path="/family-tree" component={FamilyTree} />*/}
+                <Route exact path="/family-tree" component={FamilyTree} />
               </Switch>
             </div>
           </Router>

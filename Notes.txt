@@ -6,3 +6,8 @@ at 56:03 it will be "data.getIdToken()" rather than "data.user.getIdToken()"
 
 
 firebase serve --port 4000
+
+
+https://us-central1-socialfamily-d58c8.cloudfunctions.net/api/screams
+
+https://us-central1-socialfamily-d58c8.cloudfunctions.net/api/user
