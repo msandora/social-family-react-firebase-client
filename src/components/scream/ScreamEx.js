@@ -65,7 +65,7 @@ class Scream extends Component {
 			credentials: { handle }
 		  }
 		} = this.props;
-		
+
 		const deleteButton =
 		authenticated && userHandle === handle ? (
 			<DeleteScream screamId={screamId} />
@@ -74,15 +74,15 @@ class Scream extends Component {
 		return ( 
 			<Card className={classes.card}>
 				<CardHeader 
-					component={Link}
-					to={`/users/${userHandle}`}
 					avatar={
-					<Avatar alt="Profile image" src={userImage} />
+						<Avatar alt="Profile image" src={userImage} 					
+						component={Link}
+						to={`/users/${userHandle}`} />
 					}
 					action={
-					<div>
-					{deleteButton}
-					</div>
+						<div>
+							{deleteButton}
+						</div>
 					}
 					title={userHandle}
 					subheader={dayjs(createdAt).fromNow()}

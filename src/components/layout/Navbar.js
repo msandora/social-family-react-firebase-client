@@ -35,7 +35,7 @@ class Navbar extends Component {
 						</Link>
 						<Link to="/family-tree">
 							<MyButton tip="Family Tree">
-									<NaturePeopleIcon />
+								<NaturePeopleIcon />
 							</MyButton>
 						</Link>
 					</Fragment>
