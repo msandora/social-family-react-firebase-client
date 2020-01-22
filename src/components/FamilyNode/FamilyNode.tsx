@@ -23,6 +23,7 @@ export default React.memo<Props>(
         <div className={styles.root} style={style}>
             <div 
               onClick={toggle}
+              onTouchStart={toggle}
               className={classNames(
                 styles.inner,
                 styles[node.gender],

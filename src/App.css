@@ -22,6 +22,7 @@ body {
   max-width: 1200px;
   overflow-x: hidden;
   height: 100%;
+  padding: 0 15px;
 }
 .nav-container {
   margin: auto;
