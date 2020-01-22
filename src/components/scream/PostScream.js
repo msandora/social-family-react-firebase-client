@@ -39,7 +39,7 @@ class PostScream extends Component {
     body: '',
     errors: {}
   };
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.UI.errors) {
       this.setState({
         errors: nextProps.UI.errors
@@ -71,7 +71,7 @@ class PostScream extends Component {
     } = this.props;
     return (
       <Fragment>
-        <MyButton onClick={this.handleOpen} tip="Post a Scream!">
+        <MyButton onClick={this.handleOpen} tip="Post a comment">
           <AddIcon />
         </MyButton>
         <Dialog
