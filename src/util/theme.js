@@ -56,10 +56,11 @@ export default {
     '& .image-wrapper': {
       textAlign: 'center',
       position: 'relative',
+
       '& button': {
         position: 'absolute',
-        top: '80%',
-        left: '70%'
+        top: '0',
+        right: '0'
       }
     },
     '& .profile-image': {
@@ -67,7 +68,7 @@ export default {
       height: 200,
       objectFit: 'cover',
       maxWidth: '100%',
-      borderRadius: '50%'
+      borderRadius: '10%'
     },
     '& .profile-details': {
       textAlign: 'center',

@@ -21,15 +21,17 @@
 }
 
 .wrapper {
-  flex: 1;
+  /* flex: 1; */
   background: #fff;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* .tree {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-} */
+.tree {
+  top: -260px;
+}
 
 .reset {
   position: absolute;

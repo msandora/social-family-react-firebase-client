@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-import themeObject from './util/theme';
 import jwtDecode from 'jwt-decode'; // decodes temporary token for user that is logged in
 import axios from 'axios';
 
@@ -13,12 +12,14 @@ import store from './redux/store';
 import { SET_AUTHENTICATED } from './redux/types';
 import { logoutUser, getUserData } from './redux/actions/userActions';
 // Components
-import Navbar from './components/Navbar';
+import Navbar from './components/layout/Navbar';
+import themeObject from './util/theme';
 import AuthRoute from './util/AuthRoute';
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import User from './pages/User';
 import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
 
 const theme = createMuiTheme(themeObject);
@@ -51,6 +52,12 @@ class App extends Component {
                 <AuthRoute exact path="/login" component={Login} />
                 <AuthRoute exact path="/signup" component={Signup} />
                 <Route exact path="/family-tree" component={FamilyTree} />
+                <Route exact path="/users/:handle" component={User} />
+                <Route
+                  exact
+                  path="/users/:handle/scream/:screamId"
+                  component={User}
+                />
               </Switch>
             </div>
           </Router>
