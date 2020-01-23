@@ -21,6 +21,7 @@
   text-align: center;
   width: 65px;
   position: relative;
+  top: 2px;
   left: -7px;
   line-height: 12px;
 }

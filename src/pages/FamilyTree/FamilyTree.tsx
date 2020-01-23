@@ -30,7 +30,7 @@ export default React.memo<{}>(
           max={2.5}
           className={styles.wrapper}
         >
-          <ReactFamilyTree
+          <ReactFamilyTree 
             nodes={nodes as IFamilyNode[]}
             rootId={rootId}
             width={WIDTH}
