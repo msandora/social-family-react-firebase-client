@@ -23,6 +23,8 @@ class User extends Component {
     if (screamId) this.setState({ screamIdParam: screamId });
 
     this.props.getUserData(handle);
+    console.log(handle, screamId, "??", this.props.getUserData(handle));
+
     axios
       .get(`/user/${handle}`)
       .then((res) => {

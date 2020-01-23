@@ -62,6 +62,7 @@ export const getUserData = () => (dispatch) => {
   axios
     .get('/user')
     .then((res) => {
+      // console.log('userActions res', res);
       dispatch({
         type: SET_USER,
         payload: res.data

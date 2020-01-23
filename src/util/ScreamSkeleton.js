@@ -5,14 +5,18 @@ import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import Avatar from '@material-ui/core/Avatar';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
 const styles = (theme) => ({
   ...theme,
   card: {
-    display: 'flex',
-    marginBottom: 20
+		position: 'relative',
+		display: 'flex',
+		flexDirection: 'column',
+		marginBottom: 10
   },
   cardContent: {
     width: '100%',
@@ -54,10 +58,15 @@ const ScreamSkeleton = (props) => {
 
   const content = Array.from({ length: 5 }).map((item, index) => (
     <Card className={classes.card} key={index}>
-      <CardMedia className={classes.cover} image={NoImg} />
-      <CardContent className={classes.cardContent}>
+      <CardHeader 
+        avatar={
+          <Avatar alt="Profile image" src={NoImg} />
+        }>
         <div className={classes.handle} />
         <div className={classes.date} />
+      </CardHeader>
+      <CardMedia className={classes.cover} image={NoImg} />
+      <CardContent className={classes.cardContent}>
         <div className={classes.fullLine} />
         <div className={classes.fullLine} />
         <div className={classes.halfLine} />
