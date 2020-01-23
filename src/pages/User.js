@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import Scream from '../components/scream/Scream';
+import Scream from '../components/scream/ScreamEx';
 import StaticProfile from '../components/profile/StaticProfile';
 import Grid from '@material-ui/core/Grid';
 
@@ -23,7 +23,6 @@ class User extends Component {
     if (screamId) this.setState({ screamIdParam: screamId });
 
     this.props.getUserData(handle);
-    console.log(handle, screamId, "??", this.props.getUserData(handle));
 
     axios
       .get(`/user/${handle}`)

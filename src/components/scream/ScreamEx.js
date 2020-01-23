@@ -5,7 +5,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import PropTypes from 'prop-types';
 import MyButton from '../../util/MyButton';
 import DeleteScream from '../../components/scream/DeleteScream';
-import ScreamDialog from './ScreamDialog';
+import ScreamDialog from './ScreamDialogEx';
 import LikeButton from './LikeButton';
 //MUI Stuff
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -52,17 +52,17 @@ class Scream extends Component {
 		const {
 		  classes,
 		  scream: {
-			body,
-			createdAt,
-			userImage,
-			userHandle,
-			screamId,
-			likeCount,
-			commentCount
+				body,
+				createdAt,
+				userImage,
+				userHandle,
+				screamId,
+				likeCount,
+				commentCount
 		  },
 		  user: {
-			authenticated,
-			credentials: { handle }
+				authenticated,
+				credentials: { handle }
 		  }
 		} = this.props;
 
@@ -73,18 +73,18 @@ class Scream extends Component {
 
 		return ( 
 			<Card className={classes.card}>
-				<CardHeader 
+				<CardHeader className={classes.cardHeader}
 					avatar={
 						<Avatar alt="Profile image" src={userImage} 					
 						component={Link}
-						to={`/users/${userHandle}`} />
+						to={`/users/${userHandle}`}/>
 					}
 					action={
 						<div>
 							{deleteButton}
 						</div>
 					}
-					title={userHandle}
+					title={userHandle} 
 					subheader={dayjs(createdAt).fromNow()}
 					/>
 
