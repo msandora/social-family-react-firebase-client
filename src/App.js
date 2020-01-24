@@ -24,6 +24,8 @@ import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
 
 const theme = createMuiTheme(themeObject);
 
+axios.defaults.baseURL =
+  'https://us-central1-socialfamily-d58c8.cloudfunctions.net/api';
 
 const token = localStorage.FBIdToken;
 if (token) {
@@ -37,7 +39,6 @@ if (token) {
     store.dispatch(getUserData());
   }
 }
-
 
 class App extends Component {
   render() { 
