@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import MyButton from '../../util/MyButton';
 import LikeButton from './LikeButton';
-import Comments from './Comments';
+import Comments from './CommentsEx';
 import CommentForm from './CommentForm';
 import dayjs from 'dayjs';
 import { Link } from 'react-router-dom';
@@ -37,7 +37,8 @@ const styles = (theme) => ({
   },
   closeButton: {
     position: 'absolute',
-    right: '0px'
+    top: '3px',
+    right: '3px'
   },
   expandButton: {
     position: 'absolute',
@@ -47,6 +48,9 @@ const styles = (theme) => ({
     textAlign: 'center',
     marginTop: 50,
     marginBottom: 50
+  },
+  cardHeader: {
+    padding: '0 10px 10px 0'
   }
 });
 
@@ -102,50 +106,35 @@ class ScreamDialog extends Component {
       </div>
     ) : (
 
-
 <div>
 <Grid container>
 	<Grid item xs={12}>
-			<CardHeader 
+			<CardHeader className={classes.cardHeader}
 			avatar={
 				<Avatar alt="Profile image" src={userImage} 					
 				component={Link}
 				to={`/users/${userHandle}`}/>
 			}
-			action={
-				<div>
-					
-				</div>
-			}
-			title={userHandle}
+			title={
+        <Typography
+        component={Link}
+        color="primary"
+        variant="h5"
+        to={`/users/${userHandle}`}
+        >
+        @{userHandle}
+        </Typography>
+      }
 			subheader={dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
 			/>
 	</Grid>
-
-
 </Grid>
 
-
 <Grid container spacing={16}>
-
-	<Grid item sm={5}>
-		<img src={userImage} alt="Profile" className={classes.profileImage} />
-	</Grid>
-	<Grid item sm={7}>
-		<Typography
-			component={Link}
-			color="primary"
-			variant="h5"
-			to={`/users/${userHandle}`}
-		>
-			@{userHandle}
-		</Typography>
+	<Grid item sm={12}>
 		<hr className={classes.invisibleSeparator} />
-		<Typography variant="body2" color="textSecondary">
-			{dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
-		</Typography>
+		<Typography variant="body1">{body}</Typography>	
 		<hr className={classes.invisibleSeparator} />
-		<Typography variant="body1">{body}</Typography>
 		<LikeButton screamId={screamId} />
 		<span>{likeCount} likes</span>
 		<MyButton tip="comments">
@@ -156,7 +145,6 @@ class ScreamDialog extends Component {
 	<hr className={classes.visibleSeparator} />
 	<CommentForm screamId={screamId} />
 	<Comments comments={comments} />
-	
 </Grid>
 </div>
 

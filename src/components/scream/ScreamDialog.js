@@ -34,7 +34,8 @@ const styles = (theme) => ({
   },
   closeButton: {
     position: 'absolute',
-    right: '0px'
+    top: '3px',
+    right: '3px'
   },
   expandButton: {
     position: 'absolute',

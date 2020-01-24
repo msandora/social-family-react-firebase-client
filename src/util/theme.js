@@ -42,15 +42,15 @@ export default {
   },
   invisibleSeparator: {
     border: 'none',
-    margin: 4
+    margin: 3
   },
   visibleSeparator: {
     width: '100%',
     borderBottom: '1px solid rgba(0,0,0,0.1)',
-    marginBottom: 20
+    marginBottom: 10
   },
   paper: {
-    padding: 20
+    padding: 15
   },
   profile: {
     '& .image-wrapper': {
@@ -64,11 +64,11 @@ export default {
       }
     },
     '& .profile-image': {
-      width: 200,
-      height: 200,
+      width: 140,
+      height: 140,
       objectFit: 'cover',
       maxWidth: '100%',
-      borderRadius: '10%'
+      borderRadius: '50%'
     },
     '& .profile-details': {
       textAlign: 'center',
