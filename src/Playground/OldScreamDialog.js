@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import MyButton from '../../util/MyButton';
 import LikeButton from './LikeButton';
-import Comments from './CommentsEx';
+import Comments from './Comments';
 import CommentForm from './CommentForm';
 import dayjs from 'dayjs';
 import { Link } from 'react-router-dom';
@@ -13,9 +13,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import CardHeader from '@material-ui/core/CardHeader';
-import Avatar from '@material-ui/core/Avatar';
-
 // Icons
 import CloseIcon from '@material-ui/icons/Close';
 import UnfoldMore from '@material-ui/icons/UnfoldMore';
@@ -48,9 +45,6 @@ const styles = (theme) => ({
     textAlign: 'center',
     marginTop: 50,
     marginBottom: 50
-  },
-  cardHeader: {
-    padding: '0 10px 10px 0'
   }
 });
 
@@ -105,49 +99,37 @@ class ScreamDialog extends Component {
         <CircularProgress size={200} thickness={2} />
       </div>
     ) : (
-
-<div>
-<Grid container>
-	<Grid item xs={12}>
-			<CardHeader className={classes.cardHeader}
-			avatar={
-				<Avatar alt="Profile image" src={userImage} 					
-				component={Link}
-				to={`/users/${userHandle}`}/>
-			}
-			title={
-        <Typography
-        component={Link}
-        color="primary"
-        variant="h5"
-        to={`/users/${userHandle}`}
-        >
-        @{userHandle}
-        </Typography>
-      }
-			subheader={dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
-			/>
-	</Grid>
-</Grid>
-
-<Grid container spacing={16}>
-	<Grid item sm={12}>
-		<hr className={classes.invisibleSeparator} />
-		<Typography variant="body1">{body}</Typography>	
-		<hr className={classes.invisibleSeparator} />
-		<LikeButton screamId={screamId} />
-		<span>{likeCount} likes</span>
-		<MyButton tip="comments">
-			<ChatIcon color="primary" />
-		</MyButton>
-		<span>{commentCount} comments</span>
-	</Grid>
-	<hr className={classes.visibleSeparator} />
-	<CommentForm screamId={screamId} />
-	<Comments comments={comments} />
-</Grid>
-</div>
-
+      <Grid container spacing={16}>
+        <Grid item sm={5}>
+          <img src={userImage} alt="Profile" className={classes.profileImage} />
+        </Grid>
+        <Grid item sm={7}>
+          <Typography
+            component={Link}
+            color="primary"
+            variant="h5"
+            to={`/users/${userHandle}`}
+          >
+            @{userHandle}
+          </Typography>
+          <hr className={classes.invisibleSeparator} />
+          <Typography variant="body2" color="textSecondary">
+            {dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
+          </Typography>
+          <hr className={classes.invisibleSeparator} />
+          <Typography variant="body1">{body}</Typography>
+          <LikeButton screamId={screamId} />
+          <span>{likeCount} likes</span>
+          <MyButton tip="comments">
+            <ChatIcon color="primary" />
+          </MyButton>
+          <span>{commentCount} comments</span>
+        </Grid>
+        <hr className={classes.visibleSeparator} />
+        <CommentForm screamId={screamId} />
+        <Comments comments={comments} />
+        
+      </Grid>
     );
     return (
       <Fragment>

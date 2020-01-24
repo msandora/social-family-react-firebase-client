@@ -6,6 +6,8 @@ import dayjs from 'dayjs';
 // MUI
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import CardHeader from '@material-ui/core/CardHeader';
+import Avatar from '@material-ui/core/Avatar';
 
 const styles = (theme) => ({
   ...theme,
@@ -17,6 +19,9 @@ const styles = (theme) => ({
   },
   commentData: {
     marginLeft: 20
+  },
+  cardHeader: {
+    padding: '0 10px 10px 0'
   }
 });
 
@@ -29,36 +34,37 @@ class Comments extends Component {
           const { body, createdAt, userImage, userHandle } = comment;
           return (
             <Fragment key={createdAt}>
-              <Grid item sm={12}>
-                <Grid container>
-                  <Grid item sm={2}>
-                    <img
-                      src={userImage}
-                      alt="comment"
-                      className={classes.commentImage}
-                    />
-                  </Grid>
-                  <Grid item sm={9}>
-                    <div className={classes.commentData}>
-                      <Typography
-                        variant="h5"
-                        component={Link}
-                        to={`/users/${userHandle}`}
-                        color="primary"
-                      >
-                        {userHandle}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        {dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
-                      </Typography>
-                      <hr className={classes.invisibleSeparator} />
-                      <Typography variabnt="body1">{body}</Typography>
-                    </div>
-                  </Grid>
+              <Grid container>
+                <Grid item xs={12}>
+                  <CardHeader className={classes.cardHeader}
+                  avatar={
+                  <Avatar alt="Profile image" src={userImage} 					
+                  component={Link}
+                  to={`/users/${userHandle}`}/>
+                  }
+                  title={
+                  <Typography
+                  component={Link}
+                  color="primary"
+                  variant="h5"
+                  to={`/users/${userHandle}`}
+                  >
+                  @{userHandle}
+                  </Typography>
+                  }
+                  subheader={dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
+                  />
                 </Grid>
               </Grid>
+              <Grid container spacing={16}>
+                <Grid item>
+                <hr className={classes.invisibleSeparator} />
+                <Typography variant="body1">{body}</Typography>	
+                <hr className={classes.invisibleSeparator} />
+                </Grid>
+              </Grid>   
               {index !== comments.length - 1 && (
-                <hr className={classes.visibleSeparator} />
+              <hr className={classes.visibleSeparator} />
               )}
             </Fragment>
           );

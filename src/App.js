@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
+import './util/App.css';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import jwtDecode from 'jwt-decode'; // decodes temporary token for user that is logged in
@@ -13,6 +13,8 @@ import { SET_AUTHENTICATED } from './redux/types';
 import { logoutUser, getUserData } from './redux/actions/userActions';
 // Components
 import Navbar from './components/layout/Navbar';
+import Mobilebar from './components/layout/Mobilebar';
+
 import themeObject from './util/theme';
 import AuthRoute from './util/AuthRoute';
 // Pages
@@ -42,12 +44,34 @@ if (token) {
 
 class App extends Component {
   render() { 
-    return ( 
-      <MuiThemeProvider theme={theme}>
+    const isMobile = window.innerWidth <= 500;
+    if (isMobile) {
+      return (
+        <MuiThemeProvider theme={theme}>
+        <Provider store={store}>
+          <Router>
+            <div className="mobile-container">
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <AuthRoute exact path="/login" component={Login} />
+                <AuthRoute exact path="/signup" component={Signup} />
+                <Route exact path="/family-tree" component={FamilyTree} />
+                <Route exact path="/users/:handle" component={User} />
+                <Route exact path="/users/:handle/scream/:screamId" component={User}/>
+              </Switch>
+            </div>
+            <Mobilebar/>
+          </Router>
+        </Provider>
+      </MuiThemeProvider>
+      );
+    } else {
+      return (
+        <MuiThemeProvider theme={theme}>
         <Provider store={store}>
           <Router>
             <Navbar/>
-            <div className="container">
+            <div className="desktop-container">
               <Switch>
                 <Route exact path="/" component={Home} />
                 <AuthRoute exact path="/login" component={Login} />
@@ -60,7 +84,8 @@ class App extends Component {
           </Router>
         </Provider>
       </MuiThemeProvider>
-    );
+      );
+    }
   }
 }
  
