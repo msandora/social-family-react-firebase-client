@@ -22,11 +22,14 @@
 
 .wrapper {
   /* flex: 1; */
-  background: #fff;
   height: 500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 10px;
+  background-color: rgb(245,245,245);
+  border:5px solid #dedede;
+  margin: 0 10px;
 }
 
 .tree {

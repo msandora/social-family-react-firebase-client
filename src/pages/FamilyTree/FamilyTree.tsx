@@ -4,8 +4,8 @@ import { IFamilyNode, IFamilyExtNode } from 'relatives-tree';
 import ReactFamilyTree from 'react-family-tree';
 import FamilyNode from '../../components/FamilyNode/FamilyNode';
 import styles from '../FamilyTree/Family.module.css';
-
 import nodes from '../../data.json';
+
 const myID = 'dansandora';
 
 const WIDTH = 70;

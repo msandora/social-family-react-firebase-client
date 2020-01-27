@@ -4,7 +4,6 @@
   padding: 10px;
   flex-direction: column;
 }
-
 .inner {
   display: flex;
   flex: 1 1;

@@ -26,7 +26,7 @@ export default {
     margin: '10px auto 10px auto'
   },
   textField: {
-    margin: '2px auto'
+    margin: '5px 0'
   },
   button: {
     marginTop: 20,

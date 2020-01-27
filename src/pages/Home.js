@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Scream from '../components/scream/Scream';
 import Profile from '../components/profile/Profile';
 import ScreamSkeleton from '../util/ScreamSkeleton';
+import PostScream from	'../components/scream/AddScream';
 
 import { connect } from 'react-redux';
 import { getScreams } from '../redux/actions/dataActions';
@@ -20,9 +21,15 @@ class Home extends Component {
     ) : (
       <ScreamSkeleton />
     );
+    const { authenticated } = this.props;
+
     return (
       <Grid container spacing={16}>
         <Grid item sm={8} xs={12}>
+          {authenticated ? (
+            <PostScream/>
+            ) : ( null )
+          }
           {recentScreamsMarkup}
         </Grid>
         <Grid item sm={4} xs={12}>
@@ -35,11 +42,13 @@ class Home extends Component {
 
 Home.propTypes = {
   getScreams: PropTypes.func.isRequired,
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
+  authenticated: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  data: state.data
+  data: state.data,
+  authenticated: state.user.authenticated
 });
 
 export default connect(

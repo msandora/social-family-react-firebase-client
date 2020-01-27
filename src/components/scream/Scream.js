@@ -20,7 +20,7 @@ import ChatIcon from '@material-ui/icons/Chat';
 // Redux
 import { connect } from 'react-redux';
 
-const styles= {
+const styles = {
 	card: {
 		position: 'relative',
 		display: 'flex',

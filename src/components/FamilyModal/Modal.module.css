@@ -28,7 +28,10 @@
     margin: 10rem auto;
     border-radius: 3px;
     max-width: 500px;
-    padding: 2rem;
+    padding: 20px;
+    margin: 15% auto;
+    flex: 1 1 auto;
+    overflow-y: auto;
   }
   
   .header {
@@ -37,11 +40,35 @@
   }
   
   .closebutton {
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 1;
-    color: #000;
-    opacity: .3;
+    color: inherit;
+    border: 0;
+    margin: 0;
     cursor: pointer;
-    border: none;
+    display: inline-flex;
+    outline: none;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    border-radius: 0;
+    vertical-align: middle;
+    justify-content: center;
+    -moz-appearance: none;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 12px;
+    overflow: visible;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+    
+    position: absolute;
+    top: 3px;
+    right: 3px;
   }
