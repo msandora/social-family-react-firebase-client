@@ -1,5 +1,525 @@
 [
     {
+    "id": "domenicolavalle",
+    "gender": "male",
+    "firstName": "Domenico",
+    "lastName": "Lavalle",
+    "parents": [],
+    "children": [
+        {
+        "id": "antionettelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "louislavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasquallelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "rosarialavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasqlavalle",
+        "type": "blood"
+        },
+        {
+        "id": "mariarosalavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "roccolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "giovannalavalle",
+        "type": "blood"
+        }
+    ],
+    "siblings": [],
+    "spouses": [
+        {
+        "id": "faustinalavalle",
+        "type": "married"
+        }
+    ]
+    },
+    {
+    "id": "faustinalavalle",
+    "gender": "female",
+    "firstName": "Faustina",
+    "lastName": "Lavalle",
+    "parents": [],
+    "children": [
+        {
+        "id": "antionettelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "louislavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasquallelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "rosarialavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasqlavalle",
+        "type": "blood"
+        },
+        {
+        "id": "mariarosalavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "roccolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "giovannalavalle",
+        "type": "blood"
+        }
+    ],
+    "siblings": [],
+    "spouses": [
+        {
+        "id": "domenicolavalle",
+        "type": "married"
+        }
+    ]
+    },
+    {
+    "id": "antionettelavalle",
+    "gender": "female",
+    "firstName": "Antionette",
+    "lastName": "Lavalle",
+    "parents": [
+        {
+        "id": "domenicolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "faustinalavalle",
+        "type": "blood"
+        }
+    ],
+    "children": [],
+    "siblings": [
+        {
+        "id": "louislavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasquallelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "rosarialavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasqlavalle",
+        "type": "blood"
+        },
+        {
+        "id": "mariarosalavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "roccolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "giovannalavalle",
+        "type": "blood"
+        }
+    ],
+    "spouses": []
+    },
+    {
+    "id": "louislavalle",
+    "gender": "male",
+    "firstName": "Louis",
+    "lastName": "Lavalle",
+    "parents": [
+        {
+        "id": "domenicolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "faustinalavalle",
+        "type": "blood"
+        }
+    ],
+    "children": [],
+    "siblings": [
+        {
+        "id": "antionettelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasquallelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "rosarialavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasqlavalle",
+        "type": "blood"
+        },
+        {
+        "id": "mariarosalavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "roccolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "giovannalavalle",
+        "type": "blood"
+        }
+    ],
+    "spouses": []
+    },
+    {
+    "id": "pasquallelavalle",
+    "gender": "male",
+    "firstName": "Pasquale",
+    "lastName": "Lavalle",
+    "parents": [
+        {
+        "id": "domenicolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "faustinalavalle",
+        "type": "blood"
+        }
+    ],
+    "children": [],
+    "siblings": [
+        {
+        "id": "antionettelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "louislavalle",
+        "type": "blood"
+        },
+        {
+        "id": "rosarialavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasqlavalle",
+        "type": "blood"
+        },
+        {
+        "id": "mariarosalavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "roccolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "giovannalavalle",
+        "type": "blood"
+        }
+    ],
+    "spouses": []
+    },
+    {
+    "id": "rosarialavalle",
+    "gender": "female",
+    "firstName": "Rosaria",
+    "lastName": "Lavalle",
+    "parents": [
+        {
+        "id": "domenicolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "faustinalavalle",
+        "type": "blood"
+        }
+    ],
+    "children": [],
+    "siblings": [
+        {
+        "id": "antionettelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "louislavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasquallelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasqlavalle",
+        "type": "blood"
+        },
+        {
+        "id": "mariarosalavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "roccolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "giovannalavalle",
+        "type": "blood"
+        }
+    ],
+    "spouses": []
+    },
+    {
+    "id": "pasqlavalle",
+    "gender": "male",
+    "firstName": "Pasquale",
+    "lastName": "Lavalle",
+    "parents": [
+        {
+        "id": "domenicolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "faustinalavalle",
+        "type": "blood"
+        }
+    ],
+    "children": [],
+    "siblings": [
+        {
+        "id": "antionettelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "louislavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasquallelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "rosarialavalle",
+        "type": "blood"
+        },
+        {
+        "id": "mariarosalavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "roccolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "giovannalavalle",
+        "type": "blood"
+        }
+    ],
+    "spouses": []
+    },
+    {
+    "id": "mariarosalavalle",
+    "gender": "female",
+    "firstName": "Maria Rosa",
+    "lastName": "Lavalle",
+    "parents": [
+        {
+        "id": "domenicolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "faustinalavalle",
+        "type": "blood"
+        }
+    ],
+    "children": [],
+    "siblings": [
+        {
+        "id": "antionettelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "louislavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasquallelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "rosarialavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasqlavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "roccolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "giovannalavalle",
+        "type": "blood"
+        }
+    ],
+    "spouses": []
+    },
+    {
+    "id": "roccolavalle",
+    "gender": "male",
+    "firstName": "Rocco",
+    "lastName": "Lavalle",
+    "parents": [
+        {
+        "id": "domenicolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "faustinalavalle",
+        "type": "blood"
+        }
+    ],
+    "children": [],
+    "siblings": [
+        {
+        "id": "antionettelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "louislavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasquallelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "rosarialavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasqlavalle",
+        "type": "blood"
+        },
+        {
+        "id": "mariarosalavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "giovannalavalle",
+        "type": "blood"
+        }
+    ],
+    "spouses": []
+    },
+    {
+    "id": "giovannalavalle",
+    "gender": "female",
+    "firstName": "Giovanna",
+    "lastName": "Lavalle",
+    "parents": [
+        {
+        "id": "domenicolavalle",
+        "type": "blood"
+        },
+        {
+        "id": "faustinalavalle",
+        "type": "blood"
+        }
+    ],
+    "children": [],
+    "siblings": [
+        {
+        "id": "antionettelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "louislavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasquallelavalle",
+        "type": "blood"
+        },
+        {
+        "id": "rosarialavalle",
+        "type": "blood"
+        },
+        {
+        "id": "pasqlavalle",
+        "type": "blood"
+        },
+        {
+        "id": "mariarosalavalle",
+        "type": "blood"
+        },
+        {
+        "id": "palmasandora",
+        "type": "blood"
+        },
+        {
+        "id": "roccolavalle",
+        "type": "blood"
+        }
+    ],
+    "spouses": []
+    },
+    {
       "id": "edwardsandora",
       "gender": "male",
       "firstName": "Edward",
@@ -40,7 +560,16 @@
       "gender": "female",
       "firstName": "Palma",
       "lastName": "Sandora",
-      "parents": [],
+      "parents": [
+        {
+          "id": "domenicolavalle",
+          "type": "blood"
+        },
+        {
+          "id": "faustinalavalle",
+          "type": "blood"
+        }
+      ],
       "children": [
         {
           "id": "stellaluca",
@@ -63,7 +592,12 @@
           "type": "blood"
         }
       ],
-      "siblings": [],
+      "siblings": [
+        {
+          "id": "antionettelavalle",
+          "type": "blood"
+        }
+      ],
       "spouses": [
         {
           "id": "edwardsandora",

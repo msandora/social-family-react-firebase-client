@@ -108,7 +108,7 @@ class Scream extends Component {
 		);
 	}
 }
- 
+
 Scream.propTypes = {
 	user: PropTypes.object.isRequired,
 	scream: PropTypes.object.isRequired,

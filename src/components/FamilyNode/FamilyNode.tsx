@@ -39,12 +39,13 @@ export default React.memo<Props>(
             <div className={styles.namePlate}>
               {node.firstName ? node.firstName : node.id }<br/> {node.lastName} 
             </div>
+            {/* 
           {node.hasSubTree && (
             <div
               className={classNames(styles.sub, styles[node.gender])}
               onClick={() => onSubClick(node.id)}
             />
-          )}
+          )}*/}
         </div>
       </div>
     );

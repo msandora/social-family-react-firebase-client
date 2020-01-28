@@ -6,7 +6,7 @@ import FamilyNode from '../../components/FamilyNode/FamilyNode';
 import styles from '../FamilyTree/Family.module.css';
 import nodes from '../../data.json';
 
-const myID = 'dansandora';
+const myID = 'domenicolavalle';
 
 const WIDTH = 70;
 const HEIGHT = 110;
@@ -26,7 +26,7 @@ export default React.memo<{}>(
         <PinchZoomPan
           // debug
           captureWheel
-          min={0.5}
+          min={0.3}
           max={2.5}
           className={styles.wrapper}
         >
