@@ -72,6 +72,7 @@ export default {
     },
     '& .profile-details': {
       textAlign: 'center',
+      wordBreak: 'initial',
       '& span, svg': {
         verticalAlign: 'middle'
       },

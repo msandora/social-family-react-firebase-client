@@ -89,6 +89,7 @@ class Notifications extends Component {
           You have no notifications yet
         </MenuItem>
       );
+      
     return (
       <Fragment>
         <Tooltip placement="top" title="Notifications">

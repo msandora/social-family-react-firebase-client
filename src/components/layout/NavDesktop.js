@@ -10,10 +10,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
+import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 //Redux
 import { connect } from 'react-redux';
-
-
 
 class Navbar extends Component {
 	handleOnClick = () => {
@@ -37,6 +36,11 @@ class Navbar extends Component {
 								<NaturePeopleIcon />
 							</MyButton>
 						</Link>
+						<Link to="/recipes">
+							<MyButton tip="Family Recipes" onClick={this.handleOnClick}>
+								<RestaurantMenuIcon />
+							</MyButton>
+						</Link>
 						<Notifications />
 					</Fragment>
 				) : (
@@ -49,6 +53,11 @@ class Navbar extends Component {
 						<Link to="/family-tree">
 							<MyButton tip="Family Tree" onClick={this.handleOnClick}>
 								<NaturePeopleIcon />
+							</MyButton>
+						</Link>
+						<Link to="/recipes">
+							<MyButton tip="Family Recipes" onClick={this.handleOnClick}>
+								<RestaurantMenuIcon />
 							</MyButton>
 						</Link>
 					</Fragment>

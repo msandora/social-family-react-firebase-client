@@ -2,24 +2,19 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';    
 import PropTypes from 'prop-types';
-
 import MyButton from '../../util/MyButton';
-// import PostScream from	'../scream/PostScream';
 import Notifications from './Notifications';
-
-
 //MUI Stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
-
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
 import PersonIcon from '@material-ui/icons/Person';
-
+import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 //Redux
 import { connect } from 'react-redux';
 
@@ -56,6 +51,11 @@ class Mobilebar extends Component {
 								<NaturePeopleIcon />
 							</MyButton>
 						</Link>
+						<Link to="/recipes">
+							<MyButton tip="Family Recipes" onClick={this.handleOnClick}>
+								<RestaurantMenuIcon />
+							</MyButton>
+						</Link>
 						<div className={classes.grow} />
 						<Notifications />
 						<IconButton edge="end" color="inherit">
@@ -64,9 +64,11 @@ class Mobilebar extends Component {
 					</Fragment>
 				) : (
 					<Fragment>
-						<Button color="inherit" component={Link} to="/signup" onClick={this.handleOnClick}>Signup</Button>
-						<div className={classes.grow} />
-						<Button color="inherit" component={Link} to="/login" onClick={this.handleOnClick}>Login</Button>
+						{/* 
+						<Button 
+						color="inherit" component={Link} 
+						to="/login" onClick={this.handleOnClick}>Login</Button>
+						*/}
 					</Fragment>
 				)}
 				</Toolbar>
