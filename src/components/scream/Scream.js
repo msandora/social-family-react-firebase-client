@@ -48,6 +48,7 @@ class Scream extends Component {
 	}
 	render() { 
 		dayjs.extend(relativeTime);
+
 		const {
 		  classes,
 		  scream: {
@@ -99,9 +100,9 @@ class Scream extends Component {
 					</MyButton>
 					<span>{commentCount}</span>
 					<ScreamDialog
-					screamId={screamId}
-					userHandle={userHandle}
-					openDialog={this.props.openDialog}
+						screamId={screamId}
+						userHandle={userHandle}
+						openDialog={this.props.openDialog}
 					/>
 				</CardActions>
 			</Card>

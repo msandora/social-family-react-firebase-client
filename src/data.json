@@ -2126,6 +2126,7 @@
       "gender": "male",
       "firstName": "Mark",
       "lastName": "Sandora",
+      "dob": "1982-08-01",
       "parents": [
         {
           "id": "dansandora",
