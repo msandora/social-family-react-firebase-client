@@ -11,10 +11,17 @@ interface Props {
   onSubClick: (id: string) => void;
   style?: React.CSSProperties;
 }
-
 export default React.memo<Props>(
   function FamilyNode({ node, isRoot, onSubClick, style }) {
-    
+
+    if(node.firstName === 'Mark') {
+      console.log('parent', node.parents[0]);
+      console.log('father', node.parents[0].id);
+      console.log('mother', node.parents[1].id);
+      console.log('sibling', node.siblings[0].id);
+      console.log('sibling', node.siblings[1].id);
+    }
+
     return (
       <div>
         <div className={styles.root} style={style}>
@@ -26,7 +33,7 @@ export default React.memo<Props>(
               )} 
             >
             <PersonDialog 
-              person={{ firstName:node.firstName, lastName:node.lastName, dob:node.dob }}/>
+              person={{ firstName:node.firstName, lastName:node.lastName, dob:node.dob, bio:node.bio }}/>
           </div>
             <div className={styles.namePlate}>
               {node.firstName ? node.firstName : node.id }

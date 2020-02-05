@@ -2127,13 +2127,16 @@
       "firstName": "Mark",
       "lastName": "Sandora",
       "dob": "1982-08-01",
+      "bio": "I am the first born son",
       "parents": [
         {
           "id": "dansandora",
+          "name": "Daniel",
           "type": "blood"
         },
         {
           "id": "linsandora",
+          "name": "Linda",
           "type": "blood"
         }
       ],

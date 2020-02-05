@@ -29,11 +29,6 @@ const styles = (theme) => ({
   dialogContent: {
     padding: 20
   },
-  closeButton: {
-    position: 'absolute',
-    top: '3px',
-    right: '3px'
-  },
   expandButton: {
     position: 'absolute',
     left: '90%'

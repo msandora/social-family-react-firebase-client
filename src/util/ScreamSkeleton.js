@@ -1,14 +1,18 @@
 import React, { Fragment } from 'react';
 import NoImg from '../images/no-img.png';
 import PropTypes from 'prop-types';
+
+import MyButton from '../util/MyButton';
 // MUI
 import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
+import CardActions from '@material-ui/core/CardActions';
 import Avatar from '@material-ui/core/Avatar';
-
 import withStyles from '@material-ui/core/styles/withStyles';
+// Icons
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ChatIcon from '@material-ui/icons/Chat';
 
 const styles = (theme) => ({
   ...theme,
@@ -17,15 +21,6 @@ const styles = (theme) => ({
 		display: 'flex',
 		flexDirection: 'column',
 		marginBottom: 10
-  },
-  cardContent: {
-    width: '100%',
-    flexDirection: 'column',
-    padding: 25
-  },
-  cover: {
-    minWidth: 200,
-    objectFit: 'cover'
   },
   handle: {
     width: 60,
@@ -37,7 +32,6 @@ const styles = (theme) => ({
     height: 14,
     width: 100,
     backgroundColor: 'rgba(0,0,0, 0.3)',
-    marginBottom: 10
   },
   fullLine: {
     height: 15,
@@ -65,12 +59,27 @@ const ScreamSkeleton = (props) => {
         <div className={classes.handle} />
         <div className={classes.date} />
       </CardHeader>
-      <CardMedia className={classes.cover} image={NoImg} />
       <CardContent className={classes.cardContent}>
         <div className={classes.fullLine} />
         <div className={classes.fullLine} />
         <div className={classes.halfLine} />
       </CardContent>
+      {/** 
+            <CardActions>
+        <div className={classes.handle} />
+        <div className={classes.date} />
+      </CardActions>*/}
+      <CardActions>
+        <MyButton tip="Like">
+          <FavoriteIcon color="primary"/>
+        </MyButton>
+        <div className={classes.date} />
+        <MyButton tip="comments">
+          <ChatIcon color="primary" />
+        </MyButton>
+        <div className={classes.date} />
+      </CardActions>
+
     </Card>
   ));
 

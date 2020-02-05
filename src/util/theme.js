@@ -95,5 +95,11 @@ export default {
     '& a': {
       margin: '20px 10px'
     }
+  },
+  closeButton: {
+    position: 'absolute',
+    top: '3px',
+    right: '3px',
+    padding: '5px'
   }
 };

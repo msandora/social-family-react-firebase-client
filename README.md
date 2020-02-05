@@ -27,8 +27,10 @@ Update:
 export interface IFamilyNode {
   id: string;
   gender: Gender;
-    firstName: string;
-    lastName: string;
+firstName: string;
+lastName: string;
+dob: string;
+bio: string;
   parents: IRelation[];
   children: IRelation[];
   siblings: IRelation[];

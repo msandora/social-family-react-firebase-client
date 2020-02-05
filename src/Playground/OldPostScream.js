@@ -24,12 +24,6 @@ const styles = (theme) => ({
   },
   progressSpinner: {
     position: 'absolute'
-  },
-  closeButton: {
-    position: 'absolute',
-    right: '0',
-    top: '0',
-    padding: '5px'
   }
 });
 

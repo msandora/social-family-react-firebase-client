@@ -11,6 +11,8 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import withStyles from '@material-ui/core/styles/withStyles';
 // import useMediaQuery from '@material-ui/core/useMediaQuery';
 // import { useTheme } from '@material-ui/core/styles';
+import NoImg from '../../images/no-img.png';
+
 
 // Icons
 import CloseIcon from '@material-ui/icons/Close';
@@ -20,12 +22,7 @@ import dayjs from 'dayjs';
 
 
 const styles = (theme) => ({
-  ...theme,
-  closeButton: {
-    position: 'absolute',
-    top: '3px',
-    right: '3px'
-  }
+  ...theme
 });
 
 class PersonDialog extends Component {
@@ -45,14 +42,25 @@ class PersonDialog extends Component {
 		const{ open } = this.state;
 		// const theme = useTheme();
 		// const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+		// const matches = useMediaQuery('(min-width:600px)');
+
 		let currentDate = dayjs().format('MMMM DD, YYYY');
 		let birthDate = dayjs(person.dob).format('MMMM DD, YYYY');
-		return ( 
+		return ( 	
 			<Fragment>
 				<Fab variant="extended" color="primary" 
 					onClick={this.handleOpen}
-					onTouchStart={this.handleOpen}>&nbsp;</Fab>
-				<Dialog
+					onTouchStart={this.handleOpen} 
+					style={{
+						overflow: "hidden",
+						minWidth: "45px"
+					}}>          
+					<img src={NoImg} alt="profile" className="profile-image" 
+					style={{
+						height: "53px"
+					}}/>
+				</Fab>
+				<Dialog fullWidth={true}
 				// fullScreen={fullScreen}
 				open={open}
 				onClose={this.handleClose}
@@ -68,12 +76,10 @@ class PersonDialog extends Component {
 					<DialogContent>
 							<DialogContentText>
 							{(birthDate !== currentDate)
-								? <span> Birth Date: {dayjs(person.dob).format('MMMM DD, YYYY')}<br/></span> 
-								: <span> Birth Date: Unknown <br/></span>  
+								? <span> Birth Date: {dayjs(person.dob).format('MMMM DD, YYYY')}<br/><br/></span> 
+								: <span> Birth Date: Unknown <br/><br/></span>  
 							}
-							
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							{person.bio}
 							</DialogContentText>
 					</DialogContent>
 					<DialogActions>
