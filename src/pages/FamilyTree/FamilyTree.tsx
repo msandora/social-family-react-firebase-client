@@ -24,7 +24,7 @@ export default React.memo<{}>(
           </h1>
         </header>
         <PinchZoomPan
-          debug
+          //debug
           captureWheel
           min={0.3}
           max={2.5}
