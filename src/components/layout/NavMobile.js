@@ -8,11 +8,11 @@ import Notifications from './Notifications';
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
+// import IconButton from '@material-ui/core/IconButton';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
-import PersonIcon from '@material-ui/icons/Person';
+// import PersonIcon from '@material-ui/icons/Person';
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 //Redux
 import { connect } from 'react-redux';
@@ -29,7 +29,7 @@ const styles = (theme) => ({
 
 class Mobilebar extends Component {
 	handleOnClick = () => {
-		// Reset scroll bar
+		// Reset scroll bar 
 		window.scrollTo(0, 0);
 	}
 	render() { 
@@ -37,8 +37,7 @@ class Mobilebar extends Component {
 
 		return ( 
 			<AppBar position="fixed" color="primary" className={classes.appBar}>
-				<Toolbar>
-				{authenticated ? (
+				<Toolbar className="nav-container">
 					<Fragment>
 						<Link to="/">
 							<MyButton tip="Home" onClick={this.handleOnClick}>
@@ -56,20 +55,10 @@ class Mobilebar extends Component {
 							</MyButton>
 						</Link>
 						<div className={classes.grow} />
-						<Notifications />
-						<IconButton edge="end" color="inherit">
-							<PersonIcon />
-						</IconButton>
+						{authenticated ? (
+							<Notifications />
+						) : ( null ) }
 					</Fragment>
-				) : (
-					<Fragment>
-						{/* 
-						<Button 
-						color="inherit" component={Link} 
-						to="/login" onClick={this.handleOnClick}>Login</Button>
-						*/}
-					</Fragment>
-				)}
 				</Toolbar>
 			</AppBar>
 		);

@@ -9,10 +9,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import withStyles from '@material-ui/core/styles/withStyles';
-// import useMediaQuery from '@material-ui/core/useMediaQuery';
-// import { useTheme } from '@material-ui/core/styles';
-import NoImg from '../../images/no-img.png';
 
+import NoImg from '../../images/no-img.png';
 
 // Icons
 import CloseIcon from '@material-ui/icons/Close';
@@ -40,9 +38,8 @@ class PersonDialog extends Component {
 	render() {
 		const { classes, person } = this.props;
 		const{ open } = this.state;
-		// const theme = useTheme();
-		// const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
-		// const matches = useMediaQuery('(min-width:600px)');
+
+		const isMobile = window.innerWidth <= 500;
 
 		let currentDate = dayjs().format('MMMM DD, YYYY');
 		let birthDate = dayjs(person.dob).format('MMMM DD, YYYY');
@@ -61,7 +58,7 @@ class PersonDialog extends Component {
 					}}/>
 				</Fab>
 				<Dialog fullWidth={true}
-				// fullScreen={fullScreen}
+				fullScreen={isMobile}
 				open={open}
 				onClose={this.handleClose}
 				>
@@ -72,7 +69,7 @@ class PersonDialog extends Component {
 					>
 						<CloseIcon />
 					</MyButton>
-					<DialogTitle id="responsive-dialog-title">{person.firstName} {person.lastName}</DialogTitle>
+					<DialogTitle id="responsive-dialog-title">{person.firstName} {person.middleName} {person.lastName}</DialogTitle>
 					<DialogContent>
 							<DialogContentText>
 							{(birthDate !== currentDate)

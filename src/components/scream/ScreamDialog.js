@@ -94,49 +94,50 @@ class ScreamDialog extends Component {
         <CircularProgress size={200} thickness={2} />
       </div>
     ) : (
-
-<div>
-  <Grid container>
-    <Grid item xs={12}>
-        <CardHeader className={classes.cardHeader}
-        avatar={
-          <Avatar alt="Profile image" src={userImage} 					
-          component={Link}
-          to={`/users/${userHandle}`}/>
-        }
-        title={
-          <Typography
-          component={Link}
-          color="primary"
-          variant="h5"
-          to={`/users/${userHandle}`}
-          >
-          @{userHandle}
-          </Typography>
-        }
-        subheader={dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
-        />
-    </Grid>
-  </Grid>
-  <Grid container spacing={16}>
-    <Grid item sm={12}>
-      <hr className={classes.invisibleSeparator} />
-      <Typography variant="body1">{body}</Typography>	
-      <hr className={classes.invisibleSeparator} />
-      <LikeButton screamId={screamId} />
-      <span>{likeCount} likes</span>
-      <MyButton tip="comments">
-        <ChatIcon color="primary" />
-      </MyButton>
-      <span>{commentCount} comments</span>
-    </Grid>
-    <hr className={classes.visibleSeparator} />
-    <CommentForm screamId={screamId} />
-    <Comments comments={comments} />
-  </Grid>
-</div>
-
+      <div>
+        <Grid container>
+          <Grid item xs={12}>
+              <CardHeader className={classes.cardHeader}
+              avatar={
+                <Avatar alt="Profile image" src={userImage} 					
+                component={Link}
+                to={`/users/${userHandle}`}/>
+              }
+              title={
+                <Typography
+                component={Link}
+                color="primary"
+                variant="h5"
+                to={`/users/${userHandle}`}
+                >
+                @{userHandle}
+                </Typography>
+              }
+              subheader={dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
+              />
+          </Grid>
+        </Grid>
+        <Grid container spacing={16}>
+          <Grid item sm={12}>
+            <hr className={classes.invisibleSeparator} />
+            <Typography variant="body1">{body}</Typography>	
+            <hr className={classes.invisibleSeparator} />
+            <LikeButton screamId={screamId} />
+            <span>{likeCount} likes</span>
+            <MyButton tip="comments">
+              <ChatIcon color="primary" />
+            </MyButton>
+            <span>{commentCount} comments</span>
+          </Grid>
+          <hr className={classes.visibleSeparator} />
+          <CommentForm screamId={screamId} />
+          <Comments comments={comments} />
+        </Grid>
+      </div>
     );
+
+    const isMobile = window.innerWidth <= 500;
+
     return (
       <Fragment>
         <MyButton
@@ -149,6 +150,7 @@ class ScreamDialog extends Component {
           open={this.state.open}
           onClose={this.handleClose}
           fullWidth
+          fullScreen={isMobile}
           maxWidth="sm"
         >
           <MyButton

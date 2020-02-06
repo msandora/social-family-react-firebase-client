@@ -33,7 +33,7 @@ export default React.memo<Props>(
               )} 
             >
             <PersonDialog 
-              person={{ firstName:node.firstName, lastName:node.lastName, dob:node.dob, bio:node.bio }}/>
+              person={{ firstName:node.firstName, middleName:node.middleName, lastName:node.lastName, dob:node.dob, bio:node.bio }}/>
           </div>
             <div className={styles.namePlate}>
               {node.firstName ? node.firstName : node.id }

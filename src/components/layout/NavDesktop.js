@@ -23,8 +23,7 @@ class Navbar extends Component {
 		const { authenticated } = this.props;
 		return ( 
 			<AppBar>
-				<Toolbar className="nav-container">
-				{authenticated ? (
+				<Toolbar className="nav-container"> 
 					<Fragment>
 						<Link to="/">
 							<MyButton tip="Home" onClick={this.handleOnClick}>
@@ -41,27 +40,10 @@ class Navbar extends Component {
 								<RestaurantMenuIcon />
 							</MyButton>
 						</Link>
-						<Notifications />
+						{authenticated ? (
+							<Notifications />
+						) : ( null ) }
 					</Fragment>
-				) : (
-					<Fragment>
-						<Link to="/">
-							<MyButton tip="Home" onClick={this.handleOnClick}>
-								<HomeIcon />
-							</MyButton>
-						</Link>
-						<Link to="/family-tree">
-							<MyButton tip="Family Tree" onClick={this.handleOnClick}>
-								<NaturePeopleIcon />
-							</MyButton>
-						</Link>
-						<Link to="/recipes">
-							<MyButton tip="Family Recipes" onClick={this.handleOnClick}>
-								<RestaurantMenuIcon />
-							</MyButton>
-						</Link>
-					</Fragment>
-				)}
 				</Toolbar>
 			</AppBar>
 		);
