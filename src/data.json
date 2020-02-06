@@ -793,7 +793,10 @@
       "id": "annieluca",
       "gender": "female",
       "firstName": "Annie",
+      "middleName": "Jordan",
       "lastName": "Lucatuorto",
+      "dob": "1996-12-19",
+      "bio": "I am the first born",
       "parents": [
         {
           "id": "anthonyluca",
@@ -821,7 +824,10 @@
       "id": "chloeluca",
       "gender": "female",
       "firstName": "Chloe",
+      "middleName": "Julia",
       "lastName": "Lucatuorto",
+      "dob": "1998-08-09",
+      "bio": "I am the second born",
       "parents": [
         {
           "id": "anthonyluca",
@@ -849,7 +855,10 @@
       "id": "anthluca",
       "gender": "male",
       "firstName": "Anthony",
+      "middleName": "Peter",
       "lastName": "Lucatuorto",
+      "dob": "2005-06-11",
+      "bio": "I am the third born",
       "parents": [
         {
           "id": "anthonyluca",
@@ -951,7 +960,10 @@
       "id": "nickmallen",
       "gender": "male",
       "firstName": "Nicholas",
+      "middleName": "Richard",
       "lastName": "Mallen",
+      "dob": "2011-08-03",
+      "bio": "I am the first born",
       "parents": [
         {
           "id": "brettmallen",
@@ -979,7 +991,10 @@
       "id": "ryanmallen",
       "gender": "male",
       "firstName": "Ryan",
+      "middleName": "Peter",
       "lastName": "Mallen",
+      "dob": "2014-07-17",
+      "bio": "Reagan is my twin. I am highly allergic to peanuts",
       "parents": [
         {
           "id": "brettmallen",
@@ -1007,7 +1022,10 @@
       "id": "reaganmallen",
       "gender": "female",
       "firstName": "Reagan",
+      "middleName": "Palma",
       "lastName": "Mallen",
+      "dob": "2014-07-17",
+      "bio": "Ryan is my twin",
       "parents": [
         {
           "id": "brettmallen",
@@ -1188,7 +1206,7 @@
           "type": "blood"
         },
         {
-          "id": "juliettesandora",
+          "id": "juliannasandora",
           "type": "blood"
         }
       ],
@@ -1204,7 +1222,10 @@
       "id": "emilysandora",
       "gender": "female",
       "firstName": "Emily",
+      "middleName": "Ann",
       "lastName": "Sandora",
+      "dob": "1993-05-29",
+      "bio": "I am the first born",
       "parents": [
         {
           "id": "eddiesandora",
@@ -1222,7 +1243,7 @@
           "type": "blood"
         },
         {
-          "id": "juliettesandora",
+          "id": "juliannasandora",
           "type": "blood"
         }
       ],
@@ -1232,7 +1253,10 @@
       "id": "ethansandora",
       "gender": "male",
       "firstName": "Ethan",
+      "middleName": "Edward",
       "lastName": "Sandora",
+      "dob": "1995-09-18",
+      "bio": "I am the second born",
       "parents": [
         {
           "id": "eddiesandora",
@@ -1250,7 +1274,7 @@
           "type": "blood"
         },
         {
-          "id": "juliettesandora",
+          "id": "juliannasandora",
           "type": "blood"
         }
       ],
@@ -1260,7 +1284,10 @@
       "id": "zachsandora",
       "gender": "male",
       "firstName": "Zachary",
+      "middleName": "Robert",
       "lastName": "Sandora",
+      "dob": "2000-03-13",
+      "bio": "I am the third born",
       "parents": [
         {
           "id": "eddiesandora",
@@ -1278,17 +1305,20 @@
           "type": "blood"
         },
         {
-          "id": "juliettesandora",
+          "id": "juliannasandora",
           "type": "blood"
         }
       ],
       "spouses": []
     },
     {
-      "id": "juliettesandora",
+      "id": "juliannasandora",
       "gender": "female",
-      "firstName": "Juliette",
+      "firstName": "Julianna",
+      "middleName": "Victoria",
       "lastName": "Sandora",
+      "dob": "2004-05-02",
+      "bio": "I am the fourth born",
       "parents": [
         {
           "id": "eddiesandora",
@@ -1378,7 +1408,10 @@
       "id": "anthonybarbuto",
       "gender": "male",
       "firstName": "Anthony",
+      "middleName": "Joseph",
       "lastName": "Barbuto",
+      "dob": "1999-04-01",
+      "bio": "I am the first born",
       "parents": [
         {
           "id": "vinnybarbuto",
@@ -1402,7 +1435,10 @@
       "id": "gabbybarbuto",
       "gender": "female",
       "firstName": "Gabby",
+      "middleName": "Linda",
       "lastName": "Barbuto",
+      "dob": "2000-09-15",
+      "bio": "I am the first born",
       "parents": [
         {
           "id": "vinnybarbuto",
@@ -2125,6 +2161,7 @@
       "id": "marksandora",
       "gender": "male",
       "firstName": "Mark",
+      "middleName": "Daniel",
       "lastName": "Sandora",
       "dob": "1982-08-01",
       "bio": "I am the first born son",
@@ -2159,9 +2196,26 @@
       "children": []
     },
     {
+      "id": "jteta",
+      "gender": "female",
+      "firstName": "Jaqueline",
+      "middleName": "Marie",
+      "lastName": "Teta",
+      "parents": [],
+      "children": [],
+      "siblings": [],
+      "spouses": [
+        {
+          "id": "marksandora",
+          "type": "married"
+        }
+      ]
+    },
+    {
       "id": "mikesandora",
       "gender": "male",
       "firstName": "Michael",
+      "middleName": "James",
       "lastName": "Sandora",
       "parents": [
         {
@@ -2190,6 +2244,7 @@
       "id": "valsandora",
       "gender": "female",
       "firstName": "Valerie",
+      "middleName": "Christine",
       "lastName": "Garcia",
       "parents": [
         {
@@ -2240,21 +2295,6 @@
       "spouses": [
         {
           "id": "valsandora",
-          "type": "married"
-        }
-      ]
-    },
-    {
-      "id": "jteta",
-      "gender": "female",
-      "firstName": "Jaqueline",
-      "lastName": "Teta",
-      "parents": [],
-      "children": [],
-      "siblings": [],
-      "spouses": [
-        {
-          "id": "marksandora",
           "type": "married"
         }
       ]
