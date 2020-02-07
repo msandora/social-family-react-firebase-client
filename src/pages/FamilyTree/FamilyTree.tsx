@@ -5,6 +5,7 @@ import ReactFamilyTree from 'react-family-tree';
 import FamilyNode from '../../components/FamilyNode/FamilyNode';
 import styles from '../FamilyTree/Family.module.css';
 import nodes from '../../data.json';
+import Typography from '@material-ui/core/Typography';
 
 const myID = 'palmasandora';
 
@@ -19,9 +20,7 @@ export default React.memo<{}>(
     return (
       <div className={styles.root}>
         <header className={styles.header}>
-          <h1 className={styles.title}>
-            Lineage
-          </h1>
+          <Typography variant="h5">Lineage</Typography>
         </header>
         <PinchZoomPan
           //debug

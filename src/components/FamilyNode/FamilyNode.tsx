@@ -4,7 +4,6 @@ import { IFamilyExtNode } from 'relatives-tree';
 import styles from './FamilyNode.module.css';
 import PersonDialog from '../FamilyModal/PersonDialog';
 
-
 interface Props {
   node: IFamilyExtNode;
   isRoot: boolean;
@@ -13,15 +12,6 @@ interface Props {
 }
 export default React.memo<Props>(
   function FamilyNode({ node, isRoot, onSubClick, style }) {
-
-    if(node.firstName === 'Mark') {
-      console.log('parent', node.parents[0]);
-      console.log('father', node.parents[0].id);
-      console.log('mother', node.parents[1].id);
-      console.log('sibling', node.siblings[0].id);
-      console.log('sibling', node.siblings[1].id);
-    }
-
     return (
       <div>
         <div className={styles.root} style={style}>
@@ -33,7 +23,19 @@ export default React.memo<Props>(
               )} 
             >
             <PersonDialog 
-              person={{ firstName:node.firstName, middleName:node.middleName, lastName:node.lastName, dob:node.dob, bio:node.bio }}/>
+              person={{ 
+                gender: node.gender,
+                firstName: node.firstName, 
+                middleName: node.middleName, 
+                maidenName: node.maidenName, 
+                lastName: node.lastName, 
+                dob: node.dob, 
+                bio: node.bio,
+                parents: node.parents,
+                siblings: node.siblings,
+                spouse: node.spouse
+              }}/>
+              
           </div>
             <div className={styles.namePlate}>
               {node.firstName ? node.firstName : node.id }

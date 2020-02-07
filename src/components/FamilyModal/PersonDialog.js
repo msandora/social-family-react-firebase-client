@@ -43,6 +43,16 @@ class PersonDialog extends Component {
 
 		let currentDate = dayjs().format('MMMM DD, YYYY');
 		let birthDate = dayjs(person.dob).format('MMMM DD, YYYY');
+
+
+	// if(person.parents && person.parents.length && person.parents[0].parentName && person.parents[1].parentName) {
+	// 	if(person.firstName === 'Valerie') {
+	// 		console.log('person', person);
+	// 		let personParents = `${person.firstName} is the child of ${person.parents[0].parentName} and ${person.parents[1].parentName} ${person.lastName}`;
+	// 		console.log(personParents);
+	// 	}
+	// }
+		
 		return ( 	
 			<Fragment>
 				<Fab variant="extended" color="primary" 
@@ -73,11 +83,36 @@ class PersonDialog extends Component {
 					<DialogContent>
 							<DialogContentText>
 							{(birthDate !== currentDate)
-								? <span> Birth Date: {dayjs(person.dob).format('MMMM DD, YYYY')}<br/><br/></span> 
-								: <span> Birth Date: Unknown <br/><br/></span>  
-							}
-							{person.bio}
+								? <span><b>Birth Date:</b> {dayjs(person.dob).format('MMMM DD, YYYY')}</span> 
+								: <span><b>Birth Date:</b> Unknown</span>  
+							}		
 							</DialogContentText>
+							{(person.parents && person.parents.length && person.parents[0].parentName && person.parents[1].parentName) 
+								? 
+								<DialogContentText>
+									<span>{person.firstName} is the child of {person.parents[0].parentName} and {person.parents[1].parentName} 
+										{(person.maidenName !== undefined) 
+											? <span> {person.maidenName}</span>
+											: <span> {person.lastName}</span>
+										}			
+									</span>
+								</DialogContentText> 
+								: null
+							}	
+							{(person.maidenName !== undefined) 
+								? 
+								<DialogContentText>
+									<span><b>Maiden Name:</b> {person.maidenName}</span>
+								</DialogContentText>
+								: null
+							}			
+							{(person.bio !== undefined) 
+								? 
+								<DialogContentText>
+									<span><b>Bio:</b> {person.bio}</span>
+								</DialogContentText>
+								: null
+							}		
 					</DialogContent>
 					<DialogActions>
 							<Button onClick={this.handleClose} color="primary" autoFocus>Close</Button>
@@ -87,6 +122,5 @@ class PersonDialog extends Component {
 		);
 	}
 }
-
 
 export default withStyles(styles)(PersonDialog);

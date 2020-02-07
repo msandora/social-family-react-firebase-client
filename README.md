@@ -22,22 +22,31 @@ go to [http://localhost:3000](http://localhost:3000)
 ## 5: Edit to node modules
 
 components > FamilyNode > FamilyNode.tsx 
-IFamilyExtNode > Go to definition
-Update:
+
+export interface IRelation {
+  id: string;
+  parentName?: string; 
+  siblingName?: string; 
+  spouseName?: string; 
+  childsName?: string; 
+  type: RelationType;
+}
+
 export interface IFamilyNode {
   id: string;
   gender: Gender;
-firstName: string;
-lastName: string;
-dob: string;
-bio: string;
+  firstName: string;
+  middleName?: string;
+  maidenName?: string;
+  lastName?: string;
+  dob?: string;
+  bio?: string;
   parents: IRelation[];
   children: IRelation[];
   siblings: IRelation[];
-  spouses: IRelation[];
+  spouse: IRelation[];
   placeholder?: boolean;
 }
-
 
 * [pinch-zoom-pan](https://www.npmjs.com/package/pinch-zoom-pan)
 * [react-family-tree](https://www.npmjs.com/package/react-family-tree)
