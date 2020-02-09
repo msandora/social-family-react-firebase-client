@@ -19,6 +19,7 @@ import themeObject from './util/theme';
 import AuthRoute from './util/AuthRoute';
 // Pages
 import Home from './pages/Home';
+import Recipes from './pages/Recipes';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import User from './pages/User';
@@ -58,6 +59,7 @@ class App extends Component {
                 <Route exact path="/family-tree" component={FamilyTree} />
                 <Route exact path="/users/:handle" component={User} />
                 <Route exact path="/users/:handle/scream/:screamId" component={User}/>
+                <Route exact path="/recipes" component={Recipes} />
               </Switch>
             </div>
             <Mobilebar/>
@@ -79,6 +81,7 @@ class App extends Component {
                 <Route exact path="/family-tree" component={FamilyTree} />
                 <Route exact path="/users/:handle" component={User} />
                 <Route exact path="/users/:handle/scream/:screamId" component={User}/>
+                <Route exact path="/recipes" component={Recipes} />
               </Switch>
             </div>
           </Router>

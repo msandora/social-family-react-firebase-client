@@ -1,15 +1,19 @@
 import {
+  SET_RECIPE,
+  SET_RECIPES,
+  SET_SCREAM,
   SET_SCREAMS,
   LIKE_SCREAM,
   UNLIKE_SCREAM,
   LOADING_DATA,
   DELETE_SCREAM,
   POST_SCREAM,
-  SET_SCREAM,
   SUBMIT_COMMENT
 } from '../types';
 
 const initialState = {
+  recipes: [],
+  recipe: {},
   screams: [],
   scream: {},
   loading: false
@@ -22,6 +26,18 @@ export default function(state = initialState, action) {
         ...state,
         loading: true
       };
+    case SET_RECIPES:
+      return {
+        ...state,
+        recipes: action.payload,
+        loading: false
+      };
+    case SET_RECIPE:
+      return {
+        ...state,
+        recipe: action.payload
+      };
+      
     case SET_SCREAMS:
       return {
         ...state,
