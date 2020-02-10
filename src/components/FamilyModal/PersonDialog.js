@@ -4,10 +4,11 @@ import MyButton from '../../util/MyButton';
 // MUI Stuff
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogActions from '@material-ui/core/DialogActions';
+
 import withStyles from '@material-ui/core/styles/withStyles';
 
 import NoImg from '../../images/no-img.png';
@@ -81,7 +82,7 @@ class PersonDialog extends Component {
 					>
 						<CloseIcon />
 					</MyButton>
-					<DialogTitle id="responsive-dialog-title">{this.props.person.firstName} {this.props.person.middleName} {this.props.person.lastName}</DialogTitle>
+					<DialogTitle>{this.props.person.firstName} {this.props.person.middleName} {this.props.person.lastName}</DialogTitle>
 					<DialogContent>
 							<DialogContentText>
 							{(birthDate !== currentDate)
@@ -115,6 +116,7 @@ class PersonDialog extends Component {
 								</DialogContentText> 
 								: null
 							}	
+
 							{(person.maidenName !== undefined) ? 
 								<DialogContentText>
 									<span><b>Maiden Name:</b> {person.maidenName}</span>

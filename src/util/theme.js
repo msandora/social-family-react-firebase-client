@@ -101,5 +101,8 @@ export default {
     top: '3px',
     right: '3px',
     padding: '5px'
+  },
+  progressSpinner: {
+    position: 'absolute'
   }
 };

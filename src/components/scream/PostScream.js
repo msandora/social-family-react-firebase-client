@@ -19,9 +19,6 @@ const styles = (theme) => ({
     float: 'right',
     marginTop: 10
   },
-  progressSpinner: {
-    position: 'absolute'
-  },
 	card: {
 		position: 'relative',
 		display: 'flex',

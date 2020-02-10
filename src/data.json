@@ -793,25 +793,30 @@
     ],
     "siblings": [
       {
-          "id": "edsandora",
-          "type": "blood"
+        "id": "edsandora",
+        "siblingName": "Edward",
+        "type": "blood"
       },
       {
         "id": "dansandora",
+        "siblingName": "Daniel",
         "type": "blood"
       },
       {
         "id": "anneriescott",
+        "siblingName": "Anne Marie",
         "type": "blood"
       },
       {
         "id": "jpereira",
+        "siblingName": "Joanne",
         "type": "blood"
       }
     ],
     "spouses": [
       {
         "id": "peterluca",
+        "spouseName": "Peter",
         "type": "married"
       }
     ]
@@ -843,6 +848,7 @@
     "spouses": [
       {
         "id": "stellaluca",
+        "spouseName": "Stella",
         "type": "married"
       }
     ]
@@ -869,10 +875,12 @@
     "siblings": [
       {
         "id": "anthonyluca",
+        "siblingName": "Anthony",
         "type": "blood"
       },
       {
         "id": "lisaluca",
+        "siblingName": "Lisa",
         "type": "blood"
       }
     ],
@@ -898,30 +906,36 @@
     "children": [
       {
         "id": "annieluca",
+        "childName": "Annie",
         "type": "blood"
       },
       {
-          "id": "chloeluca",
-          "type": "blood"
+        "id": "chloeluca",
+        "childName": "Chloe",
+        "type": "blood"
       },
       {
         "id": "anthluca",
+        "childName": "Anthony",
         "type": "blood"
       }
     ],
     "siblings": [
       {
         "id": "peteluca",
+        "siblingName": "Peter",
         "type": "blood"
       },
       {
         "id": "lisaluca",
+        "siblingName": "Lisa",
         "type": "blood"
       }
     ],
     "spouses": [
       {
         "id": "cathyluca",
+        "spouseName": "Cathleen",
         "type": "married"
       }
     ]
@@ -936,14 +950,17 @@
     "children": [
       {
         "id": "annieluca",
+        "childName": "Annie",
         "type": "blood"
       },
       {
-          "id": "chloeluca",
-          "type": "blood"
+        "id": "chloeluca",
+        "childName": "Chloe",
+        "type": "blood"
       },
       {
         "id": "anthluca",
+        "childName": "Anthony",
         "type": "blood"
       }
     ],
@@ -951,6 +968,7 @@
     "spouses": [
       {
         "id": "anthonyluca",
+        "spouseName": "Anthony",
         "type": "married"
       }
     ]
@@ -979,10 +997,12 @@
     "siblings": [
       {
         "id": "chloeluca",
+        "siblingName": "Chloe",
         "type": "blood"
       },
       {
         "id": "anthluca",
+        "siblingName": "Anthony",
         "type": "blood"
       }
     ],
@@ -1012,10 +1032,12 @@
     "siblings": [
       {
         "id": "annieluca",
+        "siblingName": "Annie",
         "type": "blood"
       },
       {
         "id": "anthluca",
+        "siblingName": "Anthony",
         "type": "blood"
       }
     ],
@@ -1045,10 +1067,12 @@
     "siblings": [
       {
         "id": "annieluca",
+        "siblingName": "Annie",
         "type": "blood"
       },
       {
         "id": "chloeluca",
+        "siblingName": "Chloe",
         "type": "blood"
       }
     ],
@@ -1729,18 +1753,22 @@
     "children": [
       {
         "id": "atticusscott",
+        "childName": "Atticus",
         "type": "blood"
       },
       {
         "id": "annabellescott",
+        "childName": "Annabelle",
         "type": "blood"
       },
       {
         "id": "abramscott",
+        "childName": "Abram",
         "type": "blood"
       },
       {
         "id": "ainsleyscott",
+        "childName": "Ainsley",
         "type": "blood"
       }
     ],
@@ -1748,6 +1776,7 @@
     "spouses": [
       {
         "id": "kirstenscott",
+        "spouseName": "Kirsten",
         "type": "married"
       }
     ]
@@ -1761,18 +1790,22 @@
     "children": [
       {
         "id": "atticusscott",
+        "childName": "Atticus",
         "type": "blood"
       },
       {
         "id": "annabellescott",
+        "childName": "Annabelle",
         "type": "blood"
       },
       {
         "id": "abramscott",
+        "childName": "Abram",
         "type": "blood"
       },
       {
         "id": "ainsleyscott",
+        "childName": "Ainsley",
         "type": "blood"
       }
     ],
@@ -1780,6 +1813,7 @@
     "spouses": [
       {
         "id": "johnnyscott",
+        "spouseName": "John",
         "type": "married"
       }
     ]
@@ -1805,14 +1839,17 @@
     "siblings": [
       {
         "id": "annabellescott",
+        "siblingName": "Annabelle",
         "type": "blood"
       },
       {
         "id": "abramscott",
+        "siblingName": "Abram",
         "type": "blood"
       },
       {
         "id": "ainsleyscott",
+        "siblingName": "Ainsley",
         "type": "blood"
       }
     ],
@@ -1839,14 +1876,17 @@
     "siblings": [
       {
         "id": "atticusscott",
+        "siblingName": "Atticus",
         "type": "blood"
       },
       {
         "id": "abramscott",
+        "siblingName": "Abram",
         "type": "blood"
       },
       {
         "id": "ainsleyscott",
+        "siblingName": "Ainsley",
         "type": "blood"
       }
     ],
@@ -1873,14 +1913,17 @@
     "siblings": [
       {
         "id": "atticusscott",
+        "siblingName": "Atticus",
         "type": "blood"
       },
       {
         "id": "annabellescott",
+        "siblingName": "Annabelle",
         "type": "blood"
       },
       {
         "id": "ainsleyscott",
+        "siblingName": "Ainsley",
         "type": "blood"
       }
     ],
@@ -1907,14 +1950,17 @@
     "siblings": [
       {
         "id": "atticusscott",
+        "siblingName": "Atticus",
         "type": "blood"
       },
       {
         "id": "annabellescott",
+        "siblingName": "Annabelle",
         "type": "blood"
       },
       {
         "id": "abramscott",
+        "siblingName": "Abram",
         "type": "blood"
       }
     ],
@@ -1940,10 +1986,12 @@
     "children": [
       {
         "id": "sophiascott",
+        "childName": "Sophia",
         "type": "blood"
       },
       {
         "id": "janescott",
+        "childName": "Jane",
         "type": "blood"
       }
     ],
@@ -1951,6 +1999,7 @@
     "spouses": [
       {
         "id": "robertascott",
+        "spouseName": "Roberta",
         "type": "married"
       }
     ]
@@ -1964,10 +2013,12 @@
     "children": [
       {
         "id": "sophiascott",
+        "childName": "Sophia",
         "type": "blood"
       },
       {
         "id": "janescott",
+        "childName": "Jane",
         "type": "blood"
       }
     ],

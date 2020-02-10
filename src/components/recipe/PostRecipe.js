@@ -4,7 +4,11 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import MyButton from '../../util/MyButton';
 // MUI Stuff
 import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
@@ -17,19 +21,23 @@ import { postRecipe, clearErrors } from '../../redux/actions/dataActions';
 
 const styles = (theme) => ({
   ...theme,
+  formControl: {
+    margin: '0',
+    width: '100%'
+  },
   submitButton: {
     position: 'relative',
     float: 'right',
     marginTop: 10
-  },
-  progressSpinner: {
-    position: 'absolute'
   }
 });
 
 class PostRecipe extends Component {
   state = {
     open: false,
+    recipeTitle: '',
+    recipeType: '',
+    ingredients: '',
     body: '',
     errors: {}
   };
@@ -84,6 +92,35 @@ class PostRecipe extends Component {
           <DialogTitle>Post a new recipe</DialogTitle>
           <DialogContent>
             <form onSubmit={this.handleSubmit}>
+            <FormControl className={classes.formControl}>
+              <TextField
+                name="recipeTitle"
+                type="text"
+                label="Recipe Title"
+                multiline
+                rows="3"
+                placeholder="Recipe Title"
+                error={errors.recipeTitle ? true : false}
+                helperText={errors.recipeTitle}
+                className={classes.textField}
+                onChange={this.handleChange}
+                fullWidth
+              />
+            </FormControl>
+            <FormControl className={classes.formControl}>
+              <InputLabel id="recipe-type-select-label">Recipe Type</InputLabel>
+              <Select
+                labelid="recipe-type-select-label"
+                id="demo-simple-select"
+                value=""
+                onChange={this.handleChange}
+              >
+                <MenuItem value="Appetizer">Appetizer</MenuItem>
+                <MenuItem value="Entree">Entree</MenuItem>
+                <MenuItem value="Dessert">Dessert</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl className={classes.formControl}>
               <TextField
                 name="body"
                 type="text"
@@ -97,6 +134,7 @@ class PostRecipe extends Component {
                 onChange={this.handleChange}
                 fullWidth
               />
+            </FormControl>
               <Button
                 type="submit"
                 variant="contained"
