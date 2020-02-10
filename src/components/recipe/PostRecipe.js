@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
-
+import MyButton from '../../util/MyButton';
 // MUI Stuff
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import CircularProgress from '@material-ui/core/CircularProgress';
-
+import AddIcon from '@material-ui/icons/Add';
+import CloseIcon from '@material-ui/icons/Close';
 // Redux stuff
 import { connect } from 'react-redux';
 import { postRecipe, clearErrors } from '../../redux/actions/dataActions';
-import { Card, CardContent } from '@material-ui/core';
 
 const styles = (theme) => ({
   ...theme,
@@ -21,20 +24,12 @@ const styles = (theme) => ({
   },
   progressSpinner: {
     position: 'absolute'
-  },
-	card: {
-		position: 'relative',
-		display: 'flex',
-		flexDirection: 'column',
-		marginBottom: 10
-  },
-  cardContent: {
-    paddingBottom: 16
   }
 });
 
 class PostRecipe extends Component {
   state = {
+    open: false,
     body: '',
     errors: {}
   };
@@ -45,10 +40,16 @@ class PostRecipe extends Component {
       });
     }
     if (!nextProps.UI.errors && !nextProps.UI.loading) {
-      this.setState({ body: '', errors: {} });
+      this.setState({ body: '', open: false, errors: {} });
     }
   }
-
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+  handleClose = () => {
+    this.props.clearErrors();
+    this.setState({ open: false, errors: {} });
+  };
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -62,40 +63,59 @@ class PostRecipe extends Component {
       classes,
       UI: { loading }
     } = this.props;
-
     return (
-      <Card className={classes.card}>
-        <CardContent className={classes.cardContent}>
-        <form onSubmit={this.handleSubmit}>
-        <TextField
-          name="body"
-          type="text"
-          label="Say Something..."
-          multiline
-          rows="3"
-          placeholder="What is on your mind?"
-          error={errors.body ? true : false}
-          helperText={errors.body}
-          className={classes.textField}
-          onChange={this.handleChange}
+      <Fragment>
+        <MyButton onClick={this.handleOpen} tip="Post a comment">
+          <AddIcon />
+        </MyButton>
+        <Dialog
+          open={this.state.open}
+          onClose={this.handleClose}
           fullWidth
-        />
-        <Button type="submit"
-        variant="contained"
-        color="primary"
-        className={classes.submitButton}
-        disabled={loading} onClick={this.handleSubmit}>
-          Submit
-          {loading && (
-            <CircularProgress
-              size={30}
-              className={classes.progressSpinner}
-            />
-          )}
-        </Button>
-        </form>
-        </CardContent>
-      </Card>
+          maxWidth="sm"
+        >
+          <MyButton
+            tip="Close"
+            onClick={this.handleClose}
+            tipClassName={classes.closeButton}
+          >
+            <CloseIcon />
+          </MyButton>
+          <DialogTitle>Post a new recipe</DialogTitle>
+          <DialogContent>
+            <form onSubmit={this.handleSubmit}>
+              <TextField
+                name="body"
+                type="text"
+                label="Say Something..."
+                multiline
+                rows="3"
+                placeholder="What is on your mind?"
+                error={errors.body ? true : false}
+                helperText={errors.body}
+                className={classes.textField}
+                onChange={this.handleChange}
+                fullWidth
+              />
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                className={classes.submitButton}
+                disabled={loading}
+              >
+                Submit
+                {loading && (
+                  <CircularProgress
+                    size={30}
+                    className={classes.progressSpinner}
+                  />
+                )}
+              </Button>
+            </form>
+          </DialogContent>
+        </Dialog>
+      </Fragment>
     );
   }
 }
@@ -114,3 +134,4 @@ export default connect(
   mapStateToProps,
   { postRecipe, clearErrors }
 )(withStyles(styles)(PostRecipe));
+

@@ -35,6 +35,8 @@ class PersonDialog extends Component {
 		this.setState({ open: false });
 	};
 
+
+
 	render() {
 		const { classes, person } = this.props;
 		const{ open } = this.state;
@@ -44,15 +46,15 @@ class PersonDialog extends Component {
 		let currentDate = dayjs().format('MMMM DD, YYYY');
 		let birthDate = dayjs(person.dob).format('MMMM DD, YYYY');
 
+	// let siblings = this.props.person.siblings || [] // if there's no items, give empty array
+	// let siblingsCount = this.props.person.siblings.length;
+	// let betweenSiblings = (siblingsCount === 1 ? '' : siblingsCount - 1 ? ' and ' : ', ');
 
-	// if(person.parents && person.parents.length && person.parents[0].parentName && person.parents[1].parentName) {
-	// 	if(person.firstName === 'Valerie') {
-	// 		console.log('person', person);
-	// 		let personParents = `${person.firstName} is the child of ${person.parents[0].parentName} and ${person.parents[1].parentName} ${person.lastName}`;
-	// 		console.log(personParents);
-	// 	}
-	// }
-		
+	// let mySiblings = siblings.map((item, index) => {
+	// 	return(
+	// 		<span key={index}>{item.siblingName + betweenSiblings}</span>
+	// 	)
+	// });
 		return ( 	
 			<Fragment>
 				<Fab variant="extended" color="primary" 
@@ -79,35 +81,47 @@ class PersonDialog extends Component {
 					>
 						<CloseIcon />
 					</MyButton>
-					<DialogTitle id="responsive-dialog-title">{person.firstName} {person.middleName} {person.lastName}</DialogTitle>
+					<DialogTitle id="responsive-dialog-title">{this.props.person.firstName} {this.props.person.middleName} {this.props.person.lastName}</DialogTitle>
 					<DialogContent>
 							<DialogContentText>
 							{(birthDate !== currentDate)
-								? <span><b>Birth Date:</b> {dayjs(person.dob).format('MMMM DD, YYYY')}</span> 
+								? <span><b>Birth Date:</b> {dayjs(this.props.person.dob).format('MMMM DD, YYYY')}</span> 
 								: <span><b>Birth Date:</b> Unknown</span>  
 							}		
 							</DialogContentText>
-							{(person.parents && person.parents.length && person.parents[0].parentName && person.parents[1].parentName) 
+							{(this.props.person.parents && this.props.person.parents.length && this.props.person.parents[0].parentName && this.props.person.parents[1].parentName) 
 								? 
 								<DialogContentText>
-									<span>{person.firstName} is the child of {person.parents[0].parentName} and {person.parents[1].parentName} 
+									<span>{this.props.person.firstName} is the {(this.props.person.gender === 'male') ? 'son' : "daughter"} of {this.props.person.parents[0].parentName} and {this.props.person.parents[1].parentName} 
 										{(person.maidenName !== undefined) 
-											? <span> {person.maidenName}</span>
-											: <span> {person.lastName}</span>
+											? <span> {this.props.person.maidenName}.</span>
+											: <span> {this.props.person.lastName}.</span>
 										}			
 									</span>
 								</DialogContentText> 
 								: null
 							}	
-							{(person.maidenName !== undefined) 
+							{(this.props.person.siblings && this.props.person.siblings.length) 
 								? 
+								<DialogContentText>
+									<span>{this.props.person.firstName} has {this.props.person.siblings.length} {(this.props.person.siblings.length === 1 ? 'sibling': 'siblings')}. </span>
+								
+									{this.props.person.siblings.map((item, index) => (
+										(item.siblingName !== undefined) 
+											? 
+											<span key={index}>{(index ? ', ' : '') + item.siblingName}</span>
+											: null
+									))}.
+								</DialogContentText> 
+								: null
+							}	
+							{(person.maidenName !== undefined) ? 
 								<DialogContentText>
 									<span><b>Maiden Name:</b> {person.maidenName}</span>
 								</DialogContentText>
 								: null
 							}			
-							{(person.bio !== undefined) 
-								? 
+							{(person.bio !== undefined) ? 
 								<DialogContentText>
 									<span><b>Bio:</b> {person.bio}</span>
 								</DialogContentText>

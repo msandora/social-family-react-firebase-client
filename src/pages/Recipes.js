@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Recipe from '../components/recipe/Recipe';
 import Profile from '../components/profile/Profile';
 import ScreamSkeleton from '../util/ScreamSkeleton';
-// import PostScream from	'../components/scream/PostScream';
+import PostRecipe from	'../components/recipe/PostRecipe';
 
 import { connect } from 'react-redux';
 import { getRecipes } from '../redux/actions/dataActions';
@@ -29,6 +29,10 @@ class Recipes extends Component {
           <Profile />
         </Grid>
         <Grid item sm={8} xs={12}>
+          {authenticated ? (
+            <PostRecipe/>
+            ) : ( null )
+          }
           {recentRecipesMarkup}
         </Grid>
       </Grid>

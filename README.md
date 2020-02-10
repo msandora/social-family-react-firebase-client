@@ -28,7 +28,7 @@ export interface IRelation {
   parentName?: string; 
   siblingName?: string; 
   spouseName?: string; 
-  childsName?: string; 
+  childName?: string; 
   type: RelationType;
 }
 

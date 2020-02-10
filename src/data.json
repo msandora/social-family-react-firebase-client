@@ -6,49 +6,59 @@
     "lastName": "Lavalle",
     "parents": [],
     "children": [
-        {
+      {
         "id": "antionettelavalle",
+        "childName": "Antionette",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "louislavalle",
+        "childName": "Louis",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasquallelavalle",
+        "childName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "rosarialavalle",
+        "childName": "Rosaria",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasqlavalle",
+        "childName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "mariarosalavalle",
+        "childName": "Maria Rosa",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "childName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "roccolavalle",
+        "childName": "Rocco",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "giovannalavalle",
+        "childName": "Giovanna",
         "type": "blood"
-        }
+      }
     ],
     "siblings": [],
     "spouses": [
-        {
+      {
         "id": "faustinalavalle",
+        "spouseName": "Faustina",
         "type": "married"
-        }
+      }
     ]
   },
   {
@@ -58,49 +68,59 @@
     "lastName": "Lavalle",
     "parents": [],
     "children": [
-        {
+      {
         "id": "antionettelavalle",
+        "childName": "Antionette",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "louislavalle",
+        "childName": "Louis",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasquallelavalle",
+        "childName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "rosarialavalle",
+        "childName": "Rosaria",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasqlavalle",
+        "childName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "mariarosalavalle",
+        "childName": "Maria Rosa",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "childName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "roccolavalle",
+        "childName": "Rocco",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "giovannalavalle",
+        "childName": "Giovanna",
         "type": "blood"
-        }
+      }
     ],
     "siblings": [],
     "spouses": [
-        {
+      {
         "id": "domenicolavalle",
+        "spouseName": "Domenico",
         "type": "married"
-        }
+      }
     ]
   },
   {
@@ -109,51 +129,59 @@
     "firstName": "Antionette",
     "lastName": "Lavalle",
     "parents": [
-        {
+      {
         "id": "domenicolavalle",
         "parentName": "Domenico",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "faustinalavalle",
         "parentName": "Faustina",
         "type": "blood"
-        }
+      }
     ],
     "children": [],
     "siblings": [
-        {
+      {
         "id": "louislavalle",
+        "siblingName": "Louis",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasquallelavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "rosarialavalle",
+        "siblingName": "Rosaria",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasqlavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "mariarosalavalle",
+        "siblingName": "Maria Rosa",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "siblingName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "roccolavalle",
+        "siblingName": "Rocco",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "giovannalavalle",
+        "siblingName": "Giovanna",
         "type": "blood"
-        }
+      }
     ],
     "spouses": []
   },
@@ -163,51 +191,59 @@
     "firstName": "Louis",
     "lastName": "Lavalle",
     "parents": [
-        {
+      {
         "id": "domenicolavalle",
         "parentName": "Domenico",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "faustinalavalle",
         "parentName": "Faustina",
         "type": "blood"
-        }
+      }
     ],
     "children": [],
     "siblings": [
-        {
+      {
         "id": "antionettelavalle",
+        "siblingName": "Antionette",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasquallelavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "rosarialavalle",
+        "siblingName": "Rosaria",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasqlavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "mariarosalavalle",
+        "siblingName": "Maria Rosa",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "siblingName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "roccolavalle",
+        "siblingName": "Rocco",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "giovannalavalle",
+        "siblingName": "Giovanna",
         "type": "blood"
-        }
+      }
     ],
     "spouses": []
   },
@@ -217,51 +253,59 @@
     "firstName": "Pasquale",
     "lastName": "Lavalle",
     "parents": [
-        {
+      {
         "id": "domenicolavalle",
         "parentName": "Domenico",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "faustinalavalle",
         "parentName": "Faustina",
         "type": "blood"
-        }
+      }
     ],
     "children": [],
     "siblings": [
-        {
+      {
         "id": "antionettelavalle",
+        "siblingName": "Antionette",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "louislavalle",
+        "siblingName": "Louis",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "rosarialavalle",
+        "siblingName": "Rosaria",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasqlavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "mariarosalavalle",
+        "siblingName": "Maria Rosa",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "siblingName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "roccolavalle",
+        "siblingName": "Rocco",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "giovannalavalle",
+        "siblingName": "Giovanna",
         "type": "blood"
-        }
+      }
     ],
     "spouses": []
   },
@@ -271,51 +315,59 @@
     "firstName": "Rosaria",
     "lastName": "Lavalle",
     "parents": [
-        {
+      {
         "id": "domenicolavalle",
         "parentName": "Domenico",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "faustinalavalle",
         "parentName": "Faustina",
         "type": "blood"
-        }
+      }
     ],
     "children": [],
     "siblings": [
-        {
+      {
         "id": "antionettelavalle",
+        "siblingName": "Antionette",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "louislavalle",
+        "siblingName": "Louis",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasquallelavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasqlavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "mariarosalavalle",
+        "siblingName": "Maria Rosa",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "siblingName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "roccolavalle",
+        "siblingName": "Rocco",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "giovannalavalle",
+        "siblingName": "Giovanna",
         "type": "blood"
-        }
+      }
     ],
     "spouses": []
   },
@@ -325,51 +377,59 @@
     "firstName": "Pasquale",
     "lastName": "Lavalle",
     "parents": [
-        {
+      {
         "id": "domenicolavalle",
         "parentName": "Domenico",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "faustinalavalle",
         "parentName": "Faustina",
         "type": "blood"
-        }
+      }
     ],
     "children": [],
     "siblings": [
-        {
+      {
         "id": "antionettelavalle",
+        "siblingName": "Antionette",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "louislavalle",
+        "siblingName": "Louis",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasquallelavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "rosarialavalle",
+        "siblingName": "Rosaria",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "mariarosalavalle",
+        "siblingName": "Maria Rosa",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "siblingName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "roccolavalle",
+        "siblingName": "Rocco",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "giovannalavalle",
+        "siblingName": "Giovanna",
         "type": "blood"
-        }
+      }
     ],
     "spouses": []
   },
@@ -379,51 +439,59 @@
     "firstName": "Maria Rosa",
     "lastName": "Lavalle",
     "parents": [
-        {
+      {
         "id": "domenicolavalle",
         "parentName": "Domenico",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "faustinalavalle",
         "parentName": "Faustina",
         "type": "blood"
-        }
+      }
     ],
     "children": [],
     "siblings": [
-        {
+      {
         "id": "antionettelavalle",
+        "siblingName": "Antionette",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "louislavalle",
+        "siblingName": "Louis",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasquallelavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "rosarialavalle",
+        "siblingName": "Rosaria",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasqlavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "siblingName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "roccolavalle",
+        "siblingName": "Rocco",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "giovannalavalle",
+        "siblingName": "Giovanna",
         "type": "blood"
-        }
+      }
     ],
     "spouses": []
   },
@@ -433,51 +501,59 @@
     "firstName": "Rocco",
     "lastName": "Lavalle",
     "parents": [
-        {
+      {
         "id": "domenicolavalle",
         "parentName": "Domenico",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "faustinalavalle",
         "parentName": "Faustina",
         "type": "blood"
-        }
+      }
     ],
     "children": [],
     "siblings": [
-        {
+      {
         "id": "antionettelavalle",
+        "siblingName": "Antionette",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "louislavalle",
+        "siblingName": "Louis",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasquallelavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "rosarialavalle",
+        "siblingName": "Rosaria",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasqlavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "mariarosalavalle",
+        "siblingName": "Maria Rosa",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "siblingName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "giovannalavalle",
+        "siblingName": "Giovanna",
         "type": "blood"
-        }
+      }
     ],
     "spouses": []
   },
@@ -487,51 +563,59 @@
     "firstName": "Giovanna",
     "lastName": "Lavalle",
     "parents": [
-        {
+      {
         "id": "domenicolavalle",
         "parentName": "Domenico",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "faustinalavalle",
         "parentName": "Faustina",
         "type": "blood"
-        }
+      }
     ],
     "children": [],
     "siblings": [
-        {
+      {
         "id": "antionettelavalle",
+        "siblingName": "Antionette",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "louislavalle",
+        "siblingName": "Louis",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasquallelavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "rosarialavalle",
+        "siblingName": "Rosaria",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "pasqlavalle",
+        "siblingName": "Pasqualle",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "mariarosalavalle",
+        "siblingName": "Maria Rosa",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "palmasandora",
+        "siblingName": "Palma",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "roccolavalle",
+        "siblingName": "Rocco",
         "type": "blood"
-        }
+      }
     ],
     "spouses": []
   },
@@ -544,22 +628,27 @@
       "children": [
         {
           "id": "stellaluca",
+          "childName": "Stella",
           "type": "blood"
         },
         {
-            "id": "edsandora",
-            "type": "blood"
+          "id": "edsandora",
+          "childName": "Edward",
+          "type": "blood"
         },
         {
           "id": "dansandora",
+          "childName": "Daniel",
           "type": "blood"
         },
         {
           "id": "anneriescott",
+          "childName": "Anne Marie",
           "type": "blood"
         },
         {
           "id": "jpereira",
+          "childName": "Joanne",
           "type": "blood"
         }
       ],
@@ -567,6 +656,7 @@
       "spouses": [
         {
           "id": "palmasandora",
+          "spouseName": "Palma",
           "type": "married"
         }
       ]
@@ -578,48 +668,90 @@
     "maidenName": "Lavalle",
     "lastName": "Sandora",
     "parents": [
-        {
+      {
         "id": "domenicolavalle",
         "parentName": "Domenico",
         "type": "blood"
-        },
-        {
+      },
+      {
         "id": "faustinalavalle",
         "parentName": "Faustina",
         "type": "blood"
-        }
+      }
     ],
     "children": [
       {
         "id": "stellaluca",
+        "childName": "Stella",
         "type": "blood"
       },
       {
         "id": "edsandora",
+        "childName": "Edward",
         "type": "blood"
       },
       {
         "id": "dansandora",
+        "childName": "Daniel",
         "type": "blood"
       },
       {
         "id": "anneriescott",
+        "childName": "Anne Marie",
         "type": "blood"
       },
       {
         "id": "jpereira",
+        "childName": "Joanne",
         "type": "blood"
       }
     ],
     "siblings": [
       {
         "id": "antionettelavalle",
+        "siblingName": "Antionette",
+        "type": "blood"
+      },
+      {
+        "id": "louislavalle",
+        "siblingName": "Louis",
+        "type": "blood"
+      },
+      {
+        "id": "pasquallelavalle",
+        "siblingName": "Pasqualle",
+        "type": "blood"
+      },
+      {
+        "id": "rosarialavalle",
+        "siblingName": "Rosaria",
+        "type": "blood"
+      },
+      {
+        "id": "pasqlavalle",
+        "siblingName": "Pasqualle",
+        "type": "blood"
+      },
+      {
+        "id": "mariarosalavalle",
+        "siblingName": "Maria Rosa",
+        "type": "blood"
+      },
+      {
+        "id": "roccolavalle",
+        "siblingName": "Rocco",
+        "type": "blood"
+      },
+      {
+        "id": "giovannalavalle",
+        "siblingName": "Giovanna",
         "type": "blood"
       }
     ],
     "spouses": [
       {
         "id": "edwardsandora",
+        "spouseName": "Edward",
         "type": "married"
       }
     ]
@@ -633,24 +765,29 @@
     "parents": [
       {
         "id": "edwardsandora",
+        "parentName": "Edward",
         "type": "blood"
       },
       {
         "id": "palmasandora",
+        "parentName": "Palma",
         "type": "blood"
       }
     ],
     "children": [
       {
         "id": "peteluca",
+        "childName": "Peter",
         "type": "blood"
       },
       {
         "id": "anthonyluca",
+        "childName": "Anthony",
         "type": "blood"
       },
       {
         "id": "lisaluca",
+        "childName": "Lisa",
         "type": "blood"
       }
     ],
@@ -688,14 +825,17 @@
     "children": [
       {
         "id": "peteluca",
+        "childName": "Peter",
         "type": "blood"
       },
       {
         "id": "anthonyluca",
+        "childName": "Anthony",
         "type": "blood"
       },
       {
         "id": "lisaluca",
+        "childName": "Lisa",
         "type": "blood"
       }
     ],
@@ -712,13 +852,16 @@
     "gender": "male",
     "firstName": "Peter",
     "lastName": "Lucatuorto",
+    "dob": "1964-06-26",
     "parents": [
       {
         "id": "stellaluca",
+        "parentName": "Stella",
         "type": "blood"
       },
       {
         "id": "peterluca",
+        "parentName": "Peter",
         "type": "blood"
       }
     ],
@@ -743,10 +886,12 @@
     "parents": [
       {
         "id": "stellaluca",
+        "parentName": "Stella",
         "type": "blood"
       },
       {
         "id": "peterluca",
+        "parentName": "Peter",
         "type": "blood"
       }
     ],
@@ -784,8 +929,9 @@
   {
     "id": "cathyluca",
     "gender": "female",
-    "firstName": "Cathy",
+    "firstName": "Cathleen",
     "lastName": "Lucatuorto",
+    "dob": "1969-04-30",
     "parents": [],
     "children": [
       {
@@ -820,10 +966,12 @@
     "parents": [
       {
         "id": "anthonyluca",
+        "parentName": "Anthony",
         "type": "blood"
       },
       {
         "id": "cathyluca",
+        "parentName": "Cathleen",
         "type": "blood"
       }
     ],
@@ -851,10 +999,12 @@
     "parents": [
       {
         "id": "anthonyluca",
+        "parentName": "Anthony",
         "type": "blood"
       },
       {
         "id": "cathyluca",
+        "parentName": "Cathleen",
         "type": "blood"
       }
     ],
@@ -882,10 +1032,12 @@
     "parents": [
       {
         "id": "anthonyluca",
+        "parentName": "Anthony",
         "type": "blood"
       },
       {
         "id": "cathyluca",
+        "parentName": "Cathleen",
         "type": "blood"
       }
     ],
@@ -908,43 +1060,52 @@
     "firstName": "Lisa",
     "maidenName": "Lucatuorto",
     "lastName": "Mallen",
+    "dob": "1972-05-20",
     "parents": [
       {
         "id": "stellaluca",
+        "parentName": "Stella",
         "type": "blood"
       },
       {
         "id": "peterluca",
+        "parentName": "Peter",
         "type": "blood"
       }
     ],
     "children": [
       {
         "id": "nickmallen",
+        "childName": "Nicholas",
         "type": "blood"
       },
       {
-          "id": "ryanmallen",
-          "type": "blood"
+        "id": "ryanmallen",
+        "childName": "Ryan",
+        "type": "blood"
       },
       {
         "id": "reaganmallen",
+        "childName": "Reagan",
         "type": "blood"
       }
     ],
     "siblings": [
       {
         "id": "peteluca",
+        "siblingName": "Peter",
         "type": "blood"
       },
       {
         "id": "anthonyluca",
+        "siblingName": "Anthony",
         "type": "blood"
       }
     ],
     "spouses": [
       {
         "id": "brettmallen",
+        "spouseName": "Brett",
         "type": "married"
       }
     ]
@@ -954,18 +1115,22 @@
     "gender": "male",
     "firstName": "Brett",
     "lastName": "Mallen",
+    "dob": "1971-11-14",
     "parents": [],
     "children": [
       {
         "id": "nickmallen",
+        "childName": "Nicholas",
         "type": "blood"
       },
       {
-          "id": "ryanmallen",
-          "type": "blood"
+        "id": "ryanmallen",
+        "childName": "Ryan",
+        "type": "blood"
       },
       {
         "id": "reaganmallen",
+        "childName": "Reagan",
         "type": "blood"
       }
     ],
@@ -973,6 +1138,7 @@
     "spouses": [
       {
         "id": "lisaluca",
+        "spouseName": "Lisa",
         "type": "married"
       }
     ]
@@ -988,10 +1154,12 @@
     "parents": [
       {
         "id": "brettmallen",
+        "parentName": "Brett",
         "type": "blood"
       },
       {
         "id": "lisaluca",
+        "parentName": "Lisa",
         "type": "blood"
       }
     ],
@@ -999,10 +1167,12 @@
     "siblings": [
       {
         "id": "ryanmallen",
+        "siblingName": "Ryan",
         "type": "blood"
       },
       {
         "id": "reaganmallen",
+        "siblingName": "Reagan",
         "type": "blood"
       }
     ],
@@ -1019,10 +1189,12 @@
     "parents": [
       {
         "id": "brettmallen",
+        "parentName": "Brett",
         "type": "blood"
       },
       {
         "id": "lisaluca",
+        "parentName": "Lisa",
         "type": "blood"
       }
     ],
@@ -1030,10 +1202,12 @@
     "siblings": [
       {
         "id": "nickmallen",
+        "siblingName": "Nicholas",
         "type": "blood"
       },
       {
         "id": "reaganmallen",
+        "siblingName": "Reagan",
         "type": "blood"
       }
     ],
@@ -1050,10 +1224,12 @@
     "parents": [
       {
         "id": "brettmallen",
+        "parentName": "Brett",
         "type": "blood"
       },
       {
         "id": "lisaluca",
+        "parentName": "Lisa",
         "type": "blood"
       }
     ],
@@ -1061,10 +1237,12 @@
     "siblings": [
       {
         "id": "nickmallen",
+        "siblingName": "Nicholas",
         "type": "blood"
       },
       {
         "id": "ryanmallen",
+        "siblingName": "Ryan",
         "type": "blood"
       }
     ],
@@ -1078,10 +1256,12 @@
     "parents": [
       {
         "id": "edwardsandora",
+        "parentName": "Edward",
         "type": "blood"
       },
       {
         "id": "palmasandora",
+        "parentName": "Palma",
         "type": "blood"
       }
     ],
@@ -1098,24 +1278,29 @@
     "siblings": [
       {
         "id": "stellaluca",
+        "siblingName": "Stella",
         "type": "blood"
       },
       {
         "id": "dansandora",
+        "siblingName": "Daniel",
         "type": "blood"
       },
       {
         "id": "anneriescott",
+        "siblingName": "Anne Marie",
         "type": "blood"
       },
       {
         "id": "jpereira",
+        "siblingName": "Joanne",
         "type": "blood"
       }
     ],
     "spouses": [
       {
         "id": "lindasandora",
+        "spouseName": "Linda",
         "type": "married"
       }
     ]
@@ -1140,6 +1325,7 @@
     "spouses": [
       {
         "id": "edsandora",
+        "spouseName": "Edward",
         "type": "married"
       }
     ]
@@ -1203,14 +1389,17 @@
     "siblings": [
       {
         "id": "ethansandora",
+        "siblingName": "Ethan",
         "type": "blood"
       },
       {
         "id": "zachsandora",
+        "siblingName": "Zachary",
         "type": "blood"
       },
       {
         "id": "juliannasandora",
+        "siblingName": "Julianna",
         "type": "blood"
       }
     ],
@@ -1234,14 +1423,17 @@
     "siblings": [
       {
         "id": "emilysandora",
+        "siblingName": "Emily",
         "type": "blood"
       },
       {
         "id": "zachsandora",
+        "siblingName": "Zachary",
         "type": "blood"
       },
       {
         "id": "juliannasandora",
+        "siblingName": "Julianna",
         "type": "blood"
       }
     ],
@@ -1265,14 +1457,17 @@
     "siblings": [
       {
         "id": "emilysandora",
+        "siblingName": "Emily",
         "type": "blood"
       },
       {
         "id": "ethansandora",
+        "siblingName": "Ethan",
         "type": "blood"
       },
       {
         "id": "juliannasandora",
+        "siblingName": "Julianna",
         "type": "blood"
       }
     ],
@@ -1296,14 +1491,17 @@
     "siblings": [
       {
         "id": "emilysandora",
+        "siblingName": "Emily",
         "type": "blood"
       },
       {
         "id": "ethansandora",
+        "siblingName": "Ethan",
         "type": "blood"
       },
       {
         "id": "zachsandora",
+        "siblingName": "Zachary",
         "type": "blood"
       }
     ],
@@ -1393,6 +1591,7 @@
     "siblings": [
       {
         "id": "gabbybarbuto",
+        "siblingName": "Gabrielle",
         "type": "blood"
       }
     ],
@@ -1420,6 +1619,7 @@
     "siblings": [
       {
         "id": "anthonybarbuto",
+        "siblingName": "Anthony",
         "type": "blood"
       }
     ],
@@ -1461,10 +1661,12 @@
     "parents": [
       {
         "id": "edwardsandora",
+        "parentName": "Edward",
         "type": "blood"
       },
       {
         "id": "palmasandora",
+        "parentName": "Palma",
         "type": "blood"
       }
     ],
@@ -1515,10 +1717,12 @@
     "parents": [
       {
         "id": "johnscott",
+        "parentName": "John",
         "type": "blood"
       },
       {
         "id": "anneriescott",
+        "parentName": "Anne Marie",
         "type": "blood"
       }
     ],
@@ -1724,10 +1928,12 @@
     "parents": [
       {
         "id": "johnscott",
+        "parentName": "John",
         "type": "blood"
       },
       {
         "id": "anneriescott",
+        "parentName": "Anne Marie",
         "type": "blood"
       }
     ],
@@ -1834,6 +2040,7 @@
     "firstName": "Alicia",
     "maidenName": "Scott",
     "lastName": "Carmada",
+    "dob": "1984-03-04",
     "parents": [
       {
         "id": "johnscott",
@@ -1849,7 +2056,7 @@
     "children": [
       {
         "id": "leocarmada",
-        "childsName": "Leo",
+        "childName": "Leo",
         "type": "blood"
       }
     ],
@@ -1867,11 +2074,12 @@
     "gender": "male",
     "firstName": "Matt",
     "lastName": "Carmada",
+    "dob": "1982-12-16",
     "parents": [],
     "children": [
       {
         "id": "leocarmada",
-        "childsName": "Leo",
+        "childName": "Leo",
         "type": "blood"
       }
     ],
@@ -1927,22 +2135,22 @@
     "children": [
       {
         "id": "rickpereira",
-        "childsName": "Rick",
+        "childName": "Rick",
         "type": "blood"
       },
       {
         "id": "mattpereira",
-        "childsName": "Matthew",
+        "childName": "Matthew",
         "type": "blood"
       },
       {
         "id": "zachpereira",
-        "childsName": "Zachary",
+        "childName": "Zachary",
         "type": "blood"
       },
       {
         "id": "ashpereira",
-        "childsName": "Ashley",
+        "childName": "Ashley",
         "type": "blood"
       }
     ],
@@ -1981,22 +2189,22 @@
     "children": [
       {
         "id": "rickpereira",
-        "childsName": "Rick",
+        "childName": "Rick",
         "type": "blood"
       },
       {
         "id": "mattpereira",
-        "childsName": "Matthew",
+        "childName": "Matthew",
         "type": "blood"
       },
       {
         "id": "zachpereira",
-        "childsName": "Zachary",
+        "childName": "Zachary",
         "type": "blood"
       },
       {
         "id": "ashpereira",
-        "childsName": "Ashley",
+        "childName": "Ashley",
         "type": "blood"
       }
     ],
@@ -2014,6 +2222,7 @@
     "gender": "male",
     "firstName": "Rick",
     "lastName": "Periera",
+    "dob": "1981-09-02",
     "parents": [
       {
         "id": "dickpereira",
@@ -2066,7 +2275,7 @@
     "children": [
       {
         "id": "mathewpereira",
-        "childsName": "Matthew",
+        "childName": "Matthew",
         "type": "blood"
       }
     ],
@@ -2090,6 +2299,7 @@
     "spouses": [
       {
         "id": "christinepereira",
+        "spouseName": "Christine",
         "type": "married"
       }
     ]
@@ -2110,6 +2320,7 @@
     "spouses": [
       {
         "id": "mattpereira",
+        "spouseName": "Matthew",
         "type": "married"
       }
     ]
@@ -2122,10 +2333,12 @@
     "parents": [
       {
         "id": "mattpereira",
+        "parentName": "Matthew",
         "type": "blood"
       },
       {
         "id": "christinepereira",
+        "parentName": "Christine",
         "type": "blood"
       }
     ],
@@ -2176,6 +2389,7 @@
     "firstName": "Ashley",
     "maidenName": "Periera",
     "lastName": "Kupelian",
+    "dob": "1993-02-12",
     "parents": [
       {
         "id": "dickpereira",
@@ -2228,35 +2442,39 @@
     "children": [
       {
         "id": "marksandora",
-        "childsName": "Mark",
+        "childName": "Mark",
         "type": "blood"
       },
       {
         "id": "mikesandora",
-        "childsName": "Michael",
+        "childName": "Michael",
         "type": "blood"
       },
       {
         "id": "valsandora",
-        "childsName": "Valerie",
+        "childName": "Valerie",
         "type": "blood"
       }
     ],
     "siblings": [
       {
         "id": "stellaluca",
+        "siblingName": "Stella",
         "type": "blood"
       },
       {
-          "id": "edsandora",
-          "type": "blood"
+        "id": "edsandora",
+        "siblingName": "Edward",
+        "type": "blood"
       },
       {
         "id": "anneriescott",
+        "siblingName": "Anne Marie",
         "type": "blood"
       },
       {
         "id": "jpereira",
+        "siblingName": "Joanne",
         "type": "blood"
       }
     ],
@@ -2278,17 +2496,17 @@
     "children": [
       {
         "id": "marksandora",
-        "childsName": "Mark",
+        "childName": "Mark",
         "type": "blood"
       },
       {
         "id": "mikesandora",
-        "childsName": "Michael",
+        "childName": "Michael",
         "type": "blood"
       },
       {
         "id": "valsandora",
-        "childsName": "Valerie",
+        "childName": "Valerie",
         "type": "blood"
       }
     ],
@@ -2419,7 +2637,7 @@
     "children": [
       {
         "id": "brandongarcia",
-        "childsName": "Brandon",
+        "childName": "Brandon",
         "type": "blood"
       }
     ],
@@ -2452,7 +2670,7 @@
     "children": [
       {
         "id": "brandongarcia",
-        "childsName": "Brandon",
+        "childName": "Brandon",
         "type": "blood"
       }
     ],
