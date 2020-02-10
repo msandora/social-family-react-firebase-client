@@ -1,19 +1,24 @@
 import {
-  SET_RECIPE,
-  SET_RECIPES,
-  DELETE_RECIPE,
-  SET_SCREAM,
-  SET_SCREAMS,
   LOADING_DATA,
-  LIKE_SCREAM,
-  UNLIKE_SCREAM,
-  DELETE_SCREAM,
   SET_ERRORS,
-  POST_SCREAM,
   CLEAR_ERRORS,
   LOADING_UI,
   STOP_LOADING_UI,
-  SUBMIT_COMMENT
+
+  SET_RECIPE,
+  SET_RECIPES,
+  DELETE_RECIPE,
+  POST_RECIPE,
+
+  SET_SCREAM,
+  SET_SCREAMS,
+  DELETE_SCREAM,
+  POST_SCREAM,
+
+  LIKE_SCREAM,
+  UNLIKE_SCREAM,
+
+  SUBMIT_SCREAM_COMMENT
 } from '../types';
 import axios from 'axios';
 
@@ -52,6 +57,26 @@ export const getRecipe = (recipeId) => (dispatch) => {
     .catch((err) => console.log(err));
 };
 
+// Post a recipe
+export const postRecipe = (newRecipe) => (dispatch) => {
+  dispatch({ type: LOADING_UI });
+  axios
+    .post('/recipe', newRecipe)
+    .then((res) => {
+      dispatch({
+        type: POST_RECIPE,
+        payload: res.data
+      });
+      dispatch(clearErrors());
+    })
+    .catch((err) => {
+      dispatch({
+        type: SET_ERRORS,
+        payload: err.response.data
+      });
+    });
+};
+
 export const deleteRecipe = (recipeId) => (dispatch) => {
   axios
     .delete(`/recipe/${recipeId}`)
@@ -60,6 +85,9 @@ export const deleteRecipe = (recipeId) => (dispatch) => {
     })
     .catch((err) => console.log(err));
 };
+
+
+
 
 
 
@@ -148,7 +176,7 @@ export const submitComment = (screamId, commentData) => (dispatch) => {
     .post(`/scream/${screamId}/comment`, commentData)
     .then((res) => {
       dispatch({
-        type: SUBMIT_COMMENT,
+        type: SUBMIT_SCREAM_COMMENT,
         payload: res.data
       });
       dispatch(clearErrors());

@@ -15,14 +15,13 @@ class Recipes extends Component {
     this.props.getRecipes();
   }
   render() {
-    const { authenticated } = this.props;
     const { recipes, loading } = this.props.data;
-
-    let recentScreamsMarkup = !loading ? (
+    let recentRecipesMarkup = !loading ? (
       recipes.map((recipe) => <Recipe key={recipe.recipeId} recipe={recipe} />)
     ) : (
       <ScreamSkeleton />
     );
+    const { authenticated } = this.props;
 
     return (
       <Grid container spacing={16}>
@@ -30,9 +29,7 @@ class Recipes extends Component {
           <Profile />
         </Grid>
         <Grid item sm={8} xs={12}>
-  
-
-          {recentScreamsMarkup}
+          {recentRecipesMarkup}
         </Grid>
       </Grid>
     );

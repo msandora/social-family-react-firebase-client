@@ -17,9 +17,11 @@ export const LIKE_SCREAM = 'LIKE_SCREAM';
 export const UNLIKE_SCREAM = 'UNLIKE_SCREAM';
 export const DELETE_SCREAM = 'DELETE_SCREAM';
 export const POST_SCREAM = 'POST_SCREAM';
-export const SUBMIT_COMMENT = 'SUBMIT_COMMENT';
+export const SUBMIT_SCREAM_COMMENT = 'SUBMIT_SCREAM_COMMENT';
 
 export const SET_RECIPES = 'SET_RECIPES';
 export const SET_RECIPE = 'SET_RECIPE';
+export const LIKE_RECIPE = 'LIKE_RECIPE';
+export const UNLIKE_RECIPE = 'UNLIKE_RECIPE';
 export const DELETE_RECIPE = 'DELETE_RECIPE';
 export const POST_RECIPE = 'POST_RECIPE';
