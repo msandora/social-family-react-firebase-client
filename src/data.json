@@ -252,6 +252,7 @@
     "gender": "male",
     "firstName": "Pasquale",
     "lastName": "Lavalle",
+    "bio": "Died at birth",
     "parents": [
       {
         "id": "domenicolavalle",
@@ -376,6 +377,7 @@
     "gender": "male",
     "firstName": "Pasquale",
     "lastName": "Lavalle",
+    "bio": "Died at birth",
     "parents": [
       {
         "id": "domenicolavalle",
@@ -1292,10 +1294,12 @@
     "children": [
       {
         "id": "eddiesandora",
+        "childName": "Edward",
         "type": "blood"
       },
       {
         "id": "theresabarbuto",
+        "childName": "Theresa",
         "type": "blood"
       }
     ],
@@ -1338,10 +1342,12 @@
     "children": [
       {
         "id": "eddiesandora",
+        "childName": "Edward",
         "type": "blood"
       },
       {
         "id": "theresabarbuto",
+        "childName": "Theresa",
         "type": "blood"
       }
     ],
@@ -1362,34 +1368,41 @@
     "parents": [
       {
         "id": "edsandora",
+        "parentName": "Edward",
         "type": "blood"
       },
       {
         "id": "lindasandora",
+        "parentName": "Linda",
         "type": "blood"
       }
     ],
     "children": [
       {
         "id": "emilysandora",
+        "childName": "Emily",
         "type": "blood"
       },
       {
         "id": "ethansandora",
+        "childName": "Ethan",
         "type": "blood"
       },
       {
         "id": "zachsandora",
+        "childName": "Zachary",
         "type": "blood"
       },
       {
         "id": "juliannasandora",
+        "childName": "Julianna",
         "type": "blood"
       }
     ],
     "siblings": [
       {
         "id": "theresabarbuto",
+        "siblingName": "Theresa",
         "type": "blood"
       }
     ],
@@ -1539,20 +1552,24 @@
     "parents": [
       {
         "id": "edsandora",
+        "parentName": "Edward",
         "type": "blood"
       },
       {
         "id": "lindasandora",
+        "parentName": "Linda",
         "type": "blood"
       }
     ],
     "children": [
       {
         "id": "anthonybarbuto",
+        "childName": "Anthony",
         "type": "blood"
       },
       {
         "id": "gabbybarbuto",
+        "childName": "Gabrielle",
         "type": "blood"
       }
     ],
@@ -1565,6 +1582,7 @@
     "spouses": [
       {
         "id": "vinnybarbuto",
+        "spouseName": "Vincent",
         "type": "married"
       }
     ]
@@ -1578,10 +1596,12 @@
     "children": [
       {
         "id": "anthonybarbuto",
+        "childName": "Anthony",
         "type": "blood"
       },
       {
         "id": "gabbybarbuto",
+        "childName": "Gabrielle",
         "type": "blood"
       }
     ],
@@ -1589,6 +1609,7 @@
     "spouses": [
       {
         "id": "theresabarbuto",
+        "spouseName": "Theresa",
         "type": "married"
       }
     ]
@@ -1604,10 +1625,12 @@
     "parents": [
       {
         "id": "vinnybarbuto",
+        "parentName": "Vincent",
         "type": "blood"
       },
       {
         "id": "theresabarbuto",
+        "parentName": "Theresa",
         "type": "blood"
       }
     ],
@@ -1632,10 +1655,12 @@
     "parents": [
       {
         "id": "vinnybarbuto",
+        "parentName": "Vincent",
         "type": "blood"
       },
       {
         "id": "theresabarbuto",
+        "parentName": "Theresa",
         "type": "blood"
       }
     ],
@@ -1658,14 +1683,17 @@
     "children": [
       {
         "id": "johnnyscott",
+        "childName": "John",
         "type": "blood"
       },
       {
         "id": "jasonscott",
+        "childName": "Jason",
         "type": "blood"
       },
       {
         "id": "aliciascott",
+        "childName": "Alicia",
         "type": "blood"
       }
     ],
@@ -1697,38 +1725,46 @@
     "children": [
       {
         "id": "johnnyscott",
+        "childName": "John",
         "type": "blood"
       },
       {
         "id": "jasonscott",
+        "childName": "Jason",
         "type": "blood"
       },
       {
         "id": "aliciascott",
+        "childName": "Alicia",
         "type": "blood"
       }
     ],
     "siblings": [
       {
         "id": "stellaluca",
+        "siblingName": "Stella",
         "type": "blood"
       },
       {
-          "id": "edsandora",
-          "type": "blood"
+        "id": "edsandora",
+        "siblingName": "Edward",
+        "type": "blood"
       },
       {
         "id": "dansandora",
+        "siblingName": "Daniel",
         "type": "blood"
       },
       {
         "id": "jpereira",
+        "siblingName": "Joanne",
         "type": "blood"
       }
     ],
     "spouses": [
       {
         "id": "johnscott",
+        "spouseName": "John",
         "type": "married"
       }
     ]
@@ -2208,18 +2244,22 @@
     "siblings": [
       {
         "id": "stellaluca",
+        "siblingName": "Stella",
         "type": "blood"
       },
       {
         "id": "edsandora",
+        "siblingName": "Edward",
         "type": "blood"
       },
       {
         "id": "dansandora",
+        "siblingName": "Daniel",
         "type": "blood"
       },
       {
         "id": "anneriescott",
+        "siblingName": "Anne Marie",
         "type": "blood"
       }
     ],
@@ -2364,6 +2404,7 @@
     "children": [
       {
         "id": "mathewpereira",
+        "childName": "Matthew",
         "type": "blood"
       }
     ],
@@ -2716,7 +2757,9 @@
     "id": "salgarcia",
     "gender": "male",
     "firstName": "Salvatore",
+    "middleName": "William",
     "lastName": "Garcia",
+    "dob": "1987-10-15",
     "parents": [],
     "children": [
       {
