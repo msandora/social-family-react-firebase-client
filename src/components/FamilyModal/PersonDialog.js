@@ -106,7 +106,7 @@ class PersonDialog extends Component {
 								? 
 								<DialogContentText>
 									<span>{this.props.person.firstName} has {this.props.person.siblings.length} {(this.props.person.siblings.length === 1 ? 'sibling': 'siblings')}. </span>
-								
+		
 									{this.props.person.siblings.map((item, index) => (
 										(item.siblingName !== undefined) 
 											? 

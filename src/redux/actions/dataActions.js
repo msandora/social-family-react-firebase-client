@@ -4,20 +4,18 @@ import {
   CLEAR_ERRORS,
   LOADING_UI,
   STOP_LOADING_UI,
-
   SET_RECIPE,
   SET_RECIPES,
   DELETE_RECIPE,
   POST_RECIPE,
-
+  LIKE_RECIPE,
+  UNLIKE_RECIPE,
   SET_SCREAM,
   SET_SCREAMS,
   DELETE_SCREAM,
   POST_SCREAM,
-
   LIKE_SCREAM,
   UNLIKE_SCREAM,
-
   SUBMIT_SCREAM_COMMENT
 } from '../types';
 import axios from 'axios';
@@ -75,6 +73,32 @@ export const postRecipe = (newRecipe) => (dispatch) => {
         payload: err.response.data
       });
     });
+};
+
+// Like a recipe
+export const likeRecipe = (recipeId) => (dispatch) => {
+  axios
+    .get(`/recipe/${recipeId}/like`)
+    .then((res) => {
+      dispatch({
+        type: LIKE_RECIPE,
+        payload: res.data
+      });
+    })
+    .catch((err) => console.log(err));
+};
+
+// Unlike a recipe
+export const unlikeRecipe = (recipeId) => (dispatch) => {
+  axios
+    .get(`/recipe/${recipeId}/unlike`)
+    .then((res) => {
+      dispatch({
+        type: UNLIKE_RECIPE,
+        payload: res.data
+      });
+    })
+    .catch((err) => console.log(err));
 };
 
 export const deleteRecipe = (recipeId) => (dispatch) => {

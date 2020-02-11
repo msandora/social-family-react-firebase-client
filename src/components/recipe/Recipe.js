@@ -4,6 +4,8 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import PropTypes from 'prop-types';
 import DeleteRecipe from '../../components/recipe/DeleteRecipe';
+import LikeRecipe from './LikeRecipe';
+
 //MUI Stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import Card from '@material-ui/core/Card';
@@ -40,7 +42,8 @@ class Recipe extends Component {
 				recipeId,
 				recipeTitle,
 				recipeType,
-				ingredients
+				ingredients,
+				likeCount
 		  },
 		  user: {
 				authenticated,
@@ -78,7 +81,8 @@ class Recipe extends Component {
 				</CardContent>
 
 				<CardActions>
-
+					<LikeRecipe recipeId={recipeId} />
+					<span>{likeCount} Likes</span>
 				</CardActions>
 			</Card>
 		);
