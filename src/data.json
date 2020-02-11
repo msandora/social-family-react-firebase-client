@@ -1419,6 +1419,7 @@
     "parents": [
       {
         "id": "eddiesandora",
+        "parentName": "Edward",
         "type": "blood"
       }
     ],
@@ -1453,6 +1454,7 @@
     "parents": [
       {
         "id": "eddiesandora",
+        "parentName": "Edward",
         "type": "blood"
       }
     ],
@@ -1487,6 +1489,7 @@
     "parents": [
       {
         "id": "eddiesandora",
+        "parentName": "Edward",
         "type": "blood"
       }
     ],
@@ -1521,6 +1524,7 @@
     "parents": [
       {
         "id": "eddiesandora",
+        "parentName": "Edward",
         "type": "blood"
       }
     ],

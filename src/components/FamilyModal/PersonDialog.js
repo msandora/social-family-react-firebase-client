@@ -90,10 +90,13 @@ class PersonDialog extends Component {
 								: <span><b>Birth Date:</b> Unknown</span>  
 							}		
 							</DialogContentText>
-							{(this.props.person.parents && this.props.person.parents.length && this.props.person.parents[0].parentName && this.props.person.parents[1].parentName) 
-								? 
+							{(this.props.person.parents && this.props.person.parents.length && this.props.person.parents[0].parentName) ? 
 								<DialogContentText>
-									<span>{this.props.person.firstName} is the {(this.props.person.gender === 'male') ? 'son' : "daughter"} of {this.props.person.parents[0].parentName} and {this.props.person.parents[1].parentName} 
+									<span>{this.props.person.firstName} is the {(this.props.person.gender === 'male') ? 'son' : "daughter"} of {this.props.person.parents[0].parentName} 
+										{(this.props.person.parents && this.props.person.parents.length > 1 && this.props.person.parents[1].parentName) ? 
+											' and ' + this.props.person.parents[1].parentName
+											: null
+										}
 										{(person.maidenName !== undefined) 
 											? <span> {this.props.person.maidenName}.</span>
 											: <span> {this.props.person.lastName}.</span>
