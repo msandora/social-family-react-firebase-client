@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 import { signupUser } from '../redux/actions/userActions';
 
 const styles = (theme) => ({
-    ...theme
+	...theme
 });
 
 class Signup extends Component {
@@ -47,100 +47,100 @@ class Signup extends Component {
     };
     this.props.signupUser(newUserData, this.props.history);
   };
-    handleChange = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-    }
-    render() { 
-        const { classes, UI: { loading } } = this.props;
-        const { errors } = this.state;
-        return ( 
-            <Grid container className={classes.form}>
-                <Grid item sm/>
-                <Grid item sm>
-                    <img src={AppIcon} alt="monkey" className={classes.image}/>
-                    <Typography variant="h2" className={classes.pageTitle}>Signup</Typography>
-                    <form noValidate onSubmit={this.handleSubmit}>
-                        <TextField 
-                            id="email" 
-                            name="email" 
-                            type="email" 
-                            label="Email" 
-                            className={classes.textField} 
-                            helperText={errors.email}
-                            error={errors.email ? true : false}
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                            fullWidth />
-                        <TextField 
-                            id="password" 
-                            name="password" 
-                            type="password" 
-                            label="Password" 
-                            className={classes.textField} 
-                            helperText={errors.password}
-                            error={errors.password ? true : false}
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                            fullWidth />
-                        <TextField 
-                            id="confirmPassword" 
-                            name="confirmPassword" 
-                            type="password" 
-                            label="Confirm Password" 
-                            className={classes.textField} 
-                            helperText={errors.confirmPassword}
-                            error={errors.confirmPassword ? true : false}
-                            value={this.state.confirmPassword}
-                            onChange={this.handleChange}
-                            fullWidth />
-                        <TextField 
-                            id="handle" 
-                            name="handle" 
-                            type="text" 
-                            label="Handle" 
-                            className={classes.textField} 
-                            helperText={errors.handle}
-                            error={errors.handle ? true : false}
-                            value={this.state.handle}
-                            onChange={this.handleChange}
-                            fullWidth />
-                            {errors.general && (
-                                <Typography variant="body2" className={classes.customError}>
-                                    {errors.general}
-                                </Typography>
-                            )}
-                        <Button 
-                            type="submit" 
-                            variant="contained" 
-                            color="primary" 
-                            className={classes.button} 
-                            disabled={loading}>Login
-                            {loading && (
-                                <CircularProgress className={classes.progress} size={30}/>
-                            )}
-                        </Button>
-                        <br/>
-                        <small>Already have an account? Log in <Link to="/login">here</Link></small>
-                    </form>
-                </Grid>
-                <Grid item sm/>
-            </Grid>
-        );
-    }
+	handleChange = (event) => {
+		this.setState({
+				[event.target.name]: event.target.value
+		})
+	}
+	render() { 
+		const { classes, UI: { loading } } = this.props;
+		const { errors } = this.state;
+		return ( 
+			<Grid container className={classes.form}>
+				<Grid item sm={4} />
+				<Grid item xs={12} sm={4}>
+					<img src={AppIcon} alt="monkey" className={classes.image}/>
+					<Typography variant="h2" className={classes.pageTitle}>Signup</Typography>
+					<form noValidate onSubmit={this.handleSubmit}>
+							<TextField 
+									id="email" 
+									name="email" 
+									type="email" 
+									label="Email" 
+									className={classes.textField} 
+									helperText={errors.email}
+									error={errors.email ? true : false}
+									value={this.state.email}
+									onChange={this.handleChange}
+									fullWidth />
+							<TextField 
+									id="password" 
+									name="password" 
+									type="password" 
+									label="Password" 
+									className={classes.textField} 
+									helperText={errors.password}
+									error={errors.password ? true : false}
+									value={this.state.password}
+									onChange={this.handleChange}
+									fullWidth />
+							<TextField 
+									id="confirmPassword" 
+									name="confirmPassword" 
+									type="password" 
+									label="Confirm Password" 
+									className={classes.textField} 
+									helperText={errors.confirmPassword}
+									error={errors.confirmPassword ? true : false}
+									value={this.state.confirmPassword}
+									onChange={this.handleChange}
+									fullWidth />
+							<TextField 
+									id="handle" 
+									name="handle" 
+									type="text" 
+									label="Handle" 
+									className={classes.textField} 
+									helperText={errors.handle}
+									error={errors.handle ? true : false}
+									value={this.state.handle}
+									onChange={this.handleChange}
+									fullWidth />
+									{errors.general && (
+											<Typography variant="body2" className={classes.customError}>
+													{errors.general}
+											</Typography>
+									)}
+							<Button 
+									type="submit" 
+									variant="contained" 
+									color="primary" 
+									className={classes.button} 
+									disabled={loading}>Login
+									{loading && (
+											<CircularProgress className={classes.progress} size={30}/>
+									)}
+							</Button>
+							<br /><br />
+							<small>Already have an account? Log in <Link to="/login">here</Link></small>
+					</form>
+				</Grid>
+				<Grid item sm={4}/>
+			</Grid>
+		);
+	}
 }
 
 Signup.propTypes = {
-    classes: PropTypes.object.isRequired,
-    user: PropTypes.object.isRequired,
-    UI: PropTypes.object.isRequired,
-    signupUser: PropTypes.func.isRequired
+	classes: PropTypes.object.isRequired,
+	user: PropTypes.object.isRequired,
+	UI: PropTypes.object.isRequired,
+	signupUser: PropTypes.func.isRequired
 };
   
 const mapStateToProps = (state) => ({
-    user: state.user,
-    UI: state.UI
+	user: state.user,
+	UI: state.UI
 });
 
 export default connect(mapStateToProps, { signupUser })(withStyles(styles)(Signup));

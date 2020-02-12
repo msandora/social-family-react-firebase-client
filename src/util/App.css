@@ -25,17 +25,17 @@ body {
 }
 
 .desktop-container {
-  margin: 70px auto 20px;
+  margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;
-  padding: 10px 15px;
+  padding: 70px 15px 20px;
 }
 
 .mobile-container {
   margin: 0 auto 100px;
-  max-width: 500;
+  max-width: 500px;
   overflow: hidden;
-  padding: 0 10px;
+  padding: 5px 10px 100px;
 }
 
 .mobile-post-btn {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './util/App.css';
 import { MuiThemeProvider } from '@material-ui/core/styles';
@@ -17,6 +17,8 @@ import Mobilebar from './components/layout/NavMobile';
 
 import themeObject from './util/theme';
 import AuthRoute from './util/AuthRoute';
+import AppRouter from './routers/AppRouter';
+
 // Pages
 import Home from './pages/Home';
 import Recipes from './pages/Recipes';
@@ -24,6 +26,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import User from './pages/User';
 import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
+import NotFoundPage from './pages/NotFoundPage';
 
 const theme = createMuiTheme(themeObject);
 
@@ -46,49 +49,47 @@ if (token) {
 class App extends Component {
   render() { 
     const isMobile = window.innerWidth <= 500;
-    if (isMobile) {
-      return (
-        <MuiThemeProvider theme={theme}>
+    return (
+      <MuiThemeProvider theme={theme}>
         <Provider store={store}>
           <Router>
-            <div className="mobile-container">
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <AuthRoute exact path="/login" component={Login} />
-                <AuthRoute exact path="/signup" component={Signup} />
-                <Route exact path="/family-tree" component={FamilyTree} />
-                <Route exact path="/users/:handle" component={User} />
-                <Route exact path="/users/:handle/scream/:screamId" component={User}/>
-                <Route exact path="/recipes" component={Recipes} />
-              </Switch>
-            </div>
-            <Mobilebar/>
+          {(isMobile) ? 
+            <Fragment>
+              <div className="mobile-container">
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <AuthRoute exact path="/login" component={Login} />
+                  <AuthRoute exact path="/signup" component={Signup} />
+                  <Route exact path="/family-tree" component={FamilyTree} />
+                  <Route exact path="/users/:handle" component={User} />
+                  <Route exact path="/users/:handle/scream/:screamId" component={User}/>
+                  <Route exact path="/recipes" component={Recipes} />
+                  <Route component={NotFoundPage} />
+                </Switch>
+              </div>
+              <Mobilebar/>
+            </Fragment>
+          : 
+            <Fragment>
+              <Navbar/>
+              <div className="desktop-container">
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <AuthRoute exact path="/login" component={Login} />
+                  <AuthRoute exact path="/signup" component={Signup} />
+                  <Route exact path="/family-tree" component={FamilyTree} />
+                  <Route exact path="/users/:handle" component={User} />
+                  <Route exact path="/users/:handle/scream/:screamId" component={User}/>
+                  <Route exact path="/recipes" component={Recipes} />
+                  <Route component={NotFoundPage} />
+                </Switch>
+              </div>
+            </Fragment>
+          }
           </Router>
         </Provider>
       </MuiThemeProvider>
-      );
-    } else {
-      return (
-        <MuiThemeProvider theme={theme}>
-        <Provider store={store}>
-          <Router>
-            <Navbar/>
-            <div className="desktop-container">
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <AuthRoute exact path="/login" component={Login} />
-                <AuthRoute exact path="/signup" component={Signup} />
-                <Route exact path="/family-tree" component={FamilyTree} />
-                <Route exact path="/users/:handle" component={User} />
-                <Route exact path="/users/:handle/scream/:screamId" component={User}/>
-                <Route exact path="/recipes" component={Recipes} />
-              </Switch>
-            </div>
-          </Router>
-        </Provider>
-      </MuiThemeProvider>
-      );
-    }
+    );
   }
 }
  

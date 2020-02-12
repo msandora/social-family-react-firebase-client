@@ -2,14 +2,13 @@ import React, { Component, Fragment } from 'react';
 import MyButton from '../../util/MyButton';
 
 // MUI Stuff
+import withStyles from '@material-ui/core/styles/withStyles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
-
-import withStyles from '@material-ui/core/styles/withStyles';
 
 import NoImg from '../../images/no-img.png';
 
@@ -47,15 +46,11 @@ class PersonDialog extends Component {
 		let currentDate = dayjs().format('MMMM DD, YYYY');
 		let birthDate = dayjs(person.dob).format('MMMM DD, YYYY');
 
-	// let siblings = this.props.person.siblings || [] // if there's no items, give empty array
-	// let siblingsCount = this.props.person.siblings.length;
-	// let betweenSiblings = (siblingsCount === 1 ? '' : siblingsCount - 1 ? ' and ' : ', ');
+		// if(person.firstName === 'Daniel'){
+		// 	console.log(person);
+		// 	console.log(person.spouses);
+		// }
 
-	// let mySiblings = siblings.map((item, index) => {
-	// 	return(
-	// 		<span key={index}>{item.siblingName + betweenSiblings}</span>
-	// 	)
-	// });
 		return ( 	
 			<Fragment>
 				<Fab variant="extended" color="primary" 
@@ -65,52 +60,57 @@ class PersonDialog extends Component {
 						overflow: "hidden",
 						minWidth: "45px"
 					}}>          
-					<img src={NoImg} alt="profile" className="profile-image" 
-					style={{
-						height: "53px"
-					}}/>
+					<img src={NoImg} alt="profile" style={{ height: "53px"	}}/>
 				</Fab>
-				<Dialog fullWidth={true}
-				fullScreen={isMobile}
-				open={open}
-				onClose={this.handleClose}
-				>
+
+				<Dialog 
+					fullWidth={true}
+					fullScreen={isMobile}
+					open={open}
+					onClose={this.handleClose}
+					>
 					<MyButton
 						tip="Close"
 						onClick={this.handleClose}
 						tipClassName={classes.closeButton}
-					>
+						>
 						<CloseIcon />
 					</MyButton>
-					<DialogTitle>{this.props.person.firstName} {this.props.person.middleName} {this.props.person.lastName}</DialogTitle>
+					<DialogTitle>{person.firstName} {person.middleName} {person.lastName}</DialogTitle>
 					<DialogContent>
 							<DialogContentText>
 							{(birthDate !== currentDate)
-								? <span><b>Birth Date:</b> {dayjs(this.props.person.dob).format('MMMM DD, YYYY')}</span> 
+								? <span><b>Birth Date:</b> {dayjs(person.dob).format('MMMM DD, YYYY')}</span> 
 								: <span><b>Birth Date:</b> Unknown</span>  
 							}		
 							</DialogContentText>
-							{(this.props.person.parents && this.props.person.parents.length && this.props.person.parents[0].parentName) ? 
+							{(person.maidenName !== undefined) ? 
 								<DialogContentText>
-									<span>{this.props.person.firstName} is the {(this.props.person.gender === 'male') ? 'son' : "daughter"} of {this.props.person.parents[0].parentName} 
-										{(this.props.person.parents && this.props.person.parents.length > 1 && this.props.person.parents[1].parentName) ? 
-											' and ' + this.props.person.parents[1].parentName
+									<span><b>Maiden Name:</b> {person.maidenName}</span>
+								</DialogContentText>
+								: null
+							}			
+							<br/>
+							{(person.parents && person.parents.length && person.parents[0].parentName) ? 
+								<DialogContentText>
+									<span>{person.firstName} is the {(person.gender === 'male') ? 'son' : "daughter"} of {person.parents[0].parentName} 
+										{(person.parents && person.parents.length > 1 && person.parents[1].parentName) ? 
+											' and ' + person.parents[1].parentName
 											: null
 										}
 										{(person.maidenName !== undefined) 
-											? <span> {this.props.person.maidenName}.</span>
-											: <span> {this.props.person.lastName}.</span>
+											? <span> {person.maidenName}.</span>
+											: <span> {person.lastName}.</span>
 										}			
 									</span>
 								</DialogContentText> 
 								: null
 							}	
-							{(this.props.person.siblings && this.props.person.siblings.length) 
+							{(person.siblings && person.siblings.length) 
 								? 
 								<DialogContentText>
-									<span>{this.props.person.firstName} has {this.props.person.siblings.length} {(this.props.person.siblings.length === 1 ? 'sibling': 'siblings')}. </span>
-		
-									{this.props.person.siblings.map((item, index) => (
+									<span>{(person.gender === 'male') ? 'He' : "She"} has {person.siblings.length} {(person.siblings.length === 1 ? 'sibling': 'siblings')}: </span>
+									{person.siblings.map((item, index) => (
 										(item.siblingName !== undefined) 
 											? 
 											<span key={index}>{(index ? ', ' : '') + item.siblingName}</span>
@@ -119,13 +119,27 @@ class PersonDialog extends Component {
 								</DialogContentText> 
 								: null
 							}	
-
-							{(person.maidenName !== undefined) ? 
+							{(person.spouses && person.spouses.length && person.spouses[0].spouseName) ? 
 								<DialogContentText>
-									<span><b>Maiden Name:</b> {person.maidenName}</span>
-								</DialogContentText>
+										{person.firstName} {person.spouses[0].type} {person.spouses[0].spouseName}
+										{(person.children && person.children.length) ? 
+											<span>
+												<span> and had {person.children.length} {(person.children.length === 1 ? 'child': 'children')}: </span>
+												<span>
+												{person.children.map((item, index) => (
+													(item.childName !== undefined) 
+														? 
+														<span key={index}>{(index ? ', ' : '') + item.childName}</span>
+														: null
+												))}.
+												</span>
+											</span>
+											: null
+										}	
+								</DialogContentText> 
 								: null
-							}			
+							}	
+
 							{(person.bio !== undefined) ? 
 								<DialogContentText>
 									<span><b>Bio:</b> {person.bio}</span>

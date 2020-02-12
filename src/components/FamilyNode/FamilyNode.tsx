@@ -33,7 +33,8 @@ export default React.memo<Props>(
                 bio: node.bio,
                 parents: node.parents,
                 siblings: node.siblings,
-                spouse: node.spouse
+                children: node.children,
+                spouses: node.spouses
               }}/>
               
           </div>

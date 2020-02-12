@@ -44,7 +44,7 @@ export interface IFamilyNode {
   parents: IRelation[];
   children: IRelation[];
   siblings: IRelation[];
-  spouse: IRelation[];
+  spouses: IRelation[];
   placeholder?: boolean;
 }
 
