@@ -30,7 +30,7 @@ class DeleteRecipe extends Component {
     this.setState({ open: false });
   };
   deleteRecipe = () => {
-    this.props.deleteRecipe(this.props.recipeId);
+    this.props.deleteRecipe(this.props.screamId);
     this.setState({ open: false });
   };
   render() {
@@ -71,7 +71,7 @@ class DeleteRecipe extends Component {
 DeleteRecipe.propTypes = {
   deleteRecipe: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,
-  recipeId: PropTypes.string.isRequired
+  screamId: PropTypes.string.isRequired
 };
 
 export default connect(

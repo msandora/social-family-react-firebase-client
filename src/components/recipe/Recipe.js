@@ -39,7 +39,7 @@ class Recipe extends Component {
 				createdAt,
 				userImage,
 				userHandle,
-				recipeId,
+				screamId,
 				recipeTitle,
 				recipeType,
 				ingredients,
@@ -53,7 +53,7 @@ class Recipe extends Component {
 
 		const deleteButton =
 		authenticated && userHandle === handle ? (
-			<DeleteRecipe recipeId={recipeId} />
+			<DeleteRecipe screamId={screamId} />
 		) : null;
 
 		return ( 
@@ -81,7 +81,7 @@ class Recipe extends Component {
 				</CardContent>
 
 				<CardActions>
-					<LikeRecipe recipeId={recipeId} />
+					<LikeRecipe screamId={screamId} />
 					<span>{likeCount} Likes</span>
 				</CardActions>
 			</Card>

@@ -17,7 +17,7 @@ class Recipes extends Component {
   render() {
     const { recipes, loading } = this.props.data;
     let recentRecipesMarkup = !loading ? (
-      recipes.map((recipe) => <Recipe key={recipe.recipeId} recipe={recipe} />)
+      recipes.map((recipe) => <Recipe key={recipe.screamId} recipe={recipe} />)
     ) : (
       <ScreamSkeleton />
     );

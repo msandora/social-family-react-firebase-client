@@ -17,7 +17,6 @@ import Mobilebar from './components/layout/NavMobile';
 
 import themeObject from './util/theme';
 import AuthRoute from './util/AuthRoute';
-import AppRouter from './routers/AppRouter';
 
 // Pages
 import Home from './pages/Home';

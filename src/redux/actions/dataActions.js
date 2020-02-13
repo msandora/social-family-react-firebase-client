@@ -41,10 +41,10 @@ export const getRecipes = () => (dispatch) => {
     });
 };
 
-export const getRecipe = (recipeId) => (dispatch) => {
+export const getRecipe = (screamId) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
-    .get(`/recipe/${recipeId}`)
+    .get(`/recipe/${screamId}`)
     .then((res) => {
       dispatch({
         type: SET_RECIPE,
@@ -76,9 +76,9 @@ export const postRecipe = (newRecipe) => (dispatch) => {
 };
 
 // Like a recipe
-export const likeRecipe = (recipeId) => (dispatch) => {
+export const likeRecipe = (screamId) => (dispatch) => {
   axios
-    .get(`/recipe/${recipeId}/like`)
+    .get(`/recipe/${screamId}/like`)
     .then((res) => {
       dispatch({
         type: LIKE_RECIPE,
@@ -89,9 +89,9 @@ export const likeRecipe = (recipeId) => (dispatch) => {
 };
 
 // Unlike a recipe
-export const unlikeRecipe = (recipeId) => (dispatch) => {
+export const unlikeRecipe = (screamId) => (dispatch) => {
   axios
-    .get(`/recipe/${recipeId}/unlike`)
+    .get(`/recipe/${screamId}/unlike`)
     .then((res) => {
       dispatch({
         type: UNLIKE_RECIPE,
@@ -101,11 +101,11 @@ export const unlikeRecipe = (recipeId) => (dispatch) => {
     .catch((err) => console.log(err));
 };
 
-export const deleteRecipe = (recipeId) => (dispatch) => {
+export const deleteRecipe = (screamId) => (dispatch) => {
   axios
-    .delete(`/recipe/${recipeId}`)
+    .delete(`/recipe/${screamId}`)
     .then(() => {
-      dispatch({ type: DELETE_RECIPE, payload: recipeId });
+      dispatch({ type: DELETE_RECIPE, payload: screamId });
     })
     .catch((err) => console.log(err));
 };

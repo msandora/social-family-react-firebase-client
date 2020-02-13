@@ -3,7 +3,6 @@ import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
-
 import PrivateRoute from '../routers/PrivateRoute';
 import PublicRoute from '../routers/PublicRoute';
 // Pages
@@ -13,8 +12,7 @@ import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import User from '../pages/User';
 import FamilyTree from '../pages/FamilyTree/FamilyTree.tsx';
-
-
+// Imports ^
 
 export const history = createHistory();
 const isMobile = window.innerWidth <= 500;

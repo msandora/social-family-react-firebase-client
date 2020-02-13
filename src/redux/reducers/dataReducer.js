@@ -40,10 +40,10 @@ export default function(state = initialState, action) {
     case LIKE_RECIPE:
       case UNLIKE_RECIPE:
         let recipeIndex = state.recipes.findIndex(
-          (recipe) => recipe.recipeId === action.payload.recipeId
+          (recipe) => recipe.screamId === action.payload.screamId
         );
         state.recipes[recipeIndex] = action.payload;
-        if (state.recipe.recipeId === action.payload.recipeId) {
+        if (state.recipe.screamId === action.payload.screamId) {
           state.recipe = { ...state.recipe, ...action.payload };
         }
         return {
@@ -56,7 +56,7 @@ export default function(state = initialState, action) {
       };
     case DELETE_RECIPE:
       recipeIndex = state.recipes.findIndex(
-        (recipe) => recipe.recipeId === action.payload
+        (recipe) => recipe.screamId === action.payload
       );
       state.recipes.splice(recipeIndex, 1);
       return {
