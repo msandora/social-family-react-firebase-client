@@ -1814,7 +1814,18 @@
         "type": "blood"
       }
     ],
-    "siblings": [],
+    "siblings": [
+      {
+        "id": "jasonscott",
+        "siblingName": "Jason",
+        "type": "blood"
+      },
+      {
+        "id": "aliciascott",
+        "siblingName": "Alicia",
+        "type": "blood"
+      }
+    ],
     "spouses": [
       {
         "id": "kirstenscott",
@@ -2037,7 +2048,18 @@
         "type": "blood"
       }
     ],
-    "siblings": [],
+    "siblings": [
+      {
+        "id": "johnnyscott",
+        "siblingName": "John",
+        "type": "blood"
+      },
+      {
+        "id": "aliciascott",
+        "siblingName": "Alicia",
+        "type": "blood"
+      }
+    ],
     "spouses": [
       {
         "id": "robertascott",
@@ -2153,7 +2175,18 @@
         "type": "blood"
       }
     ],
-    "siblings": [],
+    "siblings": [
+      {
+        "id": "johnnyscott",
+        "siblingName": "John",
+        "type": "blood"
+      },
+      {
+        "id": "jasonscott",
+        "siblingName": "Jason",
+        "type": "blood"
+      }
+    ],
     "spouses": [
       {
         "id": "mattcarmada",

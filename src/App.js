@@ -5,7 +5,6 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import jwtDecode from 'jwt-decode'; // decodes temporary token for user that is logged in
 import axios from 'axios';
-
 // Redux
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -14,10 +13,9 @@ import { logoutUser, getUserData } from './redux/actions/userActions';
 // Components
 import Navbar from './components/layout/NavDesktop';
 import Mobilebar from './components/layout/NavMobile';
-
+// Utilies
 import themeObject from './util/theme';
 import AuthRoute from './util/AuthRoute';
-
 // Pages
 import Home from './pages/Home';
 import Recipes from './pages/Recipes';

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 // https://reacttraining.com/react-router/web/guides/quick-start
 import { Router, Route, Switch } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 
 import PrivateRoute from '../routers/PrivateRoute';
 import PublicRoute from '../routers/PublicRoute';
@@ -12,9 +12,13 @@ import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import User from '../pages/User';
 import FamilyTree from '../pages/FamilyTree/FamilyTree.tsx';
+import NotFoundPage from '../pages/NotFoundPage';
+
+import Navbar from '../components/layout/NavDesktop';
+import Mobilebar from '../components/layout/NavMobile';
 // Imports ^
 
-export const history = createHistory();
+export const history = createBrowserHistory ();
 const isMobile = window.innerWidth <= 500;
 
 const AppRouter = () => (
@@ -24,12 +28,12 @@ const AppRouter = () => (
       <div className="mobile-container">
         <Switch>
           <Route exact path="/" component={Home} />
-          <AuthRoute exact path="/login" component={Login} />
-          <AuthRoute exact path="/signup" component={Signup} />
-          <Route exact path="/family-tree" component={FamilyTree} />
-          <Route exact path="/users/:handle" component={User} />
-          <Route exact path="/users/:handle/scream/:screamId" component={User}/>
-          <Route exact path="/recipes" component={Recipes} />
+          <PublicRoute exact path="/login" component={Login} />
+          <PublicRoute exact path="/signup" component={Signup} />
+          <PrivateRoute exact path="/family-tree" component={FamilyTree} />
+          <PrivateRoute exact path="/users/:handle" component={User} />
+          <PrivateRoute exact path="/users/:handle/scream/:screamId" component={User}/>
+          <PrivateRoute exact path="/recipes" component={Recipes} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>
@@ -41,12 +45,12 @@ const AppRouter = () => (
       <div className="desktop-container">
         <Switch>
           <Route exact path="/" component={Home} />
-          <AuthRoute exact path="/login" component={Login} />
-          <AuthRoute exact path="/signup" component={Signup} />
-          <Route exact path="/family-tree" component={FamilyTree} />
-          <Route exact path="/users/:handle" component={User} />
-          <Route exact path="/users/:handle/scream/:screamId" component={User}/>
-          <Route exact path="/recipes" component={Recipes} />
+          <PublicRoute exact path="/login" component={Login} />
+          <PublicRoute exact path="/signup" component={Signup} />
+          <PrivateRoute exact path="/family-tree" component={FamilyTree} />
+          <PrivateRoute exact path="/users/:handle" component={User} />
+          <PrivateRoute exact path="/users/:handle/scream/:screamId" component={User}/>
+          <PrivateRoute exact path="/recipes" component={Recipes} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>

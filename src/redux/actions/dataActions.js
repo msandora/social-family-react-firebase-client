@@ -4,23 +4,21 @@ import {
   CLEAR_ERRORS,
   LOADING_UI,
   STOP_LOADING_UI,
-  SET_RECIPE,
-  SET_RECIPES,
-  DELETE_RECIPE,
-  POST_RECIPE,
-  LIKE_RECIPE,
-  UNLIKE_RECIPE,
-  SET_SCREAM,
-  SET_SCREAMS,
-  DELETE_SCREAM,
-  POST_SCREAM,
-  LIKE_SCREAM,
-  UNLIKE_SCREAM,
-  SUBMIT_SCREAM_COMMENT
+    SET_RECIPE,
+    SET_RECIPES,
+    DELETE_RECIPE,
+    POST_RECIPE,
+    LIKE_RECIPE,
+    UNLIKE_RECIPE,
+      SET_SCREAM,
+      SET_SCREAMS,
+      DELETE_SCREAM,
+      POST_SCREAM,
+      LIKE_SCREAM,
+      UNLIKE_SCREAM,
+      SUBMIT_SCREAM_COMMENT
 } from '../types';
 import axios from 'axios';
-
-
 
 // Get all recipes
 export const getRecipes = () => (dispatch) => {
