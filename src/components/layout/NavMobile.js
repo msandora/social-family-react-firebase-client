@@ -12,8 +12,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
-// import PersonIcon from '@material-ui/icons/Person';
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
+import PhotoLibrary from '@material-ui/icons/PhotoLibrary';
+// import PersonIcon from '@material-ui/icons/Person';
+
 //Redux
 import { connect } from 'react-redux';
 
@@ -54,6 +56,12 @@ class Mobilebar extends Component {
 								<RestaurantMenuIcon />
 							</MyButton>
 						</Link>
+						<Link to="/gallery">
+							<MyButton tip="Photo Gallery" onClick={this.handleOnClick}>
+								<PhotoLibrary />
+							</MyButton>
+						</Link>
+						
 						<div className={classes.grow} />
 						{authenticated ? (
 							<Notifications />

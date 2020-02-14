@@ -35,21 +35,81 @@ class PersonDialog extends Component {
 		this.setState({ open: false });
 	};
 
-
-
 	render() {
 		const { classes, person } = this.props;
 		const{ open } = this.state;
-
 		const isMobile = window.innerWidth <= 500;
 
-		let currentDate = dayjs().format('MMMM DD, YYYY');
-		let birthDate = dayjs(person.dob).format('MMMM DD, YYYY');
-
-		// if(person.firstName === 'Daniel'){
-		// 	console.log(person);
-		// 	console.log(person.spouses);
-		// }
+		const currentDate = dayjs().format('MMMM DD, YYYY');
+		const birthDate = dayjs(person.dateOfBirth).format('MMMM DD, YYYY');
+    const renderBirthDate = (birthDate !== currentDate) ? (
+			<span><b>Born:</b> {dayjs(person.dateOfBirth).format('MMMM DD, YYYY')}</span>
+    ) : (
+			<span><b>Birth Date:</b> Unknown</span>
+    );
+    const renderMaidenName = (person.maidenName !== undefined) ? (
+			<span><b>Maiden Name:</b> {person.maidenName}</span>
+    ) : (
+			null
+    );			
+		const renderParents = (person.parents && person.parents.length && person.parents[0].parentName) ? ( 
+			<span>{person.firstName} is the {(person.gender === 'male') ? 'son' : "daughter"} of {person.parents[0].parentName} 
+				{(person.parents && person.parents.length > 1 && person.parents[1].parentName) ? 
+					' and ' + person.parents[1].parentName
+					: null
+				}
+				{(person.maidenName !== undefined) 
+					? <span> {person.maidenName}.</span>
+					: <span> {person.lastName}.</span>
+				}			
+			</span>
+    ) : (
+			null
+    );	
+    const renderSiblings = (person.siblings && person.siblings.length) ? (
+			<span>
+				<span>{(person.gender === 'male') ? 'He' : "She"} has {person.siblings.length} {(person.siblings.length === 1 ? 'sibling': 'siblings')}: </span>
+				{person.siblings.map((item, index) => (
+					(item.siblingName !== undefined) ? 
+						<span key={index}>{(index ? ', ' : '') + item.siblingName}</span>
+						: null
+				))}.
+			</span> 
+		) : (
+			null
+    );	
+    const renderChildren = (person.children && person.children.length) ? (
+			<span>{person.firstName}
+			{(person.spouses && person.spouses.length && person.spouses[0].spouseName) ? 
+				<span> {person.spouses[0].type} {person.spouses[0].spouseName}
+					<span> and had {person.children.length} {(person.children.length === 1 ? 'child': 'children')}: </span>
+					{person.children.map((item, index) => (
+						(item.childName !== undefined) 
+							? 
+							<span key={index}>{(index ? ', ' : '') + item.childName}</span>
+							: null
+					))}.
+				</span>
+				: (
+					<span> had {person.children.length} {(person.children.length === 1 ? 'child': 'children')}: 
+						{person.children.map((item, index) => (
+							(item.childName !== undefined) 
+								? 
+								<span key={index}>{(index ? ', ' : '') + item.childName}</span>
+								: null
+						))}.
+					</span>
+				)
+			}	
+			</span> 
+    ) : (
+			null
+    );	
+		const renderBio = (person.bio !== undefined) ? (
+			<span><b>Bio:</b> {person.bio}</span>
+		) : (
+			null
+    );	
 
 		return ( 	
 			<Fragment>
@@ -78,74 +138,12 @@ class PersonDialog extends Component {
 					</MyButton>
 					<DialogTitle>{person.firstName} {person.middleName} {person.lastName}</DialogTitle>
 					<DialogContent>
-							<DialogContentText>
-							{(birthDate !== currentDate)
-								? <span><b>Birth Date:</b> {dayjs(person.dob).format('MMMM DD, YYYY')}</span> 
-								: <span><b>Birth Date:</b> Unknown</span>  
-							}		
-							</DialogContentText>
-							{(person.maidenName !== undefined) ? 
-								<DialogContentText>
-									<span><b>Maiden Name:</b> {person.maidenName}</span>
-								</DialogContentText>
-								: null
-							}			
-							<br/>
-							{(person.parents && person.parents.length && person.parents[0].parentName) ? 
-								<DialogContentText>
-									<span>{person.firstName} is the {(person.gender === 'male') ? 'son' : "daughter"} of {person.parents[0].parentName} 
-										{(person.parents && person.parents.length > 1 && person.parents[1].parentName) ? 
-											' and ' + person.parents[1].parentName
-											: null
-										}
-										{(person.maidenName !== undefined) 
-											? <span> {person.maidenName}.</span>
-											: <span> {person.lastName}.</span>
-										}			
-									</span>
-								</DialogContentText> 
-								: null
-							}	
-							{(person.siblings && person.siblings.length) 
-								? 
-								<DialogContentText>
-									<span>{(person.gender === 'male') ? 'He' : "She"} has {person.siblings.length} {(person.siblings.length === 1 ? 'sibling': 'siblings')}: </span>
-									{person.siblings.map((item, index) => (
-										(item.siblingName !== undefined) 
-											? 
-											<span key={index}>{(index ? ', ' : '') + item.siblingName}</span>
-											: null
-									))}.
-								</DialogContentText> 
-								: null
-							}	
-							{(person.spouses && person.spouses.length && person.spouses[0].spouseName) ? 
-								<DialogContentText>
-										{person.firstName} {person.spouses[0].type} {person.spouses[0].spouseName}
-										{(person.children && person.children.length) ? 
-											<span>
-												<span> and had {person.children.length} {(person.children.length === 1 ? 'child': 'children')}: </span>
-												<span>
-												{person.children.map((item, index) => (
-													(item.childName !== undefined) 
-														? 
-														<span key={index}>{(index ? ', ' : '') + item.childName}</span>
-														: null
-												))}.
-												</span>
-											</span>
-											: null
-										}	
-								</DialogContentText> 
-								: null
-							}	
-
-							{(person.bio !== undefined) ? 
-								<DialogContentText>
-									<span><b>Bio:</b> {person.bio}</span>
-								</DialogContentText>
-								: null
-							}		
+							<DialogContentText>{renderBirthDate}</DialogContentText>
+							<DialogContentText>{renderMaidenName}</DialogContentText>
+							<DialogContentText>{renderParents}</DialogContentText>
+							<DialogContentText>{renderSiblings}</DialogContentText>
+							<DialogContentText>{renderChildren}</DialogContentText>
+							<DialogContentText>{renderBio}</DialogContentText>
 					</DialogContent>
 					<DialogActions>
 							<Button onClick={this.handleClose} color="primary" autoFocus>Close</Button>

@@ -8,6 +8,7 @@
     "axios": "^0.18.1",
     "classnames": "2.2.6",
     "dayjs": "^1.8.11",
+    "font-awesome": "^4.7.0",
     "jwt-decode": "^2.2.0",
     "pinch-zoom-pan": "2.0.0",
     "react": "^16.8.4",

@@ -51,3 +51,10 @@ export interface IFamilyNode {
 * [pinch-zoom-pan](https://www.npmjs.com/package/pinch-zoom-pan)
 * [react-family-tree](https://www.npmjs.com/package/react-family-tree)
 * [relatives-tree](https://www.npmjs.com/package/relatives-tree)
+
+
+https://github.com/CryceTruly/trulyImages
+
+
+https://www.youtube.com/watch?v=YGsmWKMMiYs
+https://github.com/academind/firebase-cloud-functions-introduction/tree/01-storage

@@ -11,6 +11,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
+import PhotoLibrary from '@material-ui/icons/PhotoLibrary';
+
 //Redux
 import { connect } from 'react-redux';
 
@@ -40,6 +42,12 @@ class Navbar extends Component {
 								<RestaurantMenuIcon />
 							</MyButton>
 						</Link>
+						<Link to="/gallery">
+							<MyButton tip="Photo Gallery" onClick={this.handleOnClick}>
+								<PhotoLibrary />
+							</MyButton>
+						</Link>
+						
 						{authenticated ? (
 							<Notifications />
 						) : ( null ) }

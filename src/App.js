@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './util/App.css';
+// import '../node_modules/font-awesome/css/font-awesome.min.css';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import jwtDecode from 'jwt-decode'; // decodes temporary token for user that is logged in
@@ -23,6 +24,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import User from './pages/User';
 import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
+import Gallery from './pages/Gallery';
 import NotFoundPage from './pages/NotFoundPage';
 
 const theme = createMuiTheme(themeObject);
@@ -61,6 +63,7 @@ class App extends Component {
                   <Route exact path="/users/:handle" component={User} />
                   <Route exact path="/users/:handle/scream/:screamId" component={User}/>
                   <Route exact path="/recipes" component={Recipes} />
+                  <Route exact path="/gallery" component={Gallery} />
                   <Route component={NotFoundPage} />
                 </Switch>
               </div>
@@ -78,6 +81,7 @@ class App extends Component {
                   <Route exact path="/users/:handle" component={User} />
                   <Route exact path="/users/:handle/scream/:screamId" component={User}/>
                   <Route exact path="/recipes" component={Recipes} />
+                  <Route exact path="/gallery" component={Gallery} />
                   <Route component={NotFoundPage} />
                 </Switch>
               </div>
