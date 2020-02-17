@@ -11,14 +11,8 @@ import Avatar from '@material-ui/core/Avatar';
 
 const styles = (theme) => ({
   ...theme,
-  commentImage: {
-    maxWidth: '100%',
-    height: 100,
-    objectFit: 'cover',
-    borderRadius: '10%'
-  },
-  commentData: {
-    marginLeft: 20
+  commentHandle: {
+    display: 'inline-block'
   },
   cardHeader: {
     padding: '0 10px 10px 0'
@@ -48,6 +42,7 @@ class Comments extends Component {
                   color="primary"
                   variant="h5"
                   to={`/users/${userHandle}`}
+                  className={classes.commentHandle}
                   >
                   @{userHandle}
                   </Typography>

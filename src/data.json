@@ -127,7 +127,10 @@
     "id": "antionettelavalle",
     "gender": "female",
     "firstName": "Antionette",
+    "maidenName": "Tufaneschi",
     "lastName": "Lavalle",
+    "dateOfBirth": "1909-07-09",
+    "dateOfDeath": "1994-05-04",
     "parents": [
       {
         "id": "domenicolavalle",
@@ -190,6 +193,8 @@
     "gender": "male",
     "firstName": "Louis",
     "lastName": "Lavalle",
+    "dateOfBirth": "1911-01-08",
+    "dateOfDeath": "1963-05-07",
     "parents": [
       {
         "id": "domenicolavalle",

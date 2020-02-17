@@ -31,14 +31,13 @@ const styles = (theme) => ({
   dialogContent: {
     padding: 20
   },
-  expandButton: {
-    position: 'absolute',
-    left: '90%'
-  },
   spinnerDiv: {
     textAlign: 'center',
     marginTop: 50,
     marginBottom: 50
+  },
+  cardHandle: {
+    display: 'inline-block'
   },
   cardHeader: {
     padding: '0 10px 10px 0'
@@ -111,7 +110,7 @@ class ScreamDialog extends Component {
                 color="primary"
                 variant="h5"
                 to={`/users/${userHandle}`}
-                >
+                className={classes.cardHandle}>
                 @{userHandle}
                 </Typography>
               }

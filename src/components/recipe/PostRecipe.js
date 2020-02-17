@@ -131,9 +131,11 @@ class PostRecipe extends Component {
                 // labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={recipeType}
+                error={errors.recipeType ? true : false}
                 onChange={event => this.handleSelectChange(event.target.value)}
                 input={<Input id="name" />}
                 >
+                <MenuItem value="beverages">Beverages</MenuItem>
                 <MenuItem value="appetizer">Appetizer</MenuItem>
                 <MenuItem value="entree">Entree</MenuItem>
                 <MenuItem value="dessert">Dessert</MenuItem>
