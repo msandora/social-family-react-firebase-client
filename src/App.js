@@ -63,6 +63,7 @@ class App extends Component {
                   <Route exact path="/users/:handle" component={User} />
                   <Route exact path="/users/:handle/scream/:screamId" component={User}/>
                   <Route exact path="/recipes" component={Recipes} />
+                  <Route exact path="/users/:handle/recipe/:screamId" component={User}/>
                   <Route exact path="/gallery" component={Gallery} />
                   <Route component={NotFoundPage} />
                 </Switch>
@@ -81,6 +82,7 @@ class App extends Component {
                   <Route exact path="/users/:handle" component={User} />
                   <Route exact path="/users/:handle/scream/:screamId" component={User}/>
                   <Route exact path="/recipes" component={Recipes} />
+                  <Route exact path="/users/:handle/recipe/:screamId" component={User}/>
                   <Route exact path="/gallery" component={Gallery} />
                   <Route component={NotFoundPage} />
                 </Switch>

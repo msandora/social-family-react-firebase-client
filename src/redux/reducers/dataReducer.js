@@ -1,19 +1,19 @@
 import {
-  SET_RECIPE,
-  SET_RECIPES,
-  POST_RECIPE,
-  DELETE_RECIPE,
-  LIKE_RECIPE,
-  UNLIKE_RECIPE,
-
-  SET_SCREAM,
-  SET_SCREAMS,
-  LIKE_SCREAM,
-  UNLIKE_SCREAM,
   LOADING_DATA,
-  DELETE_SCREAM,
-  POST_SCREAM,
-  SUBMIT_SCREAM_COMMENT
+    SET_RECIPE,
+    SET_RECIPES,
+    POST_RECIPE,
+    DELETE_RECIPE,
+    LIKE_RECIPE,
+    UNLIKE_RECIPE,
+    SUBMIT_RECIPE_COMMENT,
+      SET_SCREAM,
+      SET_SCREAMS,
+      POST_SCREAM,
+      DELETE_SCREAM,
+      LIKE_SCREAM,
+      UNLIKE_SCREAM,
+      SUBMIT_SCREAM_COMMENT
 } from '../types';
 
 const initialState = {
@@ -67,7 +67,14 @@ export default function(state = initialState, action) {
         ...state,
         recipes: [action.payload, ...state.recipes]
       };
-
+    case SUBMIT_RECIPE_COMMENT:
+      return {
+        ...state,
+        recipe: {
+          ...state.recipe,
+          comments: [action.payload, ...state.recipe.comments]
+        }
+      };
     case SET_SCREAMS:
       return {
         ...state,

@@ -10,6 +10,7 @@ import {
     POST_RECIPE,
     LIKE_RECIPE,
     UNLIKE_RECIPE,
+    SUBMIT_RECIPE_COMMENT,
       SET_SCREAM,
       SET_SCREAMS,
       DELETE_SCREAM,
@@ -97,6 +98,25 @@ export const unlikeRecipe = (screamId) => (dispatch) => {
       });
     })
     .catch((err) => console.log(err));
+};
+
+// Submit a recipe comment
+export const submitRecipeComment = (screamId, commentData) => (dispatch) => {
+  axios
+    .post(`/recipe/${screamId}/comment`, commentData)
+    .then((res) => {
+      dispatch({
+        type: SUBMIT_RECIPE_COMMENT,
+        payload: res.data
+      });
+      dispatch(clearErrors());
+    })
+    .catch((err) => {
+      dispatch({
+        type: SET_ERRORS,
+        payload: err.response.data
+      });
+    });
 };
 
 export const deleteRecipe = (screamId) => (dispatch) => {
@@ -193,7 +213,7 @@ export const unlikeScream = (screamId) => (dispatch) => {
 };
 
 // Submit a comment
-export const submitComment = (screamId, commentData) => (dispatch) => {
+export const submitScreamComment = (screamId, commentData) => (dispatch) => {
   axios
     .post(`/scream/${screamId}/comment`, commentData)
     .then((res) => {

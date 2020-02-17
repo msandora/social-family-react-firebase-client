@@ -39,7 +39,8 @@ export interface IFamilyNode {
   middleName?: string;
   maidenName?: string;
   lastName?: string;
-  dob?: string;
+  dateOfBirth?: string;
+  dateOfDeath?: string;
   bio?: string;
   parents: IRelation[];
   children: IRelation[];
