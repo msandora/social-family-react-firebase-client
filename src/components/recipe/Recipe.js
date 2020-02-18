@@ -7,7 +7,7 @@ import MyButton from '../../util/MyButton';
 
 import DeleteRecipe from '../../components/recipe/DeleteRecipe';
 import RecipeDialog from './RecipeDialog';
-import LikeRecipe from './LikeRecipe';
+import LikeButton from './LikeButton';
 
 //MUI Stuff
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -86,7 +86,7 @@ class Recipe extends Component {
 				</CardContent>
 
 				<CardActions>
-					<LikeRecipe screamId={screamId} />
+					<LikeButton screamId={screamId} />
 					<span>{likeCount} Likes</span>
 					<MyButton tip="comments">
 						<ChatIcon color="primary" />

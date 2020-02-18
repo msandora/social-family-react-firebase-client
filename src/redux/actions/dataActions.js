@@ -21,6 +21,10 @@ import {
 } from '../types';
 import axios from 'axios';
 
+
+/****** 
+ * RECIPE Actions
+ ***/ 
 // Get all recipes
 export const getRecipes = () => (dispatch) => {
   dispatch({ type: LOADING_DATA });
@@ -128,11 +132,9 @@ export const deleteRecipe = (screamId) => (dispatch) => {
     .catch((err) => console.log(err));
 };
 
-
-
-
-
-
+/****** 
+ * SCREAM Actions
+ ***/ 
 // Get all screams
 export const getScreams = () => (dispatch) => {
   dispatch({ type: LOADING_DATA });
@@ -240,6 +242,10 @@ export const deleteScream = (screamId) => (dispatch) => {
     .catch((err) => console.log(err));
 };
 
+
+/****** 
+ * OTHER data Actions
+ ***/ 
 export const getUserData = (userHandle) => (dispatch) => {
   dispatch({ type: LOADING_DATA });
   axios

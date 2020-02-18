@@ -109,7 +109,7 @@ class PersonDialog extends Component {
 			<span><b>Bio:</b> {person.bio}</span>
 		) : (
 			null
-    );	
+		);	
 
 		return ( 	
 			<Fragment>

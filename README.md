@@ -21,7 +21,7 @@ go to [http://localhost:3000](http://localhost:3000)
 
 ## 5: Edit to node modules
 
-components > FamilyNode > FamilyNode.tsx 
+..\social-family-react-firebase-client\node_modules\relatives-tree\src\types.ts
 
 export interface IRelation {
   id: string;

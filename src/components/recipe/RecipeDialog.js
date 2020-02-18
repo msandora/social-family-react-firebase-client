@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import MyButton from '../../util/MyButton';
-import LikeRecipe from './LikeRecipe';
+import LikeButton from './LikeButton';
 import Comments from './Comments';
 import CommentForm from './CommentForm';
 import dayjs from 'dayjs';
@@ -130,7 +130,7 @@ class RecipeDialog extends Component {
             <Typography variant="body1">{ingredients}</Typography>	
             <Typography variant="body1">{body}</Typography>	
             <hr className={classes.invisibleSeparator} />
-            <LikeRecipe screamId={screamId} />
+            <LikeButton screamId={screamId} />
             <span>{likeCount} likes</span>
             <MyButton tip="comments">
               <ChatIcon color="primary" />
