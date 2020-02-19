@@ -15,6 +15,7 @@ class Home extends Component {
     this.props.getScreams();
   }
   render() {
+    const isMobile = window.innerWidth <= 500;
     const { screams, loading } = this.props.data;
     let recentScreamsMarkup = !loading ? (
       screams.map((scream) => <Scream key={scream.screamId} scream={scream} />)
@@ -25,9 +26,11 @@ class Home extends Component {
 
     return (
       <Grid container spacing={16}>
-        <Grid item sm={4} xs={12}>
-          <Profile />
-        </Grid>
+				{(!isMobile) ?
+				<Grid item sm={4} xs={12}>
+					<Profile />
+				</Grid>
+				: (null) }
         <Grid item sm={8} xs={12}>
           {authenticated ? (
             <PostScream/>

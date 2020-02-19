@@ -8,14 +8,12 @@ import Notifications from './Notifications';
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-// import IconButton from '@material-ui/core/IconButton';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 import PhotoLibrary from '@material-ui/icons/PhotoLibrary';
-
-// import PersonIcon from '@material-ui/icons/Person';
+import PersonIcon from '@material-ui/icons/Person';
 
 //Redux
 import { connect } from 'react-redux';
@@ -65,7 +63,14 @@ class Mobilebar extends Component {
 						
 						<div className={classes.grow} />
 						{authenticated ? (
+						<Fragment>
 							<Notifications />
+							<Link to="/gallery">
+								<MyButton tip="My Profile" onClick={this.handleOnClick}>
+									<PersonIcon />
+								</MyButton>
+							</Link>
+						</Fragment>
 						) : ( null ) }
 					</Fragment>
 				</Toolbar>
