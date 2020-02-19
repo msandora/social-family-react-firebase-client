@@ -28,6 +28,30 @@ const tileData = [
     img: image,
     title: 'Image',
     author: 'author',
+  },
+  {
+    postId: '5',
+    img: image,
+    title: 'Image',
+    author: 'author',
+  },
+  {
+    postId: '6',
+    img: image,
+    title: 'Image',
+    author: 'author',
+  },
+  {
+    postId: '7',
+    img: image,
+    title: 'Image',
+    author: 'author',
+  },
+  {
+    postId: '8',
+    img: image,
+    title: 'Image',
+    author: 'author',
   }
 ];
  
