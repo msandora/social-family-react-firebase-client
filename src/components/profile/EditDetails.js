@@ -63,6 +63,8 @@ class EditDetails extends Component {
   };
   render() {
     const { classes } = this.props;
+    const isMobile = window.innerWidth <= 500;
+
     return (
       <Fragment>
         <MyButton
@@ -76,6 +78,7 @@ class EditDetails extends Component {
           open={this.state.open}
           onClose={this.handleClose}
           fullWidth
+          fullScreen={isMobile}
           maxWidth="sm"
         >
           <DialogTitle>Edit your details</DialogTitle>

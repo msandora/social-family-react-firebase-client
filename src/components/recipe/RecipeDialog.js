@@ -93,6 +93,7 @@ class RecipeDialog extends Component {
       },
       UI: { loading }
     } = this.props;
+    const isMobile = window.innerWidth <= 500;
 
     const dialogMarkup = loading ? (
       <div className={classes.spinnerDiv}>
@@ -144,7 +145,6 @@ class RecipeDialog extends Component {
       </div>
     );
 
-    const isMobile = window.innerWidth <= 500;
 
     return (
       <Fragment>
@@ -157,7 +157,6 @@ class RecipeDialog extends Component {
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
-          fullWidth
           fullScreen={isMobile}
           maxWidth="sm"
         >

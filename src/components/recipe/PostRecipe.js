@@ -82,6 +82,7 @@ class PostRecipe extends Component {
   };
   render() {
     const { recipeType, errors } = this.state;
+    const isMobile = window.innerWidth <= 500;
     const {
       classes,
       UI: { loading }
@@ -95,8 +96,7 @@ class PostRecipe extends Component {
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
-          fullWidth
-          maxWidth="sm"
+          fullScreen={isMobile}
         >
           <MyButton
             tip="Close"
