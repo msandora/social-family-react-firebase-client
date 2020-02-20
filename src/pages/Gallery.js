@@ -78,7 +78,7 @@ class Gallery extends React.Component {
 }
 
 Gallery.propTypes = {
-  getRecipes: PropTypes.func.isRequired,
+  getRecipes: PropTypes.func,
   data: PropTypes.object.isRequired,
   authenticated: PropTypes.bool.isRequired
 };
