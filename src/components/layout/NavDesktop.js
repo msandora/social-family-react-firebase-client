@@ -4,6 +4,9 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import MyButton from '../../util/MyButton';
 import Notifications from './Notifications';
+
+import Sidebar from '../layout/Sidebar';
+
 // MUI stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,8 +16,6 @@ import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 import PhotoLibrary from '@material-ui/icons/PhotoLibrary';
-import PersonIcon from '@material-ui/icons/Person';
-
 //Redux
 import { connect } from 'react-redux';
 
@@ -36,6 +37,7 @@ class Navbar extends Component {
 			<AppBar>
 				<Toolbar className="nav-container"> 
 					<Fragment>
+						<div className={classes.grow} />
 						<Link to="/">
 							<MyButton tip="Home" onClick={this.handleOnClick}>
 								<HomeIcon />
@@ -56,15 +58,10 @@ class Navbar extends Component {
 								<PhotoLibrary />
 							</MyButton>
 						</Link>
-						<div className={classes.grow} />
 						{authenticated ? (
 						<Fragment>
 							<Notifications />
-							<Link to="/gallery">
-								<MyButton tip="My Profile" onClick={this.handleOnClick}>
-									<PersonIcon />
-								</MyButton>
-							</Link>
+							<Sidebar/>
 						</Fragment>
 						) : ( null ) }
 					</Fragment>

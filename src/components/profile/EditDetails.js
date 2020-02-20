@@ -1,10 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
-import MyButton from '../../util/MyButton';
-// Redux stuff
-import { connect } from 'react-redux';
-import { editUserDetails } from '../../redux/actions/userActions';
 // MUI Stuff
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -12,8 +8,14 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 // Icons
 import EditIcon from '@material-ui/icons/Edit';
+// Redux stuff
+import { connect } from 'react-redux';
+import { editUserDetails } from '../../redux/actions/userActions';
 
 const styles = (theme) => ({
   ...theme,
@@ -67,13 +69,12 @@ class EditDetails extends Component {
 
     return (
       <Fragment>
-        <MyButton
-          tip="Edit Details"
-          onClick={this.handleOpen}
-          btnClassName={classes.button}
-        >
-          <EditIcon color="primary" />
-        </MyButton>
+
+        <ListItem button onClick={this.handleOpen}>
+            <ListItemIcon><EditIcon color="primary"/></ListItemIcon>
+            <ListItemText primary="Edit Details" />
+          </ListItem>
+
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
