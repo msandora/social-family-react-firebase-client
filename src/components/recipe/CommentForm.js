@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 // Redux stuff
 import { connect } from 'react-redux';
-import { submitScreamComment } from '../../redux/actions/dataActions';
+import { submitRecipeComment } from '../../redux/actions/dataActions';
 
 const styles = (theme) => ({
   ...theme
@@ -34,7 +34,7 @@ class CommentForm extends Component {
   
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.submitScreamComment(this.props.screamId, { body: this.state.body });
+    this.props.submitRecipeComment(this.props.screamId, { body: this.state.body });
   };
 
   render() {
@@ -72,7 +72,7 @@ class CommentForm extends Component {
 }
 
 CommentForm.propTypes = {
-  submitScreamComment: PropTypes.func.isRequired,
+  submitRecipeComment: PropTypes.func.isRequired,
   UI: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
   screamId: PropTypes.string.isRequired,
@@ -86,5 +86,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
   mapStateToProps,
-  { submitScreamComment }
+  { submitRecipeComment }
 )(withStyles(styles)(CommentForm));

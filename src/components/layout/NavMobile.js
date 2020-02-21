@@ -4,16 +4,18 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import MyButton from '../../util/MyButton';
 import Notifications from './Notifications';
+import Sidebar from '../layout/Sidebar';
+
 //MUI Stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-// import IconButton from '@material-ui/core/IconButton';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
-// import PersonIcon from '@material-ui/icons/Person';
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
+import PhotoLibrary from '@material-ui/icons/PhotoLibrary';
+
 //Redux
 import { connect } from 'react-redux';
 
@@ -39,6 +41,7 @@ class Mobilebar extends Component {
 			<AppBar position="fixed" color="primary" className={classes.appBar}>
 				<Toolbar className="nav-container">
 					<Fragment>
+						<div className={classes.grow} />
 						<Link to="/">
 							<MyButton tip="Home" onClick={this.handleOnClick}>
 								<HomeIcon />
@@ -54,9 +57,16 @@ class Mobilebar extends Component {
 								<RestaurantMenuIcon />
 							</MyButton>
 						</Link>
-						<div className={classes.grow} />
+						<Link to="/gallery">
+							<MyButton tip="Photo Gallery" onClick={this.handleOnClick}>
+								<PhotoLibrary />
+							</MyButton>
+						</Link>
 						{authenticated ? (
+						<Fragment>
 							<Notifications />
+							<Sidebar/>
+						</Fragment>
 						) : ( null ) }
 					</Fragment>
 				</Toolbar>

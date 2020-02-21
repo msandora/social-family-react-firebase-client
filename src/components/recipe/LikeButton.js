@@ -7,10 +7,10 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 // Redux
 import { connect } from 'react-redux';
-import { likeScream, unlikeScream } from '../../redux/actions/dataActions';
+import { likeRecipe, unlikeRecipe } from '../../redux/actions/dataActions';
 
 export class LikeButton extends Component {
-  likedScream = () => {
+  likedRecipe = () => {
     if (
       this.props.user.likes &&
       this.props.user.likes.find(
@@ -20,11 +20,11 @@ export class LikeButton extends Component {
       return true;
     else return false;
   };
-  likeScream = () => {
-    this.props.likeScream(this.props.screamId);
+  likeRecipe = () => {
+    this.props.likeRecipe(this.props.screamId);
   };
-  unlikeScream = () => {
-    this.props.unlikeScream(this.props.screamId);
+  unlikeRecipe = () => {
+    this.props.unlikeRecipe(this.props.screamId);
   };
   render() {
     const { authenticated } = this.props.user;
@@ -34,12 +34,12 @@ export class LikeButton extends Component {
           <FavoriteBorder color="primary" />
         </MyButton>
       </Link>
-    ) : this.likedScream() ? (
-      <MyButton tip="Undo like" onClick={this.unlikeScream}>
+    ) : this.likedRecipe() ? (
+      <MyButton tip="Undo like" onClick={this.unlikeRecipe}>
         <FavoriteIcon color="primary" />
       </MyButton>
     ) : (
-      <MyButton tip="Like" onClick={this.likeScream}>
+      <MyButton tip="Like" onClick={this.likeRecipe}>
         <FavoriteBorder color="primary" />
       </MyButton>
     );
@@ -50,8 +50,8 @@ export class LikeButton extends Component {
 LikeButton.propTypes = {
   user: PropTypes.object.isRequired,
   screamId: PropTypes.string.isRequired,
-  likeScream: PropTypes.func.isRequired,
-  unlikeScream: PropTypes.func.isRequired
+  likeRecipe: PropTypes.func.isRequired,
+  unlikeRecipe: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
@@ -59,8 +59,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapActionsToProps = {
-  likeScream,
-  unlikeScream
+  likeRecipe,
+  unlikeRecipe
 };
 
 export default connect(

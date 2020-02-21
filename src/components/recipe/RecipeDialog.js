@@ -24,7 +24,7 @@ import UnfoldMore from '@material-ui/icons/UnfoldMore';
 import ChatIcon from '@material-ui/icons/Chat';
 // Redux stuff
 import { connect } from 'react-redux';
-import { getScream, clearErrors } from '../../redux/actions/dataActions';
+import { getRecipe, clearErrors } from '../../redux/actions/dataActions';
 
 const styles = (theme) => ({
   ...theme,
@@ -44,7 +44,7 @@ const styles = (theme) => ({
   }
 });
 
-class ScreamDialog extends Component {
+class RecipeDialog extends Component {
   state = {
     open: false,
     oldPath: '',
@@ -59,14 +59,15 @@ class ScreamDialog extends Component {
     let oldPath = window.location.pathname;
 
     const { userHandle, screamId } = this.props;
-    const newPath = `/users/${userHandle}/scream/${screamId}`;
+    // const newPath = `/users/${userHandle}/scream/${screamId}`;
+    const newPath = `/users/${userHandle}/recipe/${screamId}`;
 
     if (oldPath === newPath) oldPath = `/users/${userHandle}`;
 
     window.history.pushState(null, null, newPath);
 
     this.setState({ open: true, oldPath, newPath });
-    this.props.getScream(this.props.screamId);
+    this.props.getRecipe(this.props.screamId);
   };
   handleClose = () => {
     window.history.pushState(null, null, this.state.oldPath);
@@ -77,18 +78,22 @@ class ScreamDialog extends Component {
   render() {
     const {
       classes,
-      scream: {
-        screamId,
-        body,
-        createdAt,
-        likeCount,
-        commentCount,
-        userImage,
-        userHandle,
+      recipe: {
+				body,
+				createdAt,
+				userImage,
+				userHandle,
+				screamId,
+				recipeTitle,
+				recipeType,
+				ingredients,
+				likeCount,
+				commentCount,
         comments
       },
       UI: { loading }
     } = this.props;
+    const isMobile = window.innerWidth <= 500;
 
     const dialogMarkup = loading ? (
       <div className={classes.spinnerDiv}>
@@ -121,6 +126,9 @@ class ScreamDialog extends Component {
         <Grid container spacing={16}>
           <Grid item sm={12}>
             <hr className={classes.invisibleSeparator} />
+            <Typography variant="body1">{recipeTitle}</Typography>	
+            <Typography variant="body1">{recipeType}</Typography>	
+            <Typography variant="body1">{ingredients}</Typography>	
             <Typography variant="body1">{body}</Typography>	
             <hr className={classes.invisibleSeparator} />
             <LikeButton screamId={screamId} />
@@ -137,20 +145,18 @@ class ScreamDialog extends Component {
       </div>
     );
 
-    const isMobile = window.innerWidth <= 500;
 
     return (
       <Fragment>
         <MyButton
           onClick={this.handleOpen}
-          tip="Expand Post"
+          tip="Expand Recipe"
         >
           <UnfoldMore color="primary" />
         </MyButton>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
-          fullWidth
           fullScreen={isMobile}
           maxWidth="sm"
         >
@@ -173,26 +179,26 @@ class ScreamDialog extends Component {
   }
 }
 
-ScreamDialog.propTypes = {
+RecipeDialog.propTypes = {
   clearErrors: PropTypes.func.isRequired,
-  getScream: PropTypes.func.isRequired,
+  getRecipe: PropTypes.func.isRequired,
   screamId: PropTypes.string.isRequired,
   userHandle: PropTypes.string.isRequired,
-  scream: PropTypes.object.isRequired,
+  recipe: PropTypes.object.isRequired,
   UI: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  scream: state.data.scream,
+  recipe: state.data.recipe,
   UI: state.UI
 });
 
 const mapActionsToProps = {
-  getScream,
+  getRecipe,
   clearErrors
 };
 
 export default connect(
   mapStateToProps,
   mapActionsToProps
-)(withStyles(styles)(ScreamDialog));
+)(withStyles(styles)(RecipeDialog));

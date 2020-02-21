@@ -49,19 +49,19 @@ export default {
     borderBottom: '1px solid rgba(0,0,0,0.1)',
     marginBottom: 10
   },
-  paper: {
-    padding: 15
-  },
+  // paper: {
+  //   border: '1px solid transparent'
+  // },
   profile: {
+    padding: 15,
     '& .image-wrapper': {
       textAlign: 'center',
       position: 'relative',
-
-      '& button': {
-        position: 'absolute',
-        top: '0',
-        right: '0'
-      }
+      // '& button': {
+      //   position: 'absolute',
+      //   top: '0',
+      //   right: '0'
+      // }
     },
     '& .profile-image': {
       width: 140,
@@ -73,6 +73,7 @@ export default {
     '& .profile-details': {
       textAlign: 'center',
       wordBreak: 'initial',
+      paddingBottom: 20,
       '& span, svg': {
         verticalAlign: 'middle'
       },
@@ -100,6 +101,10 @@ export default {
     position: 'absolute',
     top: '3px',
     right: '3px',
-    padding: '5px'
+    padding: '5px',
+    zIndex: 1000
+  },
+  progressSpinner: {
+    position: 'absolute'
   }
 };

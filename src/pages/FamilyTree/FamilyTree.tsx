@@ -4,7 +4,8 @@ import { IFamilyNode, IFamilyExtNode } from 'relatives-tree';
 import ReactFamilyTree from 'react-family-tree';
 import FamilyNode from '../../components/FamilyNode/FamilyNode';
 import styles from '../FamilyTree/Family.module.css';
-import nodes from '../../data.json';
+import nodes from '../../data/family.json';
+
 import Typography from '@material-ui/core/Typography';
 
 const myID = 'palmasandora';

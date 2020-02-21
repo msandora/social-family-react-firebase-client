@@ -19,9 +19,6 @@ const styles = (theme) => ({
     float: 'right',
     marginTop: 10
   },
-  progressSpinner: {
-    position: 'absolute'
-  },
 	card: {
 		position: 'relative',
 		display: 'flex',
@@ -51,6 +48,7 @@ class PostScream extends Component {
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+    // console.log(this.state);
   };
   handleSubmit = (event) => {
     event.preventDefault();

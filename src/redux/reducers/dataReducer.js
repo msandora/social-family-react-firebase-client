@@ -1,15 +1,24 @@
 import {
-  SET_SCREAMS,
-  LIKE_SCREAM,
-  UNLIKE_SCREAM,
   LOADING_DATA,
-  DELETE_SCREAM,
-  POST_SCREAM,
-  SET_SCREAM,
-  SUBMIT_COMMENT
+    SET_RECIPE,
+    SET_RECIPES,
+    POST_RECIPE,
+    DELETE_RECIPE,
+    LIKE_RECIPE,
+    UNLIKE_RECIPE,
+    SUBMIT_RECIPE_COMMENT,
+      SET_SCREAM,
+      SET_SCREAMS,
+      POST_SCREAM,
+      DELETE_SCREAM,
+      LIKE_SCREAM,
+      UNLIKE_SCREAM,
+      SUBMIT_SCREAM_COMMENT
 } from '../types';
 
 const initialState = {
+  recipes: [],
+  recipe: {},
   screams: [],
   scream: {},
   loading: false
@@ -21,6 +30,50 @@ export default function(state = initialState, action) {
       return {
         ...state,
         loading: true
+      };
+    case SET_RECIPES:
+      return {
+        ...state,
+        recipes: action.payload,
+        loading: false
+      };
+    case LIKE_RECIPE:
+      case UNLIKE_RECIPE:
+        let recipeIndex = state.recipes.findIndex(
+          (recipe) => recipe.screamId === action.payload.screamId
+        );
+        state.recipes[recipeIndex] = action.payload;
+        if (state.recipe.screamId === action.payload.screamId) {
+          state.recipe = { ...state.recipe, ...action.payload };
+        }
+        return {
+          ...state
+        };
+    case SET_RECIPE:
+      return {
+        ...state,
+        recipe: action.payload
+      };
+    case DELETE_RECIPE:
+      recipeIndex = state.recipes.findIndex(
+        (recipe) => recipe.screamId === action.payload
+      );
+      state.recipes.splice(recipeIndex, 1);
+      return {
+        ...state
+      };
+    case POST_RECIPE:
+      return {
+        ...state,
+        recipes: [action.payload, ...state.recipes]
+      };
+    case SUBMIT_RECIPE_COMMENT:
+      return {
+        ...state,
+        recipe: {
+          ...state.recipe,
+          comments: [action.payload, ...state.recipe.comments]
+        }
       };
     case SET_SCREAMS:
       return {
@@ -35,10 +88,10 @@ export default function(state = initialState, action) {
       };
     case LIKE_SCREAM:
     case UNLIKE_SCREAM:
-      let index = state.screams.findIndex(
+      let screamIndex = state.screams.findIndex(
         (scream) => scream.screamId === action.payload.screamId
       );
-      state.screams[index] = action.payload;
+      state.screams[screamIndex] = action.payload;
       if (state.scream.screamId === action.payload.screamId) {
         state.scream = { ...state.scream, ...action.payload };
       }
@@ -46,10 +99,10 @@ export default function(state = initialState, action) {
         ...state
       };
     case DELETE_SCREAM:
-      index = state.screams.findIndex(
+      screamIndex = state.screams.findIndex(
         (scream) => scream.screamId === action.payload
       );
-      state.screams.splice(index, 1);
+      state.screams.splice(screamIndex, 1);
       return {
         ...state
       };
@@ -58,7 +111,7 @@ export default function(state = initialState, action) {
         ...state,
         screams: [action.payload, ...state.screams]
       };
-    case SUBMIT_COMMENT:
+    case SUBMIT_SCREAM_COMMENT:
       return {
         ...state,
         scream: {

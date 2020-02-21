@@ -2,23 +2,23 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 
-import Scream from '../components/scream/Scream';
+import Recipe from '../components/recipe/Recipe';
 import Profile from '../components/profile/Profile';
 import ScreamSkeleton from '../util/ScreamSkeleton';
-import PostScream from	'../components/scream/PostScream';
+import PostRecipe from	'../components/recipe/PostRecipe';
 
 import { connect } from 'react-redux';
-import { getScreams } from '../redux/actions/dataActions';
+import { getRecipes } from '../redux/actions/dataActions';
 
-class Home extends Component {
+class Recipes extends Component {
   componentDidMount() {
-    this.props.getScreams();
+    this.props.getRecipes();
   }
   render() {
     const isMobile = window.innerWidth <= 500;
-    const { screams, loading } = this.props.data;
-    let recentScreamsMarkup = !loading ? (
-      screams.map((scream) => <Scream key={scream.screamId} scream={scream} />)
+    const { recipes, loading } = this.props.data;
+    let recentRecipesMarkup = !loading ? (
+      recipes.map((recipe) => <Recipe key={recipe.screamId} recipe={recipe} />)
     ) : (
       <ScreamSkeleton />
     );
@@ -26,25 +26,25 @@ class Home extends Component {
 
     return (
       <Grid container spacing={16}>
-				{(!isMobile) ?
+        {(!isMobile) ?
 				<Grid item sm={4} xs={12}>
 					<Profile />
 				</Grid>
 				: (null) }
         <Grid item sm={8} xs={12}>
           {authenticated ? (
-            <PostScream/>
+            <PostRecipe/>
             ) : ( null )
           }
-          {recentScreamsMarkup}
+          {recentRecipesMarkup}
         </Grid>
       </Grid>
     );
   }
 }
 
-Home.propTypes = {
-  getScreams: PropTypes.func.isRequired,
+Recipes.propTypes = {
+  getRecipes: PropTypes.func.isRequired,
   data: PropTypes.object.isRequired,
   authenticated: PropTypes.bool.isRequired
 };
@@ -56,5 +56,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
   mapStateToProps,
-  { getScreams }
-)(Home);
+  { getRecipes }
+)(Recipes);

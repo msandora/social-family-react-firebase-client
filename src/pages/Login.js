@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
 import AppIcon from '../images/icon.png';
 import { Link } from 'react-router-dom';
 
 // MUI Stuff
+import withStyles from '@material-ui/core/styles/withStyles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
@@ -54,8 +54,8 @@ class login extends Component {
 
     return (
       <Grid container className={classes.form}>
-        <Grid item sm />
-        <Grid item sm>
+        <Grid item sm={4} />
+        <Grid item xs={12} sm={4}>
           <img src={AppIcon} alt="monkey" className={classes.image} />
           <Typography variant="h2" className={classes.pageTitle}>
             Login
@@ -102,13 +102,13 @@ class login extends Component {
                 <CircularProgress size={30} className={classes.progress} />
               )}
             </Button>
-            <br />
+            <br /><br />
             <small>
               Dont have an account? Sign up <Link to="/signup">here</Link>
             </small>
           </form>
         </Grid>
-        <Grid item sm />
+        <Grid item sm={4} />
       </Grid>
     );
   }

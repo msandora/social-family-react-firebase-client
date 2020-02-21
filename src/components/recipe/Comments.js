@@ -53,9 +53,9 @@ class Comments extends Component {
               </Grid>
               <Grid container spacing={16}>
                 <Grid item>
-                  <hr className={classes.invisibleSeparator} />
-                  <Typography variant="body1">{body}</Typography>	
-                  <hr className={classes.invisibleSeparator} />
+                <hr className={classes.invisibleSeparator} />
+                <Typography variant="body1">{body}</Typography>	
+                <hr className={classes.invisibleSeparator} />
                 </Grid>
               </Grid>   
               {index !== comments.length - 1 && (

@@ -5,6 +5,8 @@ import {
   LOADING_USER,
   LIKE_SCREAM,
   UNLIKE_SCREAM,
+  LIKE_RECIPE,
+  UNLIKE_RECIPE,
   MARK_NOTIFICATIONS_READ
 } from '../types';
 
@@ -37,7 +39,8 @@ export default function(state = initialState, action) {
         loading: true
       };
     case LIKE_SCREAM:
-      return {
+    case LIKE_RECIPE:
+        return {
         ...state,
         likes: [
           ...state.likes,
@@ -47,8 +50,9 @@ export default function(state = initialState, action) {
           }
         ]
       };
-    case UNLIKE_SCREAM:
-      return {
+      case UNLIKE_SCREAM:
+      case UNLIKE_RECIPE:
+        return {
         ...state,
         likes: state.likes.filter(
           (like) => like.screamId !== action.payload.screamId

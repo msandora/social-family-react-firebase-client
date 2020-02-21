@@ -4,15 +4,27 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import MyButton from '../../util/MyButton';
 import Notifications from './Notifications';
+
+import Sidebar from '../layout/Sidebar';
+
 // MUI stuff
+import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
+import PhotoLibrary from '@material-ui/icons/PhotoLibrary';
 //Redux
 import { connect } from 'react-redux';
+
+
+const styles = (theme) => ({
+	grow: {
+		flexGrow: 1,
+	}
+});
 
 class Navbar extends Component {
 	handleOnClick = () => {
@@ -20,11 +32,12 @@ class Navbar extends Component {
 		window.scrollTo(0, 0);
 	}
 	render() { 
-		const { authenticated } = this.props;
+		const { authenticated, classes } = this.props;
 		return ( 
 			<AppBar>
 				<Toolbar className="nav-container"> 
 					<Fragment>
+						<div className={classes.grow} />
 						<Link to="/">
 							<MyButton tip="Home" onClick={this.handleOnClick}>
 								<HomeIcon />
@@ -40,8 +53,16 @@ class Navbar extends Component {
 								<RestaurantMenuIcon />
 							</MyButton>
 						</Link>
+						<Link to="/gallery">
+							<MyButton tip="Photo Gallery" onClick={this.handleOnClick}>
+								<PhotoLibrary />
+							</MyButton>
+						</Link>
 						{authenticated ? (
+						<Fragment>
 							<Notifications />
+							<Sidebar/>
+						</Fragment>
 						) : ( null ) }
 					</Fragment>
 				</Toolbar>
@@ -58,5 +79,4 @@ const mapStateToProps = (state) => ({
 	authenticated: state.user.authenticated
 });
   
-export default connect(mapStateToProps)(withRouter(Navbar));
-  
+export default connect(mapStateToProps)(withStyles(styles)(withRouter(Navbar)));

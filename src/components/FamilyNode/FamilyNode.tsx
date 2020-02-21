@@ -29,11 +29,13 @@ export default React.memo<Props>(
                 middleName: node.middleName, 
                 maidenName: node.maidenName, 
                 lastName: node.lastName, 
-                dob: node.dob, 
+                dateOfBirth: node.dateOfBirth, 
+                dateOfDeath: node.dateOfDeath,
                 bio: node.bio,
                 parents: node.parents,
                 siblings: node.siblings,
-                spouse: node.spouse
+                children: node.children,
+                spouses: node.spouses
               }}/>
               
           </div>

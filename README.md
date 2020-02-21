@@ -21,14 +21,14 @@ go to [http://localhost:3000](http://localhost:3000)
 
 ## 5: Edit to node modules
 
-components > FamilyNode > FamilyNode.tsx 
+..\social-family-react-firebase-client\node_modules\relatives-tree\src\types.ts
 
 export interface IRelation {
   id: string;
   parentName?: string; 
   siblingName?: string; 
   spouseName?: string; 
-  childsName?: string; 
+  childName?: string; 
   type: RelationType;
 }
 
@@ -39,15 +39,23 @@ export interface IFamilyNode {
   middleName?: string;
   maidenName?: string;
   lastName?: string;
-  dob?: string;
+  dateOfBirth?: string;
+  dateOfDeath?: string;
   bio?: string;
   parents: IRelation[];
   children: IRelation[];
   siblings: IRelation[];
-  spouse: IRelation[];
+  spouses: IRelation[];
   placeholder?: boolean;
 }
 
 * [pinch-zoom-pan](https://www.npmjs.com/package/pinch-zoom-pan)
 * [react-family-tree](https://www.npmjs.com/package/react-family-tree)
 * [relatives-tree](https://www.npmjs.com/package/relatives-tree)
+
+
+https://github.com/CryceTruly/trulyImages
+
+
+https://www.youtube.com/watch?v=YGsmWKMMiYs
+https://github.com/academind/firebase-cloud-functions-introduction/tree/01-storage
