@@ -43,6 +43,7 @@ const styles = (theme) => ({
 
 class Gallery extends React.Component {
   render() {
+    const isMobile = window.innerWidth <= 500;
     const { classes, width } = this.props;
     let columns = width === 'xs' ? 2 : 3;
 
@@ -50,9 +51,11 @@ class Gallery extends React.Component {
     // const { authenticated } = this.props;
     return (
       <Grid container spacing={16}>
-        <Grid item sm={4} xs={12}>
-          <Profile />
-        </Grid>
+        {(!isMobile) ?
+				<Grid item sm={4} xs={12}>
+					<Profile />
+				</Grid>
+				: (null) }
         <Grid item sm={8} xs={12}>
           <GridList cols={columns} >
               {tileData.map(tile => (

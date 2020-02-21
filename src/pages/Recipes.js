@@ -15,6 +15,7 @@ class Recipes extends Component {
     this.props.getRecipes();
   }
   render() {
+    const isMobile = window.innerWidth <= 500;
     const { recipes, loading } = this.props.data;
     let recentRecipesMarkup = !loading ? (
       recipes.map((recipe) => <Recipe key={recipe.screamId} recipe={recipe} />)
@@ -25,9 +26,11 @@ class Recipes extends Component {
 
     return (
       <Grid container spacing={16}>
-        <Grid item sm={4} xs={12}>
-          <Profile />
-        </Grid>
+        {(!isMobile) ?
+				<Grid item sm={4} xs={12}>
+					<Profile />
+				</Grid>
+				: (null) }
         <Grid item sm={8} xs={12}>
           {authenticated ? (
             <PostRecipe/>

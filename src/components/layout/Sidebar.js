@@ -27,8 +27,7 @@ export default function TemporaryDrawer() {
         tip="Close"
         onClick={toggleDrawer(side, false)}
         onKeyDown={toggleDrawer(side, false)}
-        tipClassName="close"
-      >
+        tipClassName="closeDrawer">   
         <CloseIcon />
       </MyButton>
       <UserProfile/>

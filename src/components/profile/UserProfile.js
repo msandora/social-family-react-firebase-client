@@ -21,6 +21,7 @@ import KeyboardReturn from '@material-ui/icons/KeyboardReturn';
 //Redux
 import { connect } from 'react-redux';
 import { logoutUser, uploadImage } from '../../redux/actions/userActions';
+import Divider from '@material-ui/core/Divider';
 
 const styles = (theme) => ({
   ...theme
@@ -86,6 +87,7 @@ class UserProfile extends Component {
           <CalendarToday color="primary" />{' '}
           <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
         </div>
+        <Divider />
 
         <List>
           <input type="file" id="imageInput" hidden="hidden"
