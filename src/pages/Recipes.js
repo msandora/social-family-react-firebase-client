@@ -3,10 +3,9 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 
 import Recipe from '../components/recipe/Recipe';
-import Profile from '../components/profile/Profile';
+import PostRecipe from '../components/recipe/PostRecipe';
 import ScreamSkeleton from '../util/ScreamSkeleton';
-import PostRecipe from	'../components/recipe/PostRecipe';
-
+import Profile from '../components/profile/Profile';
 import { connect } from 'react-redux';
 import { getRecipes } from '../redux/actions/dataActions';
 
@@ -27,15 +26,14 @@ class Recipes extends Component {
     return (
       <Grid container spacing={16}>
         {(!isMobile) ?
-				<Grid item sm={4} xs={12}>
-					<Profile />
+        <Grid item sm={3} xs={12}>
+          <Profile/>
+          {authenticated ? (
+          <PostRecipe />
+          ) : ( null ) }
 				</Grid>
 				: (null) }
-        <Grid item sm={8} xs={12}>
-          {authenticated ? (
-            <PostRecipe/>
-            ) : ( null )
-          }
+        <Grid item sm={9} xs={12}>
           {recentRecipesMarkup}
         </Grid>
       </Grid>

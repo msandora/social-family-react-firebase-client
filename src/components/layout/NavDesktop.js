@@ -4,9 +4,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import MyButton from '../../util/MyButton';
 import Notifications from './Notifications';
-
-import Sidebar from '../layout/Sidebar';
-
+import UserDrawer from '../profile/UserDrawer';
 // MUI stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
@@ -18,7 +16,6 @@ import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 import PhotoLibrary from '@material-ui/icons/PhotoLibrary';
 //Redux
 import { connect } from 'react-redux';
-
 
 const styles = (theme) => ({
 	grow: {
@@ -61,7 +58,7 @@ class Navbar extends Component {
 						{authenticated ? (
 						<Fragment>
 							<Notifications />
-							<Sidebar/>
+							<UserDrawer/>
 						</Fragment>
 						) : ( null ) }
 					</Fragment>

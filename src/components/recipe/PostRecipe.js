@@ -20,6 +20,10 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import AddIcon from '@material-ui/icons/Add';
 import CloseIcon from '@material-ui/icons/Close';
 
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 // Redux stuff
 import { connect } from 'react-redux';
 import { postRecipe, clearErrors } from '../../redux/actions/dataActions';
@@ -90,9 +94,13 @@ class PostRecipe extends Component {
 
     return (
       <Fragment>
-        <MyButton onClick={this.handleOpen} tip="Post a comment">
-          <AddIcon />
-        </MyButton>
+        <List>
+          <ListItem button onClick={this.handleOpen}>
+            <ListItemIcon><AddIcon color="primary"/></ListItemIcon>
+            <ListItemText primary="Post a recipe" />
+          </ListItem>
+        </List>
+
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}

@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
-import { Link } from 'react-router-dom';
-import dayjs from 'dayjs';
+import React, { Component, Fragment } from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
+import withStyles from './node_modules/@material-ui/core/styles/withStyles';
+import { Link } from './node_modules/react-router-dom';
+import dayjs from './node_modules/dayjs';
 // MUI
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from './node_modules/@material-ui/core/Grid';
+import Typography from './node_modules/@material-ui/core/Typography';
 
 const styles = (theme) => ({
   ...theme,

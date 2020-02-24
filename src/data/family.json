@@ -2563,6 +2563,7 @@
     "gender": "male",
     "firstName": "Daniel",
     "lastName": "Sandora",
+    "dateOfBirth": "1950-11-14",
     "parents": [
       {
         "id": "edwardsandora",
@@ -2626,8 +2627,10 @@
     "id": "linsandora",
     "gender": "female",
     "firstName": "Linda",
+    "middleName": "Marie",
     "maidenName": "Gentile",
     "lastName": "Sandora",
+    "dateOfBirth": "1955-07-08",
     "parents": [],
     "children": [
       {
@@ -2756,7 +2759,7 @@
     "middleName": "Christine",
     "maidenName": "Sandora",
     "lastName": "Garcia",
-    "dateOfBirth": "",
+    "dateOfBirth": "1988-09-02",
     "bio": "I am the third child",
     "parents": [
       {

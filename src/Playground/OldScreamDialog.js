@@ -1,24 +1,24 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
+import React, { Component, Fragment } from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
+import withStyles from './node_modules/@material-ui/core/styles/withStyles';
 import MyButton from '../../util/MyButton';
 import LikeButton from './LikeButton';
 import Comments from './Comments';
 import CommentForm from './CommentForm';
-import dayjs from 'dayjs';
-import { Link } from 'react-router-dom';
+import dayjs from './node_modules/dayjs';
+import { Link } from './node_modules/react-router-dom';
 // MUI Stuff
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Dialog from './node_modules/@material-ui/core/Dialog';
+import DialogContent from './node_modules/@material-ui/core/DialogContent';
+import CircularProgress from './node_modules/@material-ui/core/CircularProgress';
+import Grid from './node_modules/@material-ui/core/Grid';
+import Typography from './node_modules/@material-ui/core/Typography';
 // Icons
-import CloseIcon from '@material-ui/icons/Close';
-import UnfoldMore from '@material-ui/icons/UnfoldMore';
-import ChatIcon from '@material-ui/icons/Chat';
+import CloseIcon from './node_modules/@material-ui/icons/Close';
+import UnfoldMore from './node_modules/@material-ui/icons/UnfoldMore';
+import ChatIcon from './node_modules/@material-ui/icons/Chat';
 // Redux stuff
-import { connect } from 'react-redux';
+import { connect } from './node_modules/react-redux';
 import { getScream, clearErrors } from '../../redux/actions/dataActions';
 
 const styles = (theme) => ({
