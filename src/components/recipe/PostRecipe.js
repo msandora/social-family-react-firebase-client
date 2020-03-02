@@ -37,6 +37,13 @@ const styles = (theme) => ({
     position: 'relative',
     float: 'right',
     marginTop: 10
+  },
+  action: {
+    paddingLeft: 5,
+    paddingRight: 5
+  },
+  actionIcon: {
+    marginRight: 0
   }
 });
 
@@ -95,8 +102,8 @@ class PostRecipe extends Component {
     return (
       <Fragment>
         <List>
-          <ListItem button onClick={this.handleOpen}>
-            <ListItemIcon><AddIcon color="primary"/></ListItemIcon>
+          <ListItem button onClick={this.handleOpen} className={classes.action}>
+            <ListItemIcon className={classes.actionIcon}><AddIcon color="primary"/></ListItemIcon>
             <ListItemText primary="Post a recipe" />
           </ListItem>
         </List>

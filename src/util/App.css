@@ -28,7 +28,7 @@ body {
   margin: 0 auto;
   max-width: 980px;
   overflow: hidden;
-  padding: 70px 15px 20px;
+  padding: 75px 15px 20px;
 }
 .nav-container{
   max-width: 980px;
@@ -36,10 +36,10 @@ body {
 }
 
 .mobile-container {
-  margin: 0 auto 100px;
+  margin: 55px auto 100px;
   max-width: 500px;
   overflow: hidden;
-  padding: 5px 10px 100px;
+  padding: 10px 12px 0;
 }
 .closeDrawer {
   position:absolute !important;

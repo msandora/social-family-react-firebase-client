@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Link } from 'react-router-dom';
 import ProfileSkeleton from '../../util/ProfileSkeleton';
 // MUI stuff
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import MuiLink from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 //Redux
@@ -15,6 +14,7 @@ import { logoutUser, uploadImage } from '../../redux/actions/userActions';
 const styles = (theme) => ({
   ...theme
 });
+// const isMobile = window.innerWidth <= 500;
 
 class Profile extends Component {
   render() {
@@ -29,6 +29,7 @@ class Profile extends Component {
 
     let profileMarkup = !loading ? (
       authenticated ? (
+        <Fragment>
         <Paper className={classes.paper}>
           <div className={classes.profile}>
             <div className="image-wrapper">
@@ -48,13 +49,12 @@ class Profile extends Component {
             </div>
           </div>
         </Paper>
+        </Fragment>
+
 
       ) : (
         
         <Paper className={classes.paper}>
-          <Typography variant="body2" align="center">
-            No profile found, please login again
-          </Typography>
           <div className={classes.buttons}>
             <Button
               variant="contained"

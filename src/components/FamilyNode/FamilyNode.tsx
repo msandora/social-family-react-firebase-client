@@ -10,6 +10,7 @@ interface Props {
   onSubClick: (id: string) => void;
   style?: React.CSSProperties;
 }
+
 export default React.memo<Props>(
   function FamilyNode({ node, isRoot, onSubClick, style }) {
     return (
@@ -27,8 +28,10 @@ export default React.memo<Props>(
                 gender: node.gender,
                 firstName: node.firstName, 
                 middleName: node.middleName, 
+                nickName: node.nickName, 
                 maidenName: node.maidenName, 
                 lastName: node.lastName, 
+                suffix: node.suffix, 
                 dateOfBirth: node.dateOfBirth, 
                 dateOfDeath: node.dateOfDeath,
                 bio: node.bio,

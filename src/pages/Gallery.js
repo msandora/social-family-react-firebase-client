@@ -51,11 +51,11 @@ class Gallery extends React.Component {
     return (
       <Grid container spacing={16}>
         {(!isMobile) ?
-				<Grid item sm={3} xs={12}>
+				<Grid item sm={4} xs={12}>
 					<Profile />
 				</Grid>
 				: (null) }
-        <Grid item sm={9} xs={12}>
+        <Grid item sm={8} xs={12}>
           <GridList cols={columns} >
               {tileData.map(tile => (
               <GridListTile key={tile.postId} className={classes.gridList}>

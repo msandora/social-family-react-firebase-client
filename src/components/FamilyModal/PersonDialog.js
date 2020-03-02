@@ -39,14 +39,15 @@ class PersonDialog extends Component {
 		const { classes, person } = this.props;
 		const{ open } = this.state;
 		const isMobile = window.innerWidth <= 500;
-
 		const currentDate = dayjs().format('MMMM DD, YYYY');
 		const birthDate = dayjs(person.dateOfBirth).format('MMMM DD, YYYY');
-    const renderBirthDate = (birthDate !== currentDate) ? (
-			<span><b>Born:</b> {dayjs(person.dateOfBirth).format('MMMM DD, YYYY')}</span>
+		// const deathDate = dayjs(person.dateOfDeath).format('MMMM DD, YYYY');
+
+		const renderBirthDate = (birthDate !== currentDate) ? (
+			<span><b>Born:</b> {birthDate}</span>
     ) : (
 			<span><b>Birth Date:</b> Unknown</span>
-    );
+		);
     const renderMaidenName = (person.maidenName !== undefined) ? (
 			<span><b>Maiden Name:</b> {person.maidenName}</span>
     ) : (
@@ -110,7 +111,16 @@ class PersonDialog extends Component {
 		) : (
 			null
 		);	
-
+		const renderNickName = (person.nickName !== undefined) ? (
+			<span><b>Nickname:</b> {person.nickName}</span>
+		) : (
+			null
+		);	
+		const renderSuffix = (person.suffix !== undefined) ? (
+			<span>{person.suffix}</span>
+		) : (
+			null
+		);	
 		return ( 	
 			<Fragment>
 				<Fab variant="extended" color="primary" 
@@ -136,9 +146,10 @@ class PersonDialog extends Component {
 						>
 						<CloseIcon />
 					</MyButton>
-					<DialogTitle>{person.firstName} {person.middleName} {person.lastName}</DialogTitle>
+					<DialogTitle>{person.firstName} {person.middleName} {person.lastName} {renderSuffix}</DialogTitle>
 					<DialogContent>
 							<DialogContentText>{renderBirthDate}</DialogContentText>
+							<DialogContentText>{renderNickName}</DialogContentText>
 							<DialogContentText>{renderMaidenName}</DialogContentText>
 							<DialogContentText>{renderParents}</DialogContentText>
 							<DialogContentText>{renderSiblings}</DialogContentText>

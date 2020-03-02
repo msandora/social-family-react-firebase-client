@@ -54,6 +54,7 @@ class App extends Component {
           <Router>
           {(isMobile) ? 
             <Fragment>
+              <Mobilebar/>
               <div className="mobile-container">
                 <Switch>
                   <Route exact path="/" component={Home} />
@@ -68,7 +69,6 @@ class App extends Component {
                   <Route component={NotFoundPage} />
                 </Switch>
               </div>
-              <Mobilebar/>
             </Fragment>
           : 
             <Fragment>

@@ -1,7 +1,7 @@
 [Full Stack React & Firebase series](https://www.youtube.com/watch?v=RkBfu-W7tt0&list=PLMhAeHCz8S38ryyeMiBPPUnFAiWnoPvWP)
+https://github.com/hidjou/classsed-react-firebase-client
 
 ## https://socialfamily-d58c8.web.app/
-
 
 ## 1: API Base URL
 
@@ -37,8 +37,10 @@ export interface IFamilyNode {
   gender: Gender;
   firstName: string;
   middleName?: string;
+  nickName?: string;
   maidenName?: string;
   lastName?: string;
+  suffix?: string;
   dateOfBirth?: string;
   dateOfDeath?: string;
   bio?: string;
@@ -53,9 +55,6 @@ export interface IFamilyNode {
 * [react-family-tree](https://www.npmjs.com/package/react-family-tree)
 * [relatives-tree](https://www.npmjs.com/package/relatives-tree)
 
-
-https://github.com/CryceTruly/trulyImages
-
-
+Firebase Cloud Functions - Resizing Images after Upload
 https://www.youtube.com/watch?v=YGsmWKMMiYs
-https://github.com/academind/firebase-cloud-functions-introduction/tree/01-storage
+

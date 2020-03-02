@@ -4,7 +4,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import EditDetails from './EditDetails';
-import ProfileSkeleton from '../../util/ProfileSkeleton';
+import UserDrawerSkeleton from '../../util/UserDrawerSkeleton';
 // MUI stuff
 import Typography from '@material-ui/core/Typography';
 import MuiLink from '@material-ui/core/Link';
@@ -12,6 +12,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 // Icons
 import LocationOn from '@material-ui/icons/LocationOn';
 import LinkIcon from '@material-ui/icons/Link';
@@ -21,7 +22,6 @@ import KeyboardReturn from '@material-ui/icons/KeyboardReturn';
 //Redux
 import { connect } from 'react-redux';
 import { logoutUser, uploadImage } from '../../redux/actions/userActions';
-import Divider from '@material-ui/core/Divider';
 
 const styles = (theme) => ({
   ...theme
@@ -106,7 +106,7 @@ class UserProfile extends Component {
         </List>
       </div>
     ) : (
-      <ProfileSkeleton />
+      <UserDrawerSkeleton />
     );
 
     return profileMarkup;

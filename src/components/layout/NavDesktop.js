@@ -9,6 +9,7 @@ import UserDrawer from '../profile/UserDrawer';
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
@@ -33,6 +34,7 @@ class Navbar extends Component {
 		return ( 
 			<AppBar>
 				<Toolbar className="nav-container"> 
+					{authenticated ? (
 					<Fragment>
 						<div className={classes.grow} />
 						<Link to="/">
@@ -55,13 +57,20 @@ class Navbar extends Component {
 								<PhotoLibrary />
 							</MyButton>
 						</Link>
-						{authenticated ? (
-						<Fragment>
-							<Notifications />
-							<UserDrawer/>
-						</Fragment>
-						) : ( null ) }
+						<Notifications />
+						<UserDrawer/>
 					</Fragment>
+					) : ( 
+					<Fragment>
+						<Button color="inherit" component={Link} to="/login">
+							Login
+						</Button>
+						<div className={classes.grow} />
+						<Button color="inherit" component={Link} to="/signup">
+							Signup
+						</Button>
+					</Fragment>
+					) }
 				</Toolbar>
 			</AppBar>
 		);
