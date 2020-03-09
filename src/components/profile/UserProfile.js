@@ -45,7 +45,11 @@ class UserProfile extends Component {
     const {
       classes,
       user: {
-        credentials: { handle, createdAt, imageUrl, bio, website, location },
+        credentials: { 
+          handle, createdAt, imageUrl, 
+          firstName, middleName, lastName, 
+          bio, website, location 
+        },
         loading
       }
     } = this.props;
@@ -66,6 +70,11 @@ class UserProfile extends Component {
             @{handle}
           </MuiLink>
           <hr />
+          <Typography variant="body1">
+          {firstName && <span>{firstName} </span>}
+          {middleName && <span>{middleName} </span>}
+          {lastName && <span>{lastName}</span>}
+          </Typography>
           {bio && <Typography variant="body2">{bio}</Typography>}
           <hr />
           {location && (

@@ -26,6 +26,9 @@ const styles = (theme) => ({
 
 class EditDetails extends Component {
   state = {
+    firstName: '',
+    middleName: '',
+    lastName: '',
     bio: '',
     website: '',
     location: '',
@@ -33,6 +36,9 @@ class EditDetails extends Component {
   };
   mapUserDetailsToState = (credentials) => {
     this.setState({
+      firstName: credentials.firstName ? credentials.firstName : '',
+      middleName: credentials.middleName ? credentials.middleName : '',
+      lastName: credentials.lastName ? credentials.lastName : '',
       bio: credentials.bio ? credentials.bio : '',
       website: credentials.website ? credentials.website : '',
       location: credentials.location ? credentials.location : ''
@@ -56,6 +62,9 @@ class EditDetails extends Component {
   };
   handleSubmit = () => {
     const userDetails = {
+      firstName: this.state.firstName,
+      middleName: this.state.middleName,
+      lastName: this.state.lastName,
       bio: this.state.bio,
       website: this.state.website,
       location: this.state.location
@@ -69,11 +78,10 @@ class EditDetails extends Component {
 
     return (
       <Fragment>
-
         <ListItem button onClick={this.handleOpen}>
-            <ListItemIcon><EditIcon color="primary"/></ListItemIcon>
-            <ListItemText primary="Edit Details" />
-          </ListItem>
+          <ListItemIcon><EditIcon color="primary"/></ListItemIcon>
+          <ListItemText primary="Edit Details" />
+        </ListItem>
 
         <Dialog
           open={this.state.open}
@@ -85,6 +93,39 @@ class EditDetails extends Component {
           <DialogTitle>Edit your details</DialogTitle>
           <DialogContent>
             <form>
+              <TextField
+                name="firstName"
+                type="text"
+                label="First Name"
+                multiline
+                placeholder="Your First Name"
+                className={classes.textField}
+                value={this.state.firstName}
+                onChange={this.handleChange}
+                fullWidth
+              />
+              <TextField
+                name="middleName"
+                type="text"
+                label="Middle Name"
+                multiline
+                placeholder="Your Middle Name"
+                className={classes.textField}
+                value={this.state.middleName}
+                onChange={this.handleChange}
+                fullWidth
+              />
+              <TextField
+                name="lastName"
+                type="text"
+                label="Last Name"
+                multiline
+                placeholder="Your Last Name"
+                className={classes.textField}
+                value={this.state.lastName}
+                onChange={this.handleChange}
+                fullWidth
+              />
               <TextField
                 name="bio"
                 type="text"

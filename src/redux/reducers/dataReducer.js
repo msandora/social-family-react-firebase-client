@@ -68,12 +68,21 @@ export default function(state = initialState, action) {
         recipes: [action.payload, ...state.recipes]
       };
     case SUBMIT_RECIPE_COMMENT:
+      let commentedOnRecipeIndex = state.recipes.findIndex(
+        recipe => recipe.screamId === action.payload.screamId
+      );
       return {
         ...state,
         recipe: {
           ...state.recipe,
-          comments: [action.payload, ...state.recipe.comments]
-        }
+          comments: [action.payload, ...state.recipe.comments],
+          commentCount: state.recipe.commentCount + 1
+        },
+        recipes: state.recipes.map((recipe, recipesArrIndex) =>
+          recipesArrIndex === commentedOnRecipeIndex
+            ? { ...recipe, commentCount: recipe.commentCount + 1 }
+            : recipe
+        )
       };
     case SET_SCREAMS:
       return {
@@ -112,12 +121,21 @@ export default function(state = initialState, action) {
         screams: [action.payload, ...state.screams]
       };
     case SUBMIT_SCREAM_COMMENT:
+      let commentedOnScreamIndex = state.screams.findIndex(
+        scream => scream.screamId === action.payload.screamId
+      );
       return {
         ...state,
         scream: {
           ...state.scream,
-          comments: [action.payload, ...state.scream.comments]
-        }
+          comments: [action.payload, ...state.scream.comments],
+          commentCount: state.scream.commentCount + 1
+        },
+        screams: state.screams.map((scream, screamsArrIndex) =>
+          screamsArrIndex === commentedOnScreamIndex
+            ? { ...scream, commentCount: scream.commentCount + 1 }
+            : scream
+        )
       };
     default:
       return state;

@@ -16,12 +16,6 @@ import ChatIcon from '@material-ui/icons/Chat';
 
 const styles = (theme) => ({
   ...theme,
-  card: {
-		position: 'relative',
-		display: 'flex',
-		flexDirection: 'column',
-		marginBottom: 10
-  },
   handle: {
     width: 60,
     height: 18,

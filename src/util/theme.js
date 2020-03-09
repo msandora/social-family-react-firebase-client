@@ -106,5 +106,14 @@ export default {
   },
   progressSpinner: {
     position: 'absolute'
+  },
+  card: {
+		position: 'relative',
+		display: 'flex',
+		flexDirection: 'column',
+		marginBottom: 10
+	},
+  cardContent: {
+    padding: '8px 16px !important'
   }
 };

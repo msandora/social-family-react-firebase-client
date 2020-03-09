@@ -17,7 +17,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
-
 // Icons
 import CloseIcon from '@material-ui/icons/Close';
 import UnfoldMore from '@material-ui/icons/UnfoldMore';
@@ -89,6 +88,7 @@ class ScreamDialog extends Component {
       },
       UI: { loading }
     } = this.props;
+    const isMobile = window.innerWidth <= 500;
 
     const dialogMarkup = loading ? (
       <div className={classes.spinnerDiv}>
@@ -136,8 +136,6 @@ class ScreamDialog extends Component {
         </Grid>
       </div>
     );
-
-    const isMobile = window.innerWidth <= 500;
 
     return (
       <Fragment>

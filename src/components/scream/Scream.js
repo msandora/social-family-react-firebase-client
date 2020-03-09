@@ -20,14 +20,9 @@ import ChatIcon from '@material-ui/icons/Chat';
 // Redux
 import { connect } from 'react-redux';
 
-const styles = {
-	card: {
-		position: 'relative',
-		display: 'flex',
-		flexDirection: 'column',
-		marginBottom: 10
-	}
-}
+const styles = (theme) => ({
+  ...theme
+});
 
 class Scream extends Component {
 	likedScream = () => {
@@ -88,7 +83,7 @@ class Scream extends Component {
 					subheader={dayjs(createdAt).fromNow()}
 					/>
 
-				<CardContent className={classes.content}>
+				<CardContent className={classes.cardContent}>
 					<Typography variant="body2">{body}</Typography>
 				</CardContent>
 

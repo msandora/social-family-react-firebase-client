@@ -23,14 +23,9 @@ import ChatIcon from '@material-ui/icons/Chat';
 // Redux
 import { connect } from 'react-redux';
 
-const styles = {
-	card: {
-		position: 'relative',
-		display: 'flex',
-		flexDirection: 'column',
-		marginBottom: 10
-	}
-}
+const styles = (theme) => ({
+  ...theme
+});
 
 class Recipe extends Component {
 	render() { 
@@ -78,7 +73,7 @@ class Recipe extends Component {
 					subheader={dayjs(createdAt).fromNow()}
 					/>
 
-				<CardContent className={classes.content}>
+				<CardContent className={classes.cardContent}>
 					<Typography variant="body2">{recipeTitle}</Typography>
 					<Typography variant="body2">{body}</Typography>
 					<Typography variant="body2">{ingredients}</Typography>
@@ -114,5 +109,4 @@ const mapStateToProps = (state) => ({
 	user: state.user
 });
 
-export default 
-	connect(mapStateToProps)(withStyles(styles)(Recipe));
+export default connect(mapStateToProps)(withStyles(styles)(Recipe));

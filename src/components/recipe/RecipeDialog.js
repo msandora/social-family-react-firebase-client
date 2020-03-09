@@ -17,7 +17,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
-
 // Icons
 import CloseIcon from '@material-ui/icons/Close';
 import UnfoldMore from '@material-ui/icons/UnfoldMore';
@@ -59,7 +58,6 @@ class RecipeDialog extends Component {
     let oldPath = window.location.pathname;
 
     const { userHandle, screamId } = this.props;
-    // const newPath = `/users/${userHandle}/scream/${screamId}`;
     const newPath = `/users/${userHandle}/recipe/${screamId}`;
 
     if (oldPath === newPath) oldPath = `/users/${userHandle}`;
@@ -145,7 +143,6 @@ class RecipeDialog extends Component {
       </div>
     );
 
-
     return (
       <Fragment>
         <MyButton
@@ -157,6 +154,7 @@ class RecipeDialog extends Component {
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
+          fullWidth
           fullScreen={isMobile}
           maxWidth="sm"
         >

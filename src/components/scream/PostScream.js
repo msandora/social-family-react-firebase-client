@@ -18,15 +18,6 @@ const styles = (theme) => ({
     position: 'relative',
     float: 'right',
     marginTop: 10
-  },
-	card: {
-		position: 'relative',
-		display: 'flex',
-		flexDirection: 'column',
-		marginBottom: 10
-  },
-  cardContent: {
-    paddingBottom: 16
   }
 });
 
