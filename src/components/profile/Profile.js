@@ -9,12 +9,11 @@ import MuiLink from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 //Redux
 import { connect } from 'react-redux';
-import { logoutUser, uploadImage } from '../../redux/actions/userActions';
+// import { logoutUser, uploadImage } from '../../redux/actions/userActions';
 
 const styles = (theme) => ({
   ...theme
 });
-// const isMobile = window.innerWidth <= 500;
 
 class Profile extends Component {
   render() {
@@ -51,7 +50,6 @@ class Profile extends Component {
         </Paper>
         </Fragment>
 
-
       ) : (
         
         <Paper className={classes.paper}>
@@ -87,16 +85,16 @@ const mapStateToProps = (state) => ({
   user: state.user
 });
 
-const mapActionsToProps = { logoutUser, uploadImage };
+// const mapActionsToProps = { logoutUser, uploadImage };
 
 Profile.propTypes = {
-  logoutUser: PropTypes.func.isRequired,
-  uploadImage: PropTypes.func.isRequired,
+  // logoutUser: PropTypes.func.isRequired,
+  // uploadImage: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired
 };
 
 export default connect(
-  mapStateToProps,
-  mapActionsToProps
+  mapStateToProps//,
+  // mapActionsToProps
 )(withStyles(styles)(Profile));

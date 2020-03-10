@@ -4,7 +4,6 @@ body {
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   background-color: rgb(232, 240, 254, 1);
-  
 }
 html, #root, .App {
   height:100%;
@@ -30,17 +29,21 @@ body {
   overflow: hidden;
   padding: 75px 15px 20px;
 }
-.nav-container{
+.nav-container {
   max-width: 980px;
   margin: 0 auto;
 }
-
 .mobile-container {
   margin: 55px auto 100px;
   max-width: 500px;
   overflow: hidden;
   padding: 10px 12px 0;
 }
+/* .fixedColumn {
+  max-width: 980px;
+  position: fixed;
+  top: 75px;
+} */
 .closeDrawer {
   position:absolute !important;
   z-index:10;

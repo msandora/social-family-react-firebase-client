@@ -19,7 +19,6 @@ import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
 // Icons
 import CloseIcon from '@material-ui/icons/Close';
-import UnfoldMore from '@material-ui/icons/UnfoldMore';
 import ChatIcon from '@material-ui/icons/Chat';
 // Redux stuff
 import { connect } from 'react-redux';
@@ -141,9 +140,9 @@ class ScreamDialog extends Component {
       <Fragment>
         <MyButton
           onClick={this.handleOpen}
-          tip="Expand Post"
+          tip="View Comments"
         >
-          <UnfoldMore color="primary" />
+          <ChatIcon color="primary" />
         </MyButton>
         <Dialog
           open={this.state.open}

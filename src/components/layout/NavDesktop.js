@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import MyButton from '../../util/MyButton';
 import Notifications from './Notifications';
 import UserDrawer from '../profile/UserDrawer';
-// MUI stuff
+// MUI Stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';

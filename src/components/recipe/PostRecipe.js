@@ -38,10 +38,6 @@ const styles = (theme) => ({
     float: 'right',
     marginTop: 10
   },
-  action: {
-    paddingLeft: 5,
-    paddingRight: 5
-  },
   actionIcon: {
     marginRight: 0
   }

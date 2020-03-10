@@ -28,8 +28,7 @@ export default React.memo<{}>(
           captureWheel
           min={0.3}
           max={2.5}
-          className={styles.wrapper}
-        >
+          className={styles.wrapper}>
           <ReactFamilyTree 
             nodes={nodes as IFamilyNode[]}
             rootId={rootId}

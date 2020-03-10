@@ -1,4 +1,6 @@
-export default {
+import { createMuiTheme } from "@material-ui/core";
+
+const defaultTheme = createMuiTheme({
   palette: {
     primary: {
       light: '#33c9dc',
@@ -20,10 +22,10 @@ export default {
     textAlign: 'center'
   },
   image: {
-    margin: '20px auto 20px auto'
+    margin: '20px auto'
   },
   pageTitle: {
-    margin: '10px auto 10px auto'
+    margin: '10px auto'
   },
   textField: {
     margin: '5px 0'
@@ -73,7 +75,7 @@ export default {
     '& .profile-details': {
       textAlign: 'center',
       wordBreak: 'initial',
-      paddingBottom: 20,
+      paddingBottom: 10,
       '& span, svg': {
         verticalAlign: 'middle'
       },
@@ -116,4 +118,29 @@ export default {
   cardContent: {
     padding: '8px 16px !important'
   }
-};
+});
+
+const { breakpoints, typography: { pxToRem } } = defaultTheme;
+
+const theme = {
+  ...defaultTheme,
+  overrides: {
+    MuiTypography: {
+      h2: {
+        fontSize: pxToRem(60),
+        [breakpoints.down("xs")]: {
+          fontSize: pxToRem(50),
+        }
+      },
+      h5: {
+        color: defaultTheme.palette.primary.main,
+        fontSize: pxToRem(24),
+        [breakpoints.down("xs")]: {
+          fontSize: pxToRem(22),
+        }
+      }
+    }
+  }
+}
+
+export default theme;

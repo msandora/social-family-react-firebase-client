@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import PropTypes from 'prop-types';
-import MyButton from '../../util/MyButton';
-
 import DeleteRecipe from '../../components/recipe/DeleteRecipe';
 import RecipeDialog from './RecipeDialog';
 import LikeButton from './LikeButton';
-
 //MUI Stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import Card from '@material-ui/core/Card';
@@ -17,9 +14,6 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
-// Icons
-import ChatIcon from '@material-ui/icons/Chat';
-
 // Redux
 import { connect } from 'react-redux';
 
@@ -83,15 +77,12 @@ class Recipe extends Component {
 				<CardActions>
 					<LikeButton screamId={screamId} />
 					<span>{likeCount} Likes</span>
-					<MyButton tip="comments">
-						<ChatIcon color="primary" />
-					</MyButton>
-					<span>{commentCount}</span>
 					<RecipeDialog
 						screamId={screamId}
 						userHandle={userHandle}
 						openDialog={this.props.openDialog}
 					/>
+					<span>{commentCount} Comments</span>
 				</CardActions>
 			</Card>
 		);

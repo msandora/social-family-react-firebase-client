@@ -12,8 +12,8 @@ import store from './redux/store';
 import { SET_AUTHENTICATED } from './redux/types';
 import { logoutUser, getUserData } from './redux/actions/userActions';
 // Components
-import Navbar from './components/layout/NavDesktop';
-import Mobilebar from './components/layout/NavMobile';
+import NavDesktop from './components/layout/NavDesktop';
+import NavMobile from './components/layout/NavMobile';
 // Utilies
 import themeObject from './util/theme';
 import AuthRoute from './util/AuthRoute';
@@ -54,7 +54,7 @@ class App extends Component {
           <Router>
           {(isMobile) ? 
             <Fragment>
-              <Mobilebar/>
+              <NavMobile/>
               <div className="mobile-container">
                 <Switch>
                   <Route exact path="/" component={Home} />
@@ -72,7 +72,7 @@ class App extends Component {
             </Fragment>
           : 
             <Fragment>
-              <Navbar/>
+              <NavDesktop/>
               <div className="desktop-container">
                 <Switch>
                   <Route exact path="/" component={Home} />
