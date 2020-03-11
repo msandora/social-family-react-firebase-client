@@ -1,9 +1,9 @@
+
 import React from "react";
 import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
 import tileData from '../data/gallery';
 import Profile from '../components/profile/Profile';
-
 // Mui
 import withStyles from "@material-ui/core/styles/withStyles";
 import withWidth from '@material-ui/core/withWidth';

@@ -24,7 +24,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import User from './pages/User';
 import FamilyTree from './pages/FamilyTree/FamilyTree.tsx';
-import Gallery from './pages/Gallery';
+import Memories from './pages/Memories';
 import NotFoundPage from './pages/NotFoundPage';
 
 const theme = createMuiTheme(themeObject);
@@ -65,7 +65,7 @@ class App extends Component {
                   <Route exact path="/users/:handle/scream/:screamId" component={User}/>
                   <Route exact path="/recipes" component={Recipes} />
                   <Route exact path="/users/:handle/recipe/:screamId" component={User}/>
-                  <Route exact path="/gallery" component={Gallery} />
+                  <Route exact path="/gallery" component={Memories} />
                   <Route component={NotFoundPage} />
                 </Switch>
               </div>
@@ -83,7 +83,7 @@ class App extends Component {
                   <Route exact path="/users/:handle/scream/:screamId" component={User}/>
                   <Route exact path="/recipes" component={Recipes} />
                   <Route exact path="/users/:handle/recipe/:screamId" component={User}/>
-                  <Route exact path="/gallery" component={Gallery} />
+                  <Route exact path="/gallery" component={Memories} />
                   <Route component={NotFoundPage} />
                 </Switch>
               </div>

@@ -1,24 +1,32 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
+import GridList from '@material-ui/core/GridList';
 import PropTypes from 'prop-types';
+import compose from 'recompose/compose';
+
+// import withStyles from "@material-ui/core/styles/withStyles";
+import withWidth from '@material-ui/core/withWidth';
 // Components
-import Recipe from '../components/recipe/Recipe';
-import PostRecipe from '../components/recipe/PostRecipe';
+import Memory from '../components/memory/Memory';
+import PostMemory from '../components/memory/PostMemory';
 import ScreamSkeleton from '../util/ScreamSkeleton';
 import Profile from '../components/profile/Profile';
 // Redux
 import { connect } from 'react-redux';
 import { getRecipes } from '../redux/actions/dataActions';
 
-class Recipes extends Component {
+class Memories extends Component {
   componentDidMount() {
     this.props.getRecipes();
   }
   render() {
+    const { width } = this.props;
+    let columns = width === 'xs' ? 2 : 3;
+
     const isMobile = window.innerWidth <= 500;
     const { recipes, loading } = this.props.data;
     let recentRecipesMarkup = !loading ? (
-      recipes.map((recipe) => <Recipe key={recipe.screamId} recipe={recipe} />)
+      recipes.map((recipe) => <Memory key={recipe.screamId} recipe={recipe} />)
     ) : (
       <ScreamSkeleton />
     );
@@ -30,19 +38,21 @@ class Recipes extends Component {
         <Grid item sm={4} xs={12}>
           <Profile/>
           {authenticated ? (
-          <PostRecipe />
+          <PostMemory />
           ) : ( null ) }
 				</Grid>
 				: (null) }
         <Grid item sm={8} xs={12}>
-          {recentRecipesMarkup}
+          <GridList cols={columns}>
+            {recentRecipesMarkup}
+          </GridList>
         </Grid>
       </Grid>
     );
   }
 }
 
-Recipes.propTypes = {
+Memories.propTypes = {
   getRecipes: PropTypes.func.isRequired,
   data: PropTypes.object.isRequired,
   authenticated: PropTypes.bool.isRequired
@@ -53,7 +63,11 @@ const mapStateToProps = (state) => ({
   authenticated: state.user.authenticated
 });
 
-export default connect(
-  mapStateToProps,
-  { getRecipes }
-)(Recipes);
+
+
+export default compose(
+  //withStyles(styles),
+  withWidth(),
+  connect(mapStateToProps,
+    { getRecipes }),
+)(Memories);
