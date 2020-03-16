@@ -109,6 +109,14 @@ const defaultTheme = createMuiTheme({
   progressSpinner: {
     position: 'absolute'
   },
+  dialogContent: {
+    padding: 20
+  },
+  spinnerDiv: {
+    textAlign: 'center',
+    marginTop: 50,
+    marginBottom: 50
+  },
   card: {
 		position: 'relative',
 		display: 'flex',
@@ -116,7 +124,10 @@ const defaultTheme = createMuiTheme({
 		marginBottom: 10
 	},
   cardContent: {
-    padding: '8px 16px !important'
+    padding: '8px 16px'
+  },
+  cardActions: {
+    padding: '0 4px'
   }
 });
 

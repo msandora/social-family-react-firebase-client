@@ -59,11 +59,12 @@ const ScreamSkeleton = (props) => {
         <div className={classes.halfLine} />
       </CardContent>
       {/** 
-            <CardActions>
+      <CardActions>
         <div className={classes.handle} />
         <div className={classes.date} />
-      </CardActions>*/}
-      <CardActions>
+      </CardActions>
+      */}
+      <CardActions className={classes.cardActions}>
         <MyButton tip="Like">
           <FavoriteIcon color="primary"/>
         </MyButton>
@@ -73,7 +74,6 @@ const ScreamSkeleton = (props) => {
         </MyButton>
         <div className={classes.date} />
       </CardActions>
-
     </Card>
   ));
 

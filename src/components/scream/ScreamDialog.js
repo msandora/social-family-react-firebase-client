@@ -26,14 +26,6 @@ import { getScream, clearErrors } from '../../redux/actions/dataActions';
 
 const styles = (theme) => ({
   ...theme,
-  dialogContent: {
-    padding: 20
-  },
-  spinnerDiv: {
-    textAlign: 'center',
-    marginTop: 50,
-    marginBottom: 50
-  },
   cardHandle: {
     display: 'inline-block'
   },

@@ -19,7 +19,11 @@ const styles = (theme) => ({
 const StaticProfile = (props) => {
   const {
     classes,
-    profile: { handle, createdAt, imageUrl, bio, website, location }
+    profile: { 
+      handle, createdAt, imageUrl, 
+      firstName, middleName, lastName, 
+      bio, website, location 
+    }
   } = props;
 
   return (
@@ -39,6 +43,11 @@ const StaticProfile = (props) => {
             @{handle}
           </MuiLink>
           <hr />
+          <Typography variant="body1">
+          {firstName && <span>{firstName} </span>}
+          {middleName && <span>{middleName} </span>}
+          {lastName && <span>{lastName}</span>}
+          </Typography>
           {bio && <Typography variant="body2">{bio}</Typography>}
           <hr />
           {location && (

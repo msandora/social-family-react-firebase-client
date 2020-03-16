@@ -74,7 +74,7 @@ class Recipe extends Component {
 					<Typography variant="body2">{recipeType}</Typography>
 				</CardContent>
 
-				<CardActions>
+				<CardActions className={classes.cardActions}>
 					<LikeButton screamId={screamId} />
 					<span>{likeCount} Likes</span>
 					<RecipeDialog

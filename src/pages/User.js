@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import LazyLoad from "react-lazyload";
 import PropTypes from 'prop-types';
 import axios from 'axios';
+// Mui
+import Grid from '@material-ui/core/Grid';
+// Components
 import Scream from '../components/scream/Scream';
 import StaticProfile from '../components/profile/StaticProfile';
-import Grid from '@material-ui/core/Grid';
-
 import ScreamSkeleton from '../util/ScreamSkeleton';
 import ProfileSkeleton from '../util/ProfileSkeleton';
-
+import Spinner from '../util/Spinner';
+// Redux
 import { connect } from 'react-redux';
 import { getUserData } from '../redux/actions/dataActions';
 
@@ -41,7 +44,18 @@ class User extends Component {
     ) : screams === null ? (
       <p>No posts from this user</p>
     ) : !screamIdParam ? (
-      screams.map((scream) => <Scream key={scream.screamId} scream={scream} />)
+      screams.map((scream) => (
+        <LazyLoad
+          key={scream.screamId}
+          height={100}
+          offset={[-100, 100]}
+          placeholder={<Spinner />}
+          >
+          <div className="post">
+            <Scream scream={scream} />
+          </div>
+        </LazyLoad>
+      ))
     ) : (
       screams.map((scream) => {
         if (scream.screamId !== screamIdParam)

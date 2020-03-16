@@ -25,12 +25,12 @@ body {
 
 .desktop-container {
   margin: 0 auto;
-  max-width: 980px;
+  max-width: 860px;
   overflow: hidden;
   padding: 75px 15px 20px;
 }
 .nav-container {
-  max-width: 980px;
+  max-width: 860px;
   margin: 0 auto;
 }
 .mobile-container {
@@ -49,7 +49,6 @@ body {
   z-index:10;
   margin: 5px !important;;
 }
-
 header svg,
 header .fa {
   color: #fff;

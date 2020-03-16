@@ -84,7 +84,7 @@ class Scream extends Component {
 					<Typography variant="body2">{body}</Typography>
 				</CardContent>
 
-				<CardActions>
+				<CardActions className={classes.cardActions}>
 					<LikeButton screamId={screamId} />
 					<span>{likeCount} Likes</span>
 					<ScreamDialog

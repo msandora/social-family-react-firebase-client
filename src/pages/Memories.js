@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import GridList from '@material-ui/core/GridList';
 import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
 
@@ -20,8 +19,8 @@ class Memories extends Component {
     this.props.getRecipes();
   }
   render() {
-    const { width } = this.props;
-    let columns = width === 'xs' ? 2 : 3;
+    // const { width } = this.props;
+    // let columns = width === 'xs' ? 2 : 3;
 
     const isMobile = window.innerWidth <= 500;
     const { recipes, loading } = this.props.data;
@@ -43,9 +42,7 @@ class Memories extends Component {
 				</Grid>
 				: (null) }
         <Grid item sm={8} xs={12}>
-          <GridList cols={columns}>
             {recentRecipesMarkup}
-          </GridList>
         </Grid>
       </Grid>
     );

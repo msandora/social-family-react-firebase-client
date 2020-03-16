@@ -74,7 +74,7 @@ class Memory extends Component {
 				<img src={userImage} alt="" className="" width="100%"/>
 				</CardContent>
 
-				<CardActions>
+				<CardActions className={classes.cardActions}>
 					<LikeButton screamId={screamId} />
 					<span>{likeCount} Likes</span>
 					<MemoryDialog

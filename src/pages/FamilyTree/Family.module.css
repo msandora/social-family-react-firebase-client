@@ -36,3 +36,18 @@
   line-height: 1;
   cursor: pointer;
 }
+.button {
+  margin-bottom: 10px !important;
+  font-size: 0.775rem !important;
+}
+
+.ADDED_CLASS {
+  background-color: darkgrey;
+  top: -390px;
+  left: 130px;
+}
+
+.Sandora-Periera {
+  top: -321px;
+  left: -1120px;
+}

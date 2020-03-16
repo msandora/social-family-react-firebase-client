@@ -36,14 +36,16 @@ class PostScream extends Component {
       this.setState({ body: '', errors: {} });
     }
   }
-
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-    // console.log(this.state);
+    //console.log(this.state.body);
   };
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.postScream({ body: this.state.body });
+    this.setState({
+      body: ''
+    });
   };
   render() {
     const { errors } = this.state;
@@ -55,34 +57,35 @@ class PostScream extends Component {
     return (
       <Card className={classes.card}>
         <CardContent className={classes.cardContent}>
-        <form onSubmit={this.handleSubmit}>
-        <TextField
-          name="body"
-          type="text"
-          label="Say Something..."
-          multiline
-          rows="3"
-          placeholder="What is on your mind?"
-          error={errors.body ? true : false}
-          helperText={errors.body}
-          className={classes.textField}
-          onChange={this.handleChange}
-          fullWidth
-        />
-        <Button type="submit"
-        variant="contained"
-        color="primary"
-        className={classes.submitButton}
-        disabled={loading} onClick={this.handleSubmit}>
-          Submit
-          {loading && (
-            <CircularProgress
-              size={30}
-              className={classes.progressSpinner}
+          <form onSubmit={this.handleSubmit}>
+            <TextField
+              value={this.state.body}
+              name="body"
+              type="text"
+              label="Say Something..."
+              multiline
+              rows="3"
+              placeholder="What is on your mind?"
+              error={errors.body ? true : false}
+              helperText={errors.body}
+              className={classes.textField}
+              onChange={this.handleChange}
+              fullWidth
             />
-          )}
-        </Button>
-        </form>
+            <Button type="submit"
+            variant="contained"
+            color="primary"
+            className={classes.submitButton}
+            disabled={loading} onClick={this.handleSubmit}>
+              Submit
+              {loading && (
+                <CircularProgress
+                  size={30}
+                  className={classes.progressSpinner}
+                />
+              )}
+            </Button>
+          </form>
         </CardContent>
       </Card>
     );
