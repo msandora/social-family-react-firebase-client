@@ -127,7 +127,7 @@ const defaultTheme = createMuiTheme({
     padding: '8px 16px'
   },
   cardActions: {
-    padding: '0 4px'
+    padding: 4
   }
 });
 

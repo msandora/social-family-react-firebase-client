@@ -37,7 +37,6 @@ class Notifications extends Component {
   render() {
     const notifications = this.props.notifications;
     const anchorEl = this.state.anchorEl;
-
     dayjs.extend(relativeTime);
 
     let notificationsIcon;
@@ -57,6 +56,7 @@ class Notifications extends Component {
     } else {
       notificationsIcon = <NotificationsIcon />;
     }
+
     let notificationsMarkup =
       notifications && notifications.length > 0 ? (
         notifications.map((not) => {
@@ -79,7 +79,7 @@ class Notifications extends Component {
                 variant="body1"
                 to={`/users/${not.recipient}/scream/${not.screamId}`}
               >
-                {not.sender} {verb} your scream {time}
+                {not.sender} {verb} your post {time}
               </Typography>
             </MenuItem>
           );
