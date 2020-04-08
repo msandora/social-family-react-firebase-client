@@ -1,39 +1,55 @@
-import React, { Component } from 'react';
-import Grid from '@material-ui/core/Grid';
+import React from 'react';
+import LazyLoad from "react-lazyload";
 import PropTypes from 'prop-types';
+// Mui
+import Grid from '@material-ui/core/Grid';
 // Components
 import Recipe from '../components/recipe/Recipe';
-import PostRecipe from '../components/recipe/PostRecipe';
-import ScreamSkeleton from '../util/ScreamSkeleton';
 import Profile from '../components/profile/Profile';
+import ScreamSkeleton from '../util/ScreamSkeleton';
+import Spinner from '../util/Spinner';
+import PostRecipe from '../components/recipe/PostRecipe';
 // Redux
 import { connect } from 'react-redux';
 import { getRecipes } from '../redux/actions/dataActions';
 
-class Recipes extends Component {
+class Recipes extends React.Component {
   componentDidMount() {
     this.props.getRecipes();
   }
   render() {
     const isMobile = window.innerWidth <= 500;
     const { recipes, loading } = this.props.data;
+    const { authenticated } = this.props;
+
     let recentRecipesMarkup = !loading ? (
-      recipes.map((recipe) => <Recipe key={recipe.screamId} recipe={recipe} />)
+      recipes.map((recipe) => (
+        <LazyLoad
+          key={recipe.screamId}
+          height={100}
+          offset={[-100, 100]}
+          placeholder={<Spinner />}
+          >
+          <div className="post">
+            <Recipe key={recipe.screamId} recipe={recipe} />
+          </div>
+        </LazyLoad>
+      ))
     ) : (
       <ScreamSkeleton />
     );
-    const { authenticated } = this.props;
 
     return (
       <Grid container spacing={16}>
-        {(!isMobile) ?
         <Grid item sm={4} xs={12}>
-          <Profile/>
+          {(!isMobile) ?
+            <Profile/>
+          : (null) }
+
           {authenticated ? (
-          <PostRecipe />
+            <PostRecipe />
           ) : ( null ) }
 				</Grid>
-				: (null) }
         <Grid item sm={8} xs={12}>
           {recentRecipesMarkup}
         </Grid>

@@ -75,11 +75,9 @@ class PostRecipe extends Component {
   handleSelectChange(value) {
     this.setState({ recipeType: value });
   }
-
   handleSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
-
     this.props.postRecipe({ 
       recipeTitle: this.state.recipeTitle,
       recipeType: this.state.recipeType,
@@ -100,7 +98,7 @@ class PostRecipe extends Component {
         <List>
           <ListItem button onClick={this.handleOpen} className={classes.action}>
             <ListItemIcon className={classes.actionIcon}><AddIcon color="primary"/></ListItemIcon>
-            <ListItemText primary="Post a recipe" />
+            <ListItemText primary="Post a Recipe" />
           </ListItem>
         </List>
 
@@ -184,7 +182,6 @@ class PostRecipe extends Component {
                 fullWidth
               />
             </FormControl>
-
               <Button
                 type="submit"
                 variant="contained"
