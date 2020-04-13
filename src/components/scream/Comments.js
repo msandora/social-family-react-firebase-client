@@ -1,22 +1,22 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
-import { Link } from 'react-router-dom';
-import dayjs from 'dayjs';
+import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+import withStyles from "@material-ui/core/styles/withStyles";
+import { Link } from "react-router-dom";
+import dayjs from "dayjs";
 // MUI
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import CardHeader from '@material-ui/core/CardHeader';
-import Avatar from '@material-ui/core/Avatar';
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import CardHeader from "@material-ui/core/CardHeader";
+import Avatar from "@material-ui/core/Avatar";
 
 const styles = (theme) => ({
   ...theme,
   commentHandle: {
-    display: 'inline-block'
+    display: "inline-block",
   },
   cardHeader: {
-    padding: '0 10px 10px 0'
-  }
+    padding: "0 10px 10px 0",
+  },
 });
 
 class Comments extends Component {
@@ -30,36 +30,40 @@ class Comments extends Component {
             <Fragment key={createdAt}>
               <Grid container>
                 <Grid item xs={12}>
-                  <CardHeader className={classes.cardHeader}
-                  avatar={
-                  <Avatar alt="Profile image" src={userImage} 					
-                  component={Link}
-                  to={`/users/${userHandle}`}/>
-                  }
-                  title={
-                  <Typography
-                  component={Link}
-                  color="primary"
-                  variant="h5"
-                  to={`/users/${userHandle}`}
-                  className={classes.commentHandle}
-                  >
-                  @{userHandle}
-                  </Typography>
-                  }
-                  subheader={dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
+                  <CardHeader
+                    className={classes.cardHeader}
+                    avatar={
+                      <Avatar
+                        alt='Profile image'
+                        src={userImage}
+                        component={Link}
+                        to={`/users/${userHandle}`}
+                      />
+                    }
+                    title={
+                      <Typography
+                        component={Link}
+                        color='primary'
+                        variant='h5'
+                        to={`/users/${userHandle}`}
+                        className={classes.commentHandle}
+                      >
+                        @{userHandle}
+                      </Typography>
+                    }
+                    subheader={dayjs(createdAt).format("h:mm a, MMMM DD YYYY")}
                   />
                 </Grid>
               </Grid>
               <Grid container spacing={16}>
                 <Grid item>
                   <hr className={classes.invisibleSeparator} />
-                  <Typography variant="body1">{body}</Typography>	
+                  <Typography variant='body1'>{body}</Typography>
                   <hr className={classes.invisibleSeparator} />
                 </Grid>
-              </Grid>   
+              </Grid>
               {index !== comments.length - 1 && (
-              <hr className={classes.visibleSeparator} />
+                <hr className={classes.visibleSeparator} />
               )}
             </Fragment>
           );
@@ -70,7 +74,7 @@ class Comments extends Component {
 }
 
 Comments.propTypes = {
-  comments: PropTypes.array.isRequired
+  comments: PropTypes.array.isRequired,
 };
 
 export default withStyles(styles)(Comments);

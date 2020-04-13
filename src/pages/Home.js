@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { Component } from "react";
 import LazyLoad from "react-lazyload";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 // Mui
-import Grid from '@material-ui/core/Grid';
+import Grid from "@material-ui/core/Grid";
 // Components
-import Scream from '../components/scream/Scream';
-import Profile from '../components/profile/Profile';
-import ScreamSkeleton from '../util/ScreamSkeleton';
-import Spinner from '../util/Spinner';
-import PostScream from	'../components/scream/PostScream';
+import Scream from "../components/scream/Scream";
+import Profile from "../components/profile/Profile";
+import ScreamSkeleton from "../util/ScreamSkeleton";
+import Spinner from "../util/Spinner";
+import PostScream from "../components/scream/PostScream";
 // Redux
-import { connect } from 'react-redux';
-import { getScreams } from '../redux/actions/dataActions';
+import { connect } from "react-redux";
+import { getScreams } from "../redux/actions/dataActions";
 
-class Home extends React.Component {
+class Home extends Component {
   componentDidMount() {
     this.props.getScreams();
   }
@@ -29,8 +29,8 @@ class Home extends React.Component {
           height={100}
           offset={[-100, 100]}
           placeholder={<Spinner />}
-          >
-          <div className="post">
+        >
+          <div className='post'>
             <Scream scream={scream} />
           </div>
         </LazyLoad>
@@ -42,14 +42,10 @@ class Home extends React.Component {
     return (
       <Grid container spacing={16}>
         <Grid item sm={4} xs={12}>
-          {(!isMobile) ?
-          <Profile/>
-          : (null) }
+          {!isMobile ? <Profile /> : null}
 
-          {authenticated ? (
-            <PostScream/>
-          ) : ( null ) }
-				</Grid>
+          {authenticated ? <PostScream /> : null}
+        </Grid>
         <Grid item sm={8} xs={12}>
           {recentScreamsMarkup}
         </Grid>
@@ -61,15 +57,12 @@ class Home extends React.Component {
 Home.propTypes = {
   getScreams: PropTypes.func.isRequired,
   data: PropTypes.object.isRequired,
-  authenticated: PropTypes.bool.isRequired
+  authenticated: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   data: state.data,
-  authenticated: state.user.authenticated
+  authenticated: state.user.authenticated,
 });
 
-export default connect(
-  mapStateToProps,
-  { getScreams }
-)(Home);
+export default connect(mapStateToProps, { getScreams })(Home);

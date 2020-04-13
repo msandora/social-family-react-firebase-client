@@ -1,47 +1,47 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
+import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+import withStyles from "@material-ui/core/styles/withStyles";
 // MUI Stuff
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
 // Icons
-import EditIcon from '@material-ui/icons/Edit';
+import EditIcon from "@material-ui/icons/Edit";
 // Redux stuff
-import { connect } from 'react-redux';
-import { editUserDetails } from '../../redux/actions/userActions';
+import { connect } from "react-redux";
+import { editUserDetails } from "../../redux/actions/userActions";
 
 const styles = (theme) => ({
   ...theme,
   button: {
-    float: 'right'
-  }
+    float: "right",
+  },
 });
 
 class EditDetails extends Component {
   state = {
-    firstName: '',
-    middleName: '',
-    lastName: '',
-    bio: '',
-    website: '',
-    location: '',
-    open: false
+    firstName: "",
+    middleName: "",
+    lastName: "",
+    bio: "",
+    website: "",
+    location: "",
+    open: false,
   };
   mapUserDetailsToState = (credentials) => {
     this.setState({
-      firstName: credentials.firstName ? credentials.firstName : '',
-      middleName: credentials.middleName ? credentials.middleName : '',
-      lastName: credentials.lastName ? credentials.lastName : '',
-      bio: credentials.bio ? credentials.bio : '',
-      website: credentials.website ? credentials.website : '',
-      location: credentials.location ? credentials.location : ''
+      firstName: credentials.firstName ? credentials.firstName : "",
+      middleName: credentials.middleName ? credentials.middleName : "",
+      lastName: credentials.lastName ? credentials.lastName : "",
+      bio: credentials.bio ? credentials.bio : "",
+      website: credentials.website ? credentials.website : "",
+      location: credentials.location ? credentials.location : "",
     });
   };
   handleOpen = () => {
@@ -57,7 +57,7 @@ class EditDetails extends Component {
   }
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
   handleSubmit = () => {
@@ -67,7 +67,7 @@ class EditDetails extends Component {
       lastName: this.state.lastName,
       bio: this.state.bio,
       website: this.state.website,
-      location: this.state.location
+      location: this.state.location,
     };
     this.props.editUserDetails(userDetails);
     this.handleClose();
@@ -79,8 +79,10 @@ class EditDetails extends Component {
     return (
       <Fragment>
         <ListItem button onClick={this.handleOpen}>
-          <ListItemIcon><EditIcon color="primary"/></ListItemIcon>
-          <ListItemText primary="Edit Details" />
+          <ListItemIcon>
+            <EditIcon color='primary' />
+          </ListItemIcon>
+          <ListItemText primary='Edit Details' />
         </ListItem>
 
         <Dialog
@@ -88,71 +90,71 @@ class EditDetails extends Component {
           onClose={this.handleClose}
           fullWidth
           fullScreen={isMobile}
-          maxWidth="sm"
+          maxWidth='sm'
         >
           <DialogTitle>Edit your details</DialogTitle>
           <DialogContent>
             <form>
               <TextField
-                name="firstName"
-                type="text"
-                label="First Name"
+                name='firstName'
+                type='text'
+                label='First Name'
                 multiline
-                placeholder="Your First Name"
+                placeholder='Your First Name'
                 className={classes.textField}
                 value={this.state.firstName}
                 onChange={this.handleChange}
                 fullWidth
               />
               <TextField
-                name="middleName"
-                type="text"
-                label="Middle Name"
+                name='middleName'
+                type='text'
+                label='Middle Name'
                 multiline
-                placeholder="Your Middle Name"
+                placeholder='Your Middle Name'
                 className={classes.textField}
                 value={this.state.middleName}
                 onChange={this.handleChange}
                 fullWidth
               />
               <TextField
-                name="lastName"
-                type="text"
-                label="Last Name"
+                name='lastName'
+                type='text'
+                label='Last Name'
                 multiline
-                placeholder="Your Last Name"
+                placeholder='Your Last Name'
                 className={classes.textField}
                 value={this.state.lastName}
                 onChange={this.handleChange}
                 fullWidth
               />
               <TextField
-                name="bio"
-                type="text"
-                label="Bio"
+                name='bio'
+                type='text'
+                label='Bio'
                 multiline
-                rows="3"
-                placeholder="A short bio about yourself"
+                rows='3'
+                placeholder='A short bio about yourself'
                 className={classes.textField}
                 value={this.state.bio}
                 onChange={this.handleChange}
                 fullWidth
               />
               <TextField
-                name="website"
-                type="text"
-                label="Website"
-                placeholder="Your personal/professional website"
+                name='website'
+                type='text'
+                label='Website'
+                placeholder='Your personal/professional website'
                 className={classes.textField}
                 value={this.state.website}
                 onChange={this.handleChange}
                 fullWidth
               />
               <TextField
-                name="location"
-                type="text"
-                label="Location"
-                placeholder="Where you live"
+                name='location'
+                type='text'
+                label='Location'
+                placeholder='Where you live'
                 className={classes.textField}
                 value={this.state.location}
                 onChange={this.handleChange}
@@ -161,10 +163,10 @@ class EditDetails extends Component {
             </form>
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={this.handleClose} color='primary'>
               Cancel
             </Button>
-            <Button onClick={this.handleSubmit} color="primary">
+            <Button onClick={this.handleSubmit} color='primary'>
               Save
             </Button>
           </DialogActions>
@@ -176,14 +178,13 @@ class EditDetails extends Component {
 
 EditDetails.propTypes = {
   editUserDetails: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  credentials: state.user.credentials
+  credentials: state.user.credentials,
 });
 
-export default connect(
-  mapStateToProps,
-  { editUserDetails }
-)(withStyles(styles)(EditDetails));
+export default connect(mapStateToProps, { editUserDetails })(
+  withStyles(styles)(EditDetails)
+);

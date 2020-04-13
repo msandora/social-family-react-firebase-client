@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import withStyles from "@material-ui/core/styles/withStyles";
 // MUI Stuff
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
+import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
+import TextField from "@material-ui/core/TextField";
 // Redux stuff
-import { connect } from 'react-redux';
-import { submitScreamComment } from '../../redux/actions/dataActions';
+import { connect } from "react-redux";
+import { submitScreamComment } from "../../redux/actions/dataActions";
 
 const styles = (theme) => ({
-  ...theme
+  ...theme,
 });
 
 class CommentForm extends Component {
   state = {
-    body: '',
-    errors: {}
+    body: "",
+    errors: {},
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -24,17 +24,19 @@ class CommentForm extends Component {
       this.setState({ errors: nextProps.UI.errors });
     }
     if (!nextProps.UI.errors && !nextProps.UI.loading) {
-      this.setState({ body: '' });
+      this.setState({ body: "" });
     }
   }
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
-  
+
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.submitScreamComment(this.props.screamId, { body: this.state.body });
+    this.props.submitScreamComment(this.props.screamId, {
+      body: this.state.body,
+    });
     console.log();
   };
 
@@ -43,12 +45,12 @@ class CommentForm extends Component {
     const errors = this.state.errors;
 
     const commentFormMarkup = authenticated ? (
-      <Grid item sm={12} style={{ textAlign: 'center', width: '100%' }}>
+      <Grid item sm={12} style={{ textAlign: "center", width: "100%" }}>
         <form onSubmit={this.handleSubmit}>
           <TextField
-            name="body"
-            type="text"
-            label="Comment on this"
+            name='body'
+            type='text'
+            label='Comment on this'
             error={errors.comment ? true : false}
             helperText={errors.comment}
             value={this.state.body}
@@ -57,9 +59,9 @@ class CommentForm extends Component {
             className={classes.textField}
           />
           <Button
-            type="submit"
-            variant="contained"
-            color="primary"
+            type='submit'
+            variant='contained'
+            color='primary'
             className={classes.button}
           >
             Submit
@@ -77,15 +79,14 @@ CommentForm.propTypes = {
   UI: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
   screamId: PropTypes.string.isRequired,
-  authenticated: PropTypes.bool.isRequired
+  authenticated: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   UI: state.UI,
-  authenticated: state.user.authenticated
+  authenticated: state.user.authenticated,
 });
 
-export default connect(
-  mapStateToProps,
-  { submitScreamComment }
-)(withStyles(styles)(CommentForm));
+export default connect(mapStateToProps, { submitScreamComment })(
+  withStyles(styles)(CommentForm)
+);

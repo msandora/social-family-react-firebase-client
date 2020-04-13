@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import MyButton from '../../util/MyButton';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import MyButton from "../../util/MyButton";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 // Icons
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 // Redux
-import { connect } from 'react-redux';
-import { likeRecipe, unlikeRecipe } from '../../redux/actions/dataActions';
+import { connect } from "react-redux";
+import { likeRecipe, unlikeRecipe } from "../../redux/actions/dataActions";
 
 export class LikeButton extends Component {
   likedRecipe = () => {
@@ -29,18 +29,18 @@ export class LikeButton extends Component {
   render() {
     const { authenticated } = this.props.user;
     const likeButton = !authenticated ? (
-      <Link to="/login">
-        <MyButton tip="Like">
-          <FavoriteBorder color="primary" />
+      <Link to='/login'>
+        <MyButton tip='Like'>
+          <FavoriteBorder color='primary' />
         </MyButton>
       </Link>
     ) : this.likedRecipe() ? (
-      <MyButton tip="Undo like" onClick={this.unlikeRecipe}>
-        <FavoriteIcon color="primary" />
+      <MyButton tip='Undo like' onClick={this.unlikeRecipe}>
+        <FavoriteIcon color='primary' />
       </MyButton>
     ) : (
-      <MyButton tip="Like" onClick={this.likeRecipe}>
-        <FavoriteBorder color="primary" />
+      <MyButton tip='Like' onClick={this.likeRecipe}>
+        <FavoriteBorder color='primary' />
       </MyButton>
     );
     return likeButton;
@@ -51,19 +51,16 @@ LikeButton.propTypes = {
   user: PropTypes.object.isRequired,
   screamId: PropTypes.string.isRequired,
   likeRecipe: PropTypes.func.isRequired,
-  unlikeRecipe: PropTypes.func.isRequired
+  unlikeRecipe: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  user: state.user
+  user: state.user,
 });
 
 const mapActionsToProps = {
   likeRecipe,
-  unlikeRecipe
+  unlikeRecipe,
 };
 
-export default connect(
-  mapStateToProps,
-  mapActionsToProps
-)(LikeButton);
+export default connect(mapStateToProps, mapActionsToProps)(LikeButton);
