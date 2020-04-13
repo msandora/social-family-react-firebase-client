@@ -32,9 +32,9 @@ const AppRouter = () => (
           <PublicRoute exact path="/signup" component={Signup} />
           <Route exact path="/family-tree" component={FamilyTree} />
           <PrivateRoute exact path="/users/:handle" component={User} />
-          <PrivateRoute exact path="/users/:handle/scream/:screamId" component={User}/>
+          <PrivateRoute exact path="/users/:handle/scream/:postId" component={User}/>
           <PrivateRoute exact path="/recipes" component={Recipes} />
-          <PrivateRoute exact path="/users/:handle/recipe/:screamId" component={User}/>
+          <PrivateRoute exact path="/users/:handle/recipe/:postId" component={User}/>
           <PrivateRoute exact path="/gallery" component={Gallery} />
           <Route component={NotFoundPage} />
         </Switch>
@@ -51,9 +51,9 @@ const AppRouter = () => (
           <PublicRoute exact path="/signup" component={Signup} />
           <Route exact path="/family-tree" component={FamilyTree} />
           <PrivateRoute exact path="/users/:handle" component={User} />
-          <PrivateRoute exact path="/users/:handle/scream/:screamId" component={User}/>
+          <PrivateRoute exact path="/users/:handle/scream/:postId" component={User}/>
           <PrivateRoute exact path="/recipes" component={Recipes} />
-          <PrivateRoute exact path="/users/:handle/recipe/:screamId" component={User}/>
+          <PrivateRoute exact path="/users/:handle/recipe/:postId" component={User}/>
           <PrivateRoute exact path="/gallery" component={Gallery} />
           <Route component={NotFoundPage} />
         </Switch>

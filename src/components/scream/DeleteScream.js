@@ -29,7 +29,7 @@ class DeleteScream extends Component {
     this.setState({ open: false });
   };
   deleteScream = () => {
-    this.props.deleteScream(this.props.screamId);
+    this.props.deleteScream(this.props.postId);
     this.setState({ open: false });
   };
   render() {
@@ -68,7 +68,7 @@ class DeleteScream extends Component {
 DeleteScream.propTypes = {
   deleteScream: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,
-  screamId: PropTypes.string.isRequired,
+  postId: PropTypes.string.isRequired,
 };
 
 export default connect(null, { deleteScream })(

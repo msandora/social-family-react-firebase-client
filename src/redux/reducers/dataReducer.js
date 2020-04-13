@@ -40,10 +40,10 @@ export default function(state = initialState, action) {
     case LIKE_RECIPE:
       case UNLIKE_RECIPE:
         let recipeIndex = state.recipes.findIndex(
-          (recipe) => recipe.screamId === action.payload.screamId
+          (recipe) => recipe.postId === action.payload.postId
         );
         state.recipes[recipeIndex] = action.payload;
-        if (state.recipe.screamId === action.payload.screamId) {
+        if (state.recipe.postId === action.payload.postId) {
           state.recipe = { ...state.recipe, ...action.payload };
         }
         return {
@@ -56,7 +56,7 @@ export default function(state = initialState, action) {
       };
     case DELETE_RECIPE:
       recipeIndex = state.recipes.findIndex(
-        (recipe) => recipe.screamId === action.payload
+        (recipe) => recipe.postId === action.payload
       );
       state.recipes.splice(recipeIndex, 1);
       return {
@@ -69,7 +69,7 @@ export default function(state = initialState, action) {
       };
     case SUBMIT_RECIPE_COMMENT:
       let commentedOnRecipeIndex = state.recipes.findIndex(
-        recipe => recipe.screamId === action.payload.screamId
+        recipe => recipe.postId === action.payload.postId
       );
       return {
         ...state,
@@ -98,10 +98,10 @@ export default function(state = initialState, action) {
     case LIKE_SCREAM:
     case UNLIKE_SCREAM:
       let screamIndex = state.screams.findIndex(
-        (scream) => scream.screamId === action.payload.screamId
+        (scream) => scream.postId === action.payload.postId
       );
       state.screams[screamIndex] = action.payload;
-      if (state.scream.screamId === action.payload.screamId) {
+      if (state.scream.postId === action.payload.postId) {
         state.scream = { ...state.scream, ...action.payload };
       }
       return {
@@ -109,7 +109,7 @@ export default function(state = initialState, action) {
       };
     case DELETE_SCREAM:
       screamIndex = state.screams.findIndex(
-        (scream) => scream.screamId === action.payload
+        (scream) => scream.postId === action.payload
       );
       state.screams.splice(screamIndex, 1);
       return {
@@ -122,7 +122,7 @@ export default function(state = initialState, action) {
       };
     case SUBMIT_SCREAM_COMMENT:
       let commentedOnScreamIndex = state.screams.findIndex(
-        scream => scream.screamId === action.payload.screamId
+        scream => scream.postId === action.payload.postId
       );
       return {
         ...state,

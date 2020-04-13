@@ -44,10 +44,10 @@ export const getRecipes = () => (dispatch) => {
     });
 };
 
-export const getRecipe = (screamId) => (dispatch) => {
+export const getRecipe = (postId) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
-    .get(`/recipe/${screamId}`)
+    .get(`/recipe/${postId}`)
     .then((res) => {
       dispatch({
         type: SET_RECIPE,
@@ -79,9 +79,9 @@ export const postRecipe = (newRecipe) => (dispatch) => {
 };
 
 // Like a recipe
-export const likeRecipe = (screamId) => (dispatch) => {
+export const likeRecipe = (postId) => (dispatch) => {
   axios
-    .get(`/recipe/${screamId}/like`)
+    .get(`/recipe/${postId}/like`)
     .then((res) => {
       dispatch({
         type: LIKE_RECIPE,
@@ -92,9 +92,9 @@ export const likeRecipe = (screamId) => (dispatch) => {
 };
 
 // Unlike a recipe
-export const unlikeRecipe = (screamId) => (dispatch) => {
+export const unlikeRecipe = (postId) => (dispatch) => {
   axios
-    .get(`/recipe/${screamId}/unlike`)
+    .get(`/recipe/${postId}/unlike`)
     .then((res) => {
       dispatch({
         type: UNLIKE_RECIPE,
@@ -105,9 +105,9 @@ export const unlikeRecipe = (screamId) => (dispatch) => {
 };
 
 // Submit a recipe comment
-export const submitRecipeComment = (screamId, commentData) => (dispatch) => {
+export const submitRecipeComment = (postId, commentData) => (dispatch) => {
   axios
-    .post(`/recipe/${screamId}/comment`, commentData)
+    .post(`/recipe/${postId}/comment`, commentData)
     .then((res) => {
       dispatch({
         type: SUBMIT_RECIPE_COMMENT,
@@ -123,11 +123,11 @@ export const submitRecipeComment = (screamId, commentData) => (dispatch) => {
     });
 };
 
-export const deleteRecipe = (screamId) => (dispatch) => {
+export const deleteRecipe = (postId) => (dispatch) => {
   axios
-    .delete(`/recipe/${screamId}`)
+    .delete(`/recipe/${postId}`)
     .then(() => {
-      dispatch({ type: DELETE_RECIPE, payload: screamId });
+      dispatch({ type: DELETE_RECIPE, payload: postId });
     })
     .catch((err) => console.log(err));
 };
@@ -154,10 +154,10 @@ export const getScreams = () => (dispatch) => {
     });
 };
 
-export const getScream = (screamId) => (dispatch) => {
+export const getScream = (postId) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
-    .get(`/scream/${screamId}`)
+    .get(`/scream/${postId}`)
     .then((res) => {
       dispatch({
         type: SET_SCREAM,
@@ -189,9 +189,9 @@ export const postScream = (newScream) => (dispatch) => {
 };
 
 // Like a scream
-export const likeScream = (screamId) => (dispatch) => {
+export const likeScream = (postId) => (dispatch) => {
   axios
-    .get(`/scream/${screamId}/like`)
+    .get(`/scream/${postId}/like`)
     .then((res) => {
       dispatch({
         type: LIKE_SCREAM,
@@ -202,9 +202,9 @@ export const likeScream = (screamId) => (dispatch) => {
 };
 
 // Unlike a scream
-export const unlikeScream = (screamId) => (dispatch) => {
+export const unlikeScream = (postId) => (dispatch) => {
   axios
-    .get(`/scream/${screamId}/unlike`)
+    .get(`/scream/${postId}/unlike`)
     .then((res) => {
       dispatch({
         type: UNLIKE_SCREAM,
@@ -215,9 +215,9 @@ export const unlikeScream = (screamId) => (dispatch) => {
 };
 
 // Submit a comment
-export const submitScreamComment = (screamId, commentData) => (dispatch) => {
+export const submitScreamComment = (postId, commentData) => (dispatch) => {
   axios
-    .post(`/scream/${screamId}/comment`, commentData)
+    .post(`/scream/${postId}/comment`, commentData)
     .then((res) => {
       dispatch({
         type: SUBMIT_SCREAM_COMMENT,
@@ -233,11 +233,11 @@ export const submitScreamComment = (screamId, commentData) => (dispatch) => {
     });
 };
 
-export const deleteScream = (screamId) => (dispatch) => {
+export const deleteScream = (postId) => (dispatch) => {
   axios
-    .delete(`/scream/${screamId}`)
+    .delete(`/scream/${postId}`)
     .then(() => {
-      dispatch({ type: DELETE_SCREAM, payload: screamId });
+      dispatch({ type: DELETE_SCREAM, payload: postId });
     })
     .catch((err) => console.log(err));
 };

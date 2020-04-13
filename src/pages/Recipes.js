@@ -25,13 +25,13 @@ class Recipes extends Component {
     let recentRecipesMarkup = !loading ? (
       recipes.map((recipe) => (
         <LazyLoad
-          key={recipe.screamId}
+          key={recipe.postId}
           height={100}
           offset={[-100, 100]}
           placeholder={<Spinner />}
         >
           <div className='post'>
-            <Recipe key={recipe.screamId} recipe={recipe} />
+            <Recipe key={recipe.postId} recipe={recipe} />
           </div>
         </LazyLoad>
       ))

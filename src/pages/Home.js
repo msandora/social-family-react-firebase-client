@@ -25,7 +25,7 @@ class Home extends Component {
     let recentScreamsMarkup = !loading ? (
       screams.map((scream) => (
         <LazyLoad
-          key={scream.screamId}
+          key={scream.postId}
           height={100}
           offset={[-100, 100]}
           placeholder={<Spinner />}

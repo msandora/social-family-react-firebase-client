@@ -64,13 +64,13 @@ class App extends Component {
                     <Route exact path='/users/:handle' component={User} />
                     <Route
                       exact
-                      path='/users/:handle/scream/:screamId'
+                      path='/users/:handle/scream/:postId'
                       component={User}
                     />
                     <Route exact path='/recipes' component={Recipes} />
                     <Route
                       exact
-                      path='/users/:handle/recipe/:screamId'
+                      path='/users/:handle/recipe/:postId'
                       component={User}
                     />
                     <Route component={NotFoundPage} />
@@ -89,13 +89,13 @@ class App extends Component {
                     <Route exact path='/users/:handle' component={User} />
                     <Route
                       exact
-                      path='/users/:handle/scream/:screamId'
+                      path='/users/:handle/scream/:postId'
                       component={User}
                     />
                     <Route exact path='/recipes' component={Recipes} />
                     <Route
                       exact
-                      path='/users/:handle/recipe/:screamId'
+                      path='/users/:handle/recipe/:postId'
                       component={User}
                     />
                     <Route component={NotFoundPage} />

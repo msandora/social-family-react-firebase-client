@@ -25,7 +25,7 @@ class Memories extends Component {
     const isMobile = window.innerWidth <= 500;
     const { recipes, loading } = this.props.data;
     let recentRecipesMarkup = !loading ? (
-      recipes.map((recipe) => <Memory key={recipe.screamId} recipe={recipe} />)
+      recipes.map((recipe) => <Memory key={recipe.postId} recipe={recipe} />)
     ) : (
       <ScreamSkeleton />
     );

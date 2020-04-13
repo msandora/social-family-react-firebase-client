@@ -48,15 +48,15 @@ class RecipeDialog extends Component {
   handleOpen = () => {
     let oldPath = window.location.pathname;
 
-    const { userHandle, screamId } = this.props;
-    const newPath = `/users/${userHandle}/recipe/${screamId}`;
+    const { userHandle, postId } = this.props;
+    const newPath = `/users/${userHandle}/recipe/${postId}`;
 
     if (oldPath === newPath) oldPath = `/users/${userHandle}`;
 
     window.history.pushState(null, null, newPath);
 
     this.setState({ open: true, oldPath, newPath });
-    this.props.getRecipe(this.props.screamId);
+    this.props.getRecipe(this.props.postId);
   };
   handleClose = () => {
     window.history.pushState(null, null, this.state.oldPath);
@@ -72,7 +72,7 @@ class RecipeDialog extends Component {
         createdAt,
         userImage,
         userHandle,
-        screamId,
+        postId,
         recipeTitle,
         recipeType,
         ingredients,
@@ -125,7 +125,7 @@ class RecipeDialog extends Component {
             <Typography variant='body1'>{ingredients}</Typography>
             <Typography variant='body1'>{body}</Typography>
             <hr className={classes.invisibleSeparator} />
-            <LikeButton screamId={screamId} />
+            <LikeButton postId={postId} />
             <span>{likeCount} likes</span>
             <MyButton tip='comments'>
               <ChatIcon color='primary' />
@@ -133,7 +133,7 @@ class RecipeDialog extends Component {
             <span>{commentCount} comments</span>
           </Grid>
           <hr className={classes.visibleSeparator} />
-          <CommentForm screamId={screamId} />
+          <CommentForm postId={postId} />
           <Comments comments={comments} />
         </Grid>
       </div>
@@ -175,7 +175,7 @@ class RecipeDialog extends Component {
 RecipeDialog.propTypes = {
   clearErrors: PropTypes.func.isRequired,
   getRecipe: PropTypes.func.isRequired,
-  screamId: PropTypes.string.isRequired,
+  postId: PropTypes.string.isRequired,
   userHandle: PropTypes.string.isRequired,
   recipe: PropTypes.object.isRequired,
   UI: PropTypes.object.isRequired,

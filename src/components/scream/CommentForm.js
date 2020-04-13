@@ -34,7 +34,7 @@ class CommentForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.submitScreamComment(this.props.screamId, {
+    this.props.submitScreamComment(this.props.postId, {
       body: this.state.body,
     });
     console.log();
@@ -78,7 +78,7 @@ CommentForm.propTypes = {
   submitScreamComment: PropTypes.func.isRequired,
   UI: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
-  screamId: PropTypes.string.isRequired,
+  postId: PropTypes.string.isRequired,
   authenticated: PropTypes.bool.isRequired,
 };
 

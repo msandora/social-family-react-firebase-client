@@ -14,17 +14,17 @@ export class LikeButton extends Component {
     if (
       this.props.user.likes &&
       this.props.user.likes.find(
-        (like) => like.screamId === this.props.screamId
+        (like) => like.postId === this.props.postId
       )
     )
       return true;
     else return false;
   };
   likeRecipe = () => {
-    this.props.likeRecipe(this.props.screamId);
+    this.props.likeRecipe(this.props.postId);
   };
   unlikeRecipe = () => {
-    this.props.unlikeRecipe(this.props.screamId);
+    this.props.unlikeRecipe(this.props.postId);
   };
   render() {
     const { authenticated } = this.props.user;
@@ -49,7 +49,7 @@ export class LikeButton extends Component {
 
 LikeButton.propTypes = {
   user: PropTypes.object.isRequired,
-  screamId: PropTypes.string.isRequired,
+  postId: PropTypes.string.isRequired,
   likeRecipe: PropTypes.func.isRequired,
   unlikeRecipe: PropTypes.func.isRequired,
 };

@@ -41,17 +41,17 @@ class Scream extends Component {
 		if(
 			this.props.user.likes && 
 			this.props.user.likes.find(
-				(like) => like.screamId === this.props.scream.screamId
+				(like) => like.postId === this.props.scream.postId
 			)
 		)
 			return true;
 		else return false;
 	};
 	likeScream = () => {
-		this.props.likeScream(this.props.scream.screamId);
+		this.props.likeScream(this.props.scream.postId);
 	}
 	unlikeScream = () => {
-		this.props.unlikeScream(this.props.scream.screamId);
+		this.props.unlikeScream(this.props.scream.postId);
 	}
 	render() { 
 		dayjs.extend(relativeTime);
@@ -62,7 +62,7 @@ class Scream extends Component {
 			createdAt,
 			userImage,
 			userHandle,
-			screamId,
+			postId,
 			likeCount,
 			commentCount
 		  },
@@ -73,7 +73,7 @@ class Scream extends Component {
 		} = this.props;
 		const deleteButton =
 		authenticated && userHandle === handle ? (
-			<DeleteScream screamId={screamId} />
+			<DeleteScream postId={postId} />
 		) : null;
 			return ( 
 				<Card className={classes.card}>
@@ -94,14 +94,14 @@ class Scream extends Component {
 						{deleteButton}
 						<Typography variant="body2" color="textSecondary">{dayjs(createdAt).fromNow()}</Typography>
 						<Typography variant="body1">{body}</Typography>
-						<LikeButton screamId={screamId} />
+						<LikeButton postId={postId} />
 							<span>{likeCount} Likes</span>
 						<MyButton tip="comments">
 							<ChatIcon color="primary" />
 						</MyButton>
 						<span>{commentCount}</span>
 						<ScreamDialog
-						screamId={screamId}
+						postId={postId}
 						userHandle={userHandle}
 						openDialog={this.props.openDialog}
 						/>
