@@ -124,7 +124,8 @@ const defaultTheme = createMuiTheme({
 		marginBottom: 10
   },
   cardImages: {
-    padding: '0'
+    padding: '0 !important',
+    textAlign: 'center'
   },
   cardContent: {
     padding: '8px 16px'

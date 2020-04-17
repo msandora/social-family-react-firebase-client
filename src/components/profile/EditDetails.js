@@ -21,7 +21,7 @@ const styles = (theme) => ({
   ...theme,
   button: {
     float: "right",
-  },
+  }
 });
 
 class EditDetails extends Component {

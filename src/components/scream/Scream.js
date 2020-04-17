@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import DeleteScream from "./DeleteScream";
 import ScreamDialog from "./ScreamDialog";
 import LikeButton from "./LikeButton";
-// import ScreamCarousel from "./ScreamCarousel";
+import ScreamCarousel from "./ScreamCarousel";
 //MUI Stuff
 import withStyles from "@material-ui/core/styles/withStyles";
 import Card from "@material-ui/core/Card";
@@ -20,7 +20,7 @@ import Avatar from "@material-ui/core/Avatar";
 import { connect } from "react-redux";
 
 const styles = (theme) => ({
-  ...theme,
+  ...theme
 });
 
 class Scream extends Component {
@@ -53,21 +53,13 @@ class Scream extends Component {
         postId,
         likeCount,
         commentCount,
-        screamImages,
+        images
       },
       user: {
         authenticated,
         credentials: { handle },
       },
     } = this.props;
-
-    let recentScreamImages = screamImages ? (
-      <CardContent className={classes.cardImages}>
-        {screamImages.map((image, i) => (
-          <img key={i} src={image} alt={i} />
-        ))}
-      </CardContent>
-    ) : null;
 
     const deleteButton =
       authenticated && userHandle === handle ? (
@@ -91,7 +83,7 @@ class Scream extends Component {
           subheader={dayjs(createdAt).fromNow()}
         />
 
-        {recentScreamImages}
+        <ScreamCarousel images={images}/>
 
         <CardContent className={classes.cardContent}>
           <Typography variant='body2'>{body}</Typography>

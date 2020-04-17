@@ -21,7 +21,7 @@ class Recipes extends Component {
     const isMobile = window.innerWidth <= 500;
     const { recipes, loading } = this.props.data;
     const { authenticated } = this.props;
-console.log(recipes);
+// console.log(recipes);
     let recentRecipesMarkup = !loading ? (
       recipes.map((recipe) => (
         <LazyLoad

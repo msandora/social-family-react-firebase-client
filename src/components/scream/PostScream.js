@@ -99,7 +99,7 @@ class PostScream extends Component {
           </MyButton>
           <DialogTitle>Create a post</DialogTitle>
           <DialogContent>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} method="post" encType="multipart/form-data" action="http://localhost:3000">
               <FormControl className={classes.formControl}>
                 <TextField
                   name='body'
