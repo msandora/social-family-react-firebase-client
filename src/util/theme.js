@@ -122,7 +122,10 @@ const defaultTheme = createMuiTheme({
 		display: 'flex',
 		flexDirection: 'column',
 		marginBottom: 10
-	},
+  },
+  cardImages: {
+    padding: '0'
+  },
   cardContent: {
     padding: '8px 16px'
   },

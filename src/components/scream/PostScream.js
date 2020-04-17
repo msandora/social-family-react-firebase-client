@@ -10,13 +10,13 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import AddIcon from "@material-ui/icons/Add";
-import CloseIcon from "@material-ui/icons/Close";
-
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
+// Icons
+import AddIcon from "@material-ui/icons/Add";
+import CloseIcon from "@material-ui/icons/Close";
 // Redux stuff
 import { connect } from "react-redux";
 import { postScream, clearErrors } from "../../redux/actions/dataActions";
@@ -64,7 +64,7 @@ class PostScream extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
     this.props.postScream({ body: this.state.body });
   };
   render() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+// import ScreamCarousel from './components/scream/ScreamCarousel';
 import * as serviceWorker from './serviceWorker';
 // import App from './Playground/react-new-features';
 

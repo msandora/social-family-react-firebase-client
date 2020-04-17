@@ -37,7 +37,7 @@ class CommentForm extends Component {
     this.props.submitScreamComment(this.props.postId, {
       body: this.state.body,
     });
-    console.log();
+    // console.log();
   };
 
   render() {

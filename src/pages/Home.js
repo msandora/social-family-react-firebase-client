@@ -21,7 +21,7 @@ class Home extends Component {
     const isMobile = window.innerWidth <= 500;
     const { screams, loading } = this.props.data;
     const { authenticated } = this.props;
-
+    // console.log(screams);
     let recentScreamsMarkup = !loading ? (
       screams.map((scream) => (
         <LazyLoad

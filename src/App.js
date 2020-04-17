@@ -24,7 +24,6 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import User from "./pages/User";
 import FamilyTree from "./pages/FamilyTree/FamilyTree.tsx";
-// import Memories from './pages/Memories';
 import NotFoundPage from "./pages/NotFoundPage";
 
 const theme = createMuiTheme(themeObject);
