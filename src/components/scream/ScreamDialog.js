@@ -1,13 +1,15 @@
 import React, { Component, Fragment } from "react";
+import dayjs from "dayjs";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import withStyles from "@material-ui/core/styles/withStyles";
+// Components
 import MyButton from "../../util/MyButton";
 import LikeButton from "./LikeButton";
 import Comments from "./Comments";
 import CommentForm from "./CommentForm";
-import dayjs from "dayjs";
-import { Link } from "react-router-dom";
+import ScreamCarousel from "./ScreamCarousel";
 // MUI Stuff
+import withStyles from "@material-ui/core/styles/withStyles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -18,7 +20,6 @@ import Typography from "@material-ui/core/Typography";
 import CardHeader from "@material-ui/core/CardHeader";
 import Avatar from "@material-ui/core/Avatar";
 // Icons
-import CloseIcon from "@material-ui/icons/Close";
 import ChatIcon from "@material-ui/icons/Chat";
 // Redux stuff
 import { connect } from "react-redux";
@@ -76,6 +77,7 @@ class ScreamDialog extends Component {
         userImage,
         userHandle,
         comments,
+        images,
       },
       UI: { loading },
     } = this.props;
@@ -117,6 +119,7 @@ class ScreamDialog extends Component {
         <Grid container spacing={16}>
           <Grid item sm={12}>
             <hr className={classes.invisibleSeparator} />
+            <ScreamCarousel images={images} />
             <Typography variant='body1'>{body}</Typography>
             <hr className={classes.invisibleSeparator} />
             <LikeButton postId={postId} />
@@ -145,13 +148,6 @@ class ScreamDialog extends Component {
           fullScreen={isMobile}
           maxWidth='sm'
         >
-          <MyButton
-            tip='Close'
-            onClick={this.handleClose}
-            tipClassName={classes.closeButton}
-          >
-            <CloseIcon />
-          </MyButton>
           <DialogContent className={classes.dialogContent}>
             {dialogMarkup}
           </DialogContent>

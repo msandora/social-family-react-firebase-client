@@ -20,7 +20,7 @@ import Avatar from "@material-ui/core/Avatar";
 import { connect } from "react-redux";
 
 const styles = (theme) => ({
-  ...theme
+  ...theme,
 });
 
 class Scream extends Component {
@@ -53,7 +53,7 @@ class Scream extends Component {
         postId,
         likeCount,
         commentCount,
-        images
+        images,
       },
       user: {
         authenticated,
@@ -83,7 +83,7 @@ class Scream extends Component {
           subheader={dayjs(createdAt).fromNow()}
         />
 
-        <ScreamCarousel images={images}/>
+        <ScreamCarousel images={images} />
 
         <CardContent className={classes.cardContent}>
           <Typography variant='body2'>{body}</Typography>
