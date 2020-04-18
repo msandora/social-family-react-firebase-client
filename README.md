@@ -11,17 +11,10 @@ Add https://us-central1-socialfamily-d58c8.cloudfunctions.net/api as the 'proxy'
 
 run `npm install`
 
-## 3: Run project
-
-run `npm start`
-
-## 4: Open it
-
-go to [http://localhost:3000](http://localhost:3000)
-
-## 5: Edit to node modules
-
+## 3: Edit to node modules
+In the below file you will need to replace two interfaces
 ..\social-family-react-firebase-client\node_modules\relatives-tree\src\types.ts
+Please replace the following two interfaces below:
 
 export interface IRelation {
   id: string;
@@ -50,6 +43,15 @@ export interface IFamilyNode {
   spouses: IRelation[];
   placeholder?: boolean;
 }
+
+## 4: Run project
+
+run `npm start`
+
+## 5: Open it
+
+go to [http://localhost:3000](http://localhost:3000)
+
 
 * [pinch-zoom-pan](https://www.npmjs.com/package/pinch-zoom-pan)
 * [react-family-tree](https://www.npmjs.com/package/react-family-tree)
