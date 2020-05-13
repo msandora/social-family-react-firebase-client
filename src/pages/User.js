@@ -63,6 +63,7 @@ class User extends Component {
         else return <Scream key={scream.postId} scream={scream} openDialog />;
       })
     );
+    // console.log("screams", screams);
 
     return (
       <Grid container spacing={16}>

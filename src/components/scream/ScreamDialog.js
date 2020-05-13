@@ -89,7 +89,49 @@ class ScreamDialog extends Component {
       </div>
     ) : (
       <Fragment>
-        <Grid container>
+      <Grid container spacing={16}>
+        <Grid item xs={12} sm={6}>
+          <ScreamCarousel images={images} />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+        <CardHeader
+          avatar={
+            <Avatar
+              alt='Profile image'
+              src={userImage}
+              component={Link}
+              to={`/users/${userHandle}`}
+            />
+          }
+          title={
+            <Typography
+              component={Link}
+              color='primary'
+              variant='h5'
+              to={`/users/${userHandle}`}
+              className={classes.cardHandle}
+            >
+              @{userHandle}
+            </Typography>
+          }
+          subheader={dayjs(createdAt).format("h:mm a, MMMM DD YYYY")}
+          className={classes.cardHeader}
+        />
+        <hr className={classes.invisibleSeparator} />
+        <Typography variant='body1'>{body}</Typography>
+        <hr className={classes.invisibleSeparator} />
+        <LikeButton postId={postId} />
+        <span>{likeCount} likes</span>
+        <MyButton tip='comments'>
+          <ChatIcon color='primary' />
+        </MyButton>
+        <span>{commentCount} comments</span>
+        <hr className={classes.visibleSeparator} />
+        <CommentForm postId={postId} />
+        <Comments comments={comments} />
+        </Grid>
+      </Grid>
+        {/*<Grid container>
           <Grid item xs={12}>
             <CardHeader
               className={classes.cardHeader}
@@ -132,7 +174,7 @@ class ScreamDialog extends Component {
           <hr className={classes.visibleSeparator} />
           <CommentForm postId={postId} />
           <Comments comments={comments} />
-        </Grid>
+        </Grid>*/}
       </Fragment>
     );
 

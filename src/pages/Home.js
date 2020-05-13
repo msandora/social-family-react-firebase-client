@@ -38,7 +38,8 @@ class Home extends Component {
     ) : (
       <ScreamSkeleton />
     );
-
+    // console.log("screams", screams);
+    
     return (
       <Grid container spacing={16}>
         <Grid item sm={4} xs={12}>

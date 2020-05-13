@@ -41,13 +41,20 @@
   font-size: 0.775rem !important;
 }
 
-.ADDED_CLASS {
-  background-color: darkgrey;
-  top: -390px;
-  left: 130px;
+.ADDED_CLASS > div:first-child {
+  transform: translate(77.2535px, 182px) scale(1)!important;
 }
 
-.Sandora-Periera {
-  top: -321px;
-  left: -1120px;
+.Sandora-Gentile > div:first-child {
+  background-color: rgb(226, 8, 8);
+  transform: translate(77.2535px, 182px) scale(1);
+}
+.Sandora-Lucatuorto > div:first-child {
+  background-color: rgb(226, 8, 8);
+}
+.Sandora-Scott > div:first-child {
+  background-color: rgb(226, 8, 8);
+}
+.Sandora-Periera > div:first-child {
+  background-color: rgb(226, 8, 8);
 }

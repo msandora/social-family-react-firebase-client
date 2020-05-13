@@ -2496,6 +2496,7 @@
     "gender": "male",
     "firstName": "Dick",
     "lastName": "Periera",
+    "dateOfBirth": "1945-06-15",
     "parents": [],
     "children": [
       {
@@ -2532,6 +2533,7 @@
     "id": "rickpereira",
     "gender": "male",
     "firstName": "Rick",
+    "middleName": "James",
     "lastName": "Periera",
     "dateOfBirth": "1981-09-02",
     "parents": [
@@ -2570,7 +2572,9 @@
     "id": "mattpereira",
     "gender": "male",
     "firstName": "Matthew",
+    "middleName": "Robert",
     "lastName": "Periera",
+    "dateOfBirth": "1984-04-21",
     "parents": [
       {
         "id": "dickpereira",
@@ -2641,7 +2645,9 @@
     "id": "mathewpereira",
     "gender": "male",
     "firstName": "Matthew",
+    "middleName": "Joseph",
     "lastName": "Periera",
+    "dateOfBirth": "",
     "parents": [
       {
         "id": "mattpereira",
@@ -2662,7 +2668,9 @@
     "id": "zachpereira",
     "gender": "male",
     "firstName": "Zachary",
+    "middleName": "Edward",
     "lastName": "Periera",
+    "dateOfBirth": "1990-07-13",
     "parents": [
       {
         "id": "dickpereira",
@@ -2699,6 +2707,7 @@
     "id": "ashpereira",
     "gender": "female",
     "firstName": "Ashley",
+    "middleName": "Lauren",
     "maidenName": "Periera",
     "lastName": "Kupelian",
     "dateOfBirth": "1993-02-12",
@@ -3008,6 +3017,7 @@
     "firstName": "Brandon",
     "middleName": "Daniel",
     "lastName": "Garcia",
+    "dateOfBirth": "2019-08-05",
     "parents": [
       {
         "id": "salgarcia",
