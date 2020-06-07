@@ -74,7 +74,7 @@ const defaultTheme = createMuiTheme({
     },
     '& .profile-details': {
       textAlign: 'center',
-      wordBreak: 'initial',
+      //wordBreak: 'initial',
       paddingBottom: 10,
       '& span, svg': {
         verticalAlign: 'middle'

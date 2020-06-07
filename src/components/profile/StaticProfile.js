@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 import { Link } from "react-router-dom";
 // MUI
 import MuiLink from "@material-ui/core/Link";
@@ -9,8 +9,8 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 // Icons
 import LocationOn from "@material-ui/icons/LocationOn";
-import LinkIcon from "@material-ui/icons/Link";
-import CalendarToday from "@material-ui/icons/CalendarToday";
+// import LinkIcon from "@material-ui/icons/Link";
+// import CalendarToday from "@material-ui/icons/CalendarToday";
 
 const styles = (theme) => ({
   ...theme
@@ -21,13 +21,13 @@ const StaticProfile = (props) => {
     classes,
     profile: {
       handle,
-      createdAt,
+      // createdAt,
       imageUrl,
       firstName,
       middleName,
       lastName,
       bio,
-      website,
+      // website,
       location,
     },
   } = props;
@@ -54,7 +54,6 @@ const StaticProfile = (props) => {
             {middleName && <span>{middleName} </span>}
             {lastName && <span>{lastName}</span>}
           </Typography>
-          {bio && <Typography variant='body2'>{bio}</Typography>}
           <hr />
           {location && (
             <Fragment>
@@ -62,6 +61,8 @@ const StaticProfile = (props) => {
               <hr />
             </Fragment>
           )}
+          {bio && <Typography variant='body2'>{bio}</Typography>}
+          {/* 
           {website && (
             <Fragment>
               <LinkIcon color='primary' />
@@ -74,6 +75,7 @@ const StaticProfile = (props) => {
           )}
           <CalendarToday color='primary' />{" "}
           <span>Joined {dayjs(createdAt).format("MMM YYYY")}</span>
+          <hr />*/}
         </div>
       </div>
     </Paper>

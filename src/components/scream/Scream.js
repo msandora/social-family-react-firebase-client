@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -86,7 +86,11 @@ class Scream extends Component {
         <ScreamCarousel images={images} />
 
         <CardContent className={classes.cardContent}>
-          <Typography variant='body2'>{body}</Typography>
+          <Typography variant='body2'>
+          {body.split('\n').map((item, key) => {
+            return <Fragment key={key}>{item}<br/></Fragment>
+          })}
+          </Typography>
         </CardContent>
 
         <CardActions className={classes.cardActions}>

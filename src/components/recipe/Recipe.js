@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -68,10 +68,19 @@ class Recipe extends Component {
         />
 
         <CardContent className={classes.cardContent}>
-          <Typography variant='body2'>{recipeTitle}</Typography>
-          <Typography variant='body2'>{body}</Typography>
-          <Typography variant='body2'>{ingredients}</Typography>
-          <Typography variant='body2'>{recipeType}</Typography>
+          <Typography variant='body2'>Title: {recipeTitle}</Typography>
+          <Typography variant='body2'>Type: {recipeType}</Typography>
+
+          <Typography variant='body2'>Directions:
+          {body.split('\n').map((item, key) => {
+            return <Fragment key={key}>{item}<br/></Fragment>
+          })}
+          </Typography>
+          <Typography variant='body2'>Ingredients:
+          {ingredients.split('\n').map((item, key) => {
+            return <Fragment key={key}>{item}<br/></Fragment>
+          })}
+          </Typography>
         </CardContent>
 
         <CardActions className={classes.cardActions}>

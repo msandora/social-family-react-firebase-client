@@ -23,7 +23,7 @@ import Recipes from "./pages/Recipes";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import User from "./pages/User";
-import FamilyTree from "./pages/FamilyTree/FamilyTree.tsx";
+// import FamilyTree from "./pages/FamilyTree/FamilyTree.tsx";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const theme = createMuiTheme(themeObject);
@@ -59,7 +59,7 @@ class App extends Component {
                     <Route exact path='/' component={Home} />
                     <AuthRoute exact path='/login' component={Login} />
                     <AuthRoute exact path='/signup' component={Signup} />
-                    <Route exact path='/family-tree' component={FamilyTree} />
+                    <Route exact path='/family-tree' component={Home} />
                     <Route exact path='/users/:handle' component={User} />
                     <Route
                       exact
@@ -84,7 +84,7 @@ class App extends Component {
                     <Route exact path='/' component={Home} />
                     <AuthRoute exact path='/login' component={Login} />
                     <AuthRoute exact path='/signup' component={Signup} />
-                    <Route exact path='/family-tree' component={FamilyTree} />
+                    <Route exact path='/family-tree' component={Home} />
                     <Route exact path='/users/:handle' component={User} />
                     <Route
                       exact
