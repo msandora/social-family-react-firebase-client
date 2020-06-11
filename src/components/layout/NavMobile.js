@@ -24,10 +24,6 @@ const styles = (theme) => ({
 });
 
 class Mobilebar extends Component {
-  handleOnClick = () => {
-    // Reset scroll bar
-    window.scrollTo(0, 0);
-  };
   render() {
     const { authenticated, classes } = this.props;
 
@@ -38,17 +34,17 @@ class Mobilebar extends Component {
             <Fragment>
               <div className={classes.grow} />
               <Link to='/'>
-                <MyButton tip='Home' onClick={this.handleOnClick}>
+                <MyButton tip='Home'>
                   <HomeIcon />
                 </MyButton>
               </Link>
               <Link to='/family-tree'>
-                <MyButton tip='Family Tree' onClick={this.handleOnClick}>
+                <MyButton tip='Family Tree'>
                   <NaturePeopleIcon />
                 </MyButton>
               </Link>
               <Link to='/recipes'>
-                <MyButton tip='Family Recipes' onClick={this.handleOnClick}>
+                <MyButton tip='Family Recipes'>
                   <RestaurantMenuIcon />
                 </MyButton>
               </Link>
